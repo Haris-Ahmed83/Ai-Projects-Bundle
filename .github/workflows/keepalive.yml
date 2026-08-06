@@ -1,0 +1,23 @@
+name: Keepalive
+
+on:
+  schedule:
+    - cron: '0 0 */45 * *'    # Every 45 days at midnight UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create keepalive commit
+        run: |
+          git config user.name "Haris-Ahmed83"
+          git config user.email "hariscool987@gmail.com"
+          git commit --allow-empty -m "chore(keepalive): prevent GitHub workflow disable [skip ci]"
+          git push

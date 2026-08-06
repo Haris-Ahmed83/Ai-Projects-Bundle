@@ -1,0 +1,22 @@
+[
+  {"name":"AI Chatbot Interface","concepts":"Fetch API, DOM Manipulation","description":"A sleek chatbot interface with typing indicators."},
+  {"name":"Sentiment Analysis Dashboard","concepts":"Fetch API, JSON Parsing","description":"Analyze text sentiment with a beautiful dashboard."},
+  {"name":"Text Summarizer Tool","concepts":"Text Processing, String Methods","description":"Summarize long paragraphs by extracting key sentences."},
+  {"name":"Language Detector","concepts":"Fetch API, Text Input","description":"Detect the language of any text input."},
+  {"name":"Markdown Previewer","concepts":"Text Parsing, Real-time Preview","description":"Live markdown editor with split-pane preview."},
+  {"name":"Expense Tracker Pro","concepts":"CRUD Operations, localStorage","description":"Track income and expenses with visual summaries."},
+  {"name":"Quiz Application","concepts":"DOM Manipulation, Event Listeners","description":"Timed quiz with score tracking."},
+  {"name":"Weather Dashboard","concepts":"Fetch API, Async/Await","description":"Weather dashboard with search and forecast."},
+  {"name":"Todo List with Categories","concepts":"CRUD Operations, Filtering","description":"Categorized todo list with local storage."},
+  {"name":"QR Code Generator","concepts":"Canvas API, Download API","description":"Generate QR codes from text or URLs."},
+  {"name":"Recipe Finder App","concepts":"Fetch API, Search/Filter","description":"Browse and search recipes with filters."},
+  {"name":"Habit Tracker Calendar","concepts":"Calendar View, localStorage","description":"Track daily habits with a heatmap."},
+  {"name":"Pomodoro Timer","concepts":"setInterval, State Management","description":"Productivity timer with work/break cycles."},
+  {"name":"Color Palette Generator","concepts":"Random Generation, Clipboard API","description":"Generate beautiful color palettes."},
+  {"name":"Music Player UI","concepts":"HTML Audio API, Event Listeners","description":"Sleek music player with playlist."},
+  {"name":"Countdown Timer Events","concepts":"Date Object, setInterval","description":"Create countdown timers to events."},
+  {"name":"Drawing Canvas App","concepts":"Canvas API, Mouse Events","description":"Full-featured drawing canvas."},
+  {"name":"Password Generator","concepts":"Random Generation, Clipboard API","description":"Generate secure passwords with strength meter."},
+  {"name":"Unit Converter Pro","concepts":"Math Operations, Select Inputs","description":"Convert between various units."},
+  {"name":"Stopwatch Application","concepts":"setInterval, Date Object","description":"Precise stopwatch with lap tracking."}
+]
