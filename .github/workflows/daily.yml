@@ -2,22 +2,13 @@ name: Daily AI Projects Generator
 
 on:
   schedule:
-    - cron: '0 5 * * *'    # 10 AM Pakistan Time (UTC+5)
-    - cron: '0 6 * * *'    # 11 AM Pakistan Time (UTC+5)
+    - cron: '0 5 * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch:
-    inputs:
-      count:
-        description: "How many projects to generate this run"
-        required: false
-        default: "2"
 
 permissions:
   contents: write
   issues: write
-
-concurrency:
-  group: ai-projects-daily
-  cancel-in-progress: false
 
 jobs:
   generate:
@@ -33,56 +24,32 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Cache pip dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
       - name: Install dependencies
-        run: pip install --upgrade pip && pip install -r scripts/requirements.txt
+        run: pip install -r scripts/requirements.txt
 
       - name: Generate daily projects
         id: generate
+        continue-on-error: true
         env:
           LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PROJECTS_PER_RUN: ${{ github.event.inputs.count || '2' }}
-        continue-on-error: true
+          PYTHONIOENCODING: utf-8
         run: python scripts/generate.py
 
-      - name: Commit and push generated projects
+      - name: Commit and push
         if: steps.generate.outcome == 'success'
         run: |
           git config user.name "Haris-Ahmed83"
           git config user.email "hariscool987@gmail.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No changes."
           else
-            DATE=$(date -u +"%Y-%m-%d")
-            git commit -m "chore(daily): add projects for $DATE [skip ci]"
+            git commit -m "chore(daily): $(date -u +%Y-%m-%d)"
             git push
           fi
 
-      - name: Create issue on failure
+      - name: Notify failure
         if: steps.generate.outcome == 'failure'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🚨 Daily Generator Failed — Run #' + context.runNumber,
-              body: 'The daily project generator failed.\n\nCheck the run: ' + context.serverUrl + '/' + context.repo.owner + '/' + context.repo.repo + '/actions/runs/' + context.runId + '\n\nPossible causes:\n- API key expired\n- Rate limiting\n- Network error',
-              labels: ['bug', 'automation']
-            })
-
-      - name: Notify on fallback usage
-        if: steps.generate.outcome == 'success'
-        run: |
-          if grep -q "fallback" progress.json 2>/dev/null; then
-            echo "::warning::Some projects used fallback mode. Check API keys."
-          fi
+        run: echo "::error::Generation failed"
