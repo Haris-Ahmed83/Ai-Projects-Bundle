@@ -34,24 +34,13 @@ Return ONLY valid JSON (no markdown fences, no extra text):
 {"name": "Project Name Here", "concepts": "comma, separated, key, concepts", "description": "2-3 sentence description of what the project does"}
 """
 
-FILE_GEN_TEMPLATE = """Create a complete, self-contained web project.
+FILE_GEN_TEMPLATE = """Create a complete web project. Return ONLY valid JSON with keys: index.html, style.css, script.js.
 
 Project: <<name>>
 Description: <<description>>
 Key Concepts: <<concepts>>
-Project Number: <<number>>
 
-Return ONLY valid JSON with these exact keys (no markdown fences):
-{"index.html": "<complete HTML5 content>", "style.css": "<complete CSS content>", "script.js": "<complete JavaScript content>"}
-
-STRICT REQUIREMENTS:
-1. index.html: valid HTML5 boilerplate, links style.css and script.js
-2. style.css: modern CSS with flexbox/grid, custom properties, responsive, beautiful UI
-3. script.js: vanilla JavaScript, fully functional, no build step needed
-4. Beautiful, modern design with proper spacing, colors, typography
-5. Must work by just opening index.html in a browser
-6. Include reasonable sample/default data
-7. Brief inline comments on non-trivial logic
+Keep code concise but functional. Use modern CSS (flexbox/grid). Vanilla JS only. Must work by opening index.html in browser.
 """
 
 README_TEMPLATE = """Write a professional README.md for this web project.
@@ -298,27 +287,11 @@ def generate_project_files(client, engine: str, project_info: dict, number: int)
     else:
         raw = call_gemini(client, prompt, 16000)
 
-    try:
-        files = extract_json(raw)
-        if "index.html" in files and "style.css" in files and "script.js" in files:
-            return files
-    except ValueError:
-        pass
+    files = extract_json(raw)
+    if "index.html" in files and "style.css" in files and "script.js" in files:
+        return files
 
-    print("    Single-file generation failed, trying per-file generation...")
-    files = {}
-    file_names = ["index.html", "style.css", "script.js"]
-    for fname in file_names:
-        file_prompt = f"Write ONLY the content of '{fname}' for project '{project_info['name']}'. Return ONLY raw {fname} content. No markdown fences, no JSON wrapping."
-        if engine == "longcat":
-            content = call_longcat(client, file_prompt, 8000)
-        else:
-            content = call_gemini(client, file_prompt, 8000)
-        content = content.strip()
-        content = re.sub(r"^```[a-zA-Z]*\n?", "", content)
-        content = re.sub(r"\n?```$", "", content.strip())
-        files[fname] = content
-    return files
+    raise ValueError(f"Missing required files in response. Got: {list(files.keys())}")
 
 
 def generate_readme(client, engine: str, project_info: dict, number: int) -> str:
