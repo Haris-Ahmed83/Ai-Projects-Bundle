@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Clustering Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>K-Means Clustering Sandbox</h1>
+        <p class="instructions">Click or drag on the canvas to add data points. Then, set K and run K-Means!</p>
+        <div class="controls">
+            <label for="k-input">Number of Clusters (K):</label>
+            <input type="number" id="k-input" value="3" min="1" max="20">
+            <button id="run-kmeans">Run K-Means</button>
+            <button id="reset-canvas">Reset</button>
+        </div>
+        <canvas id="kmeans-canvas" width="800" height="500"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
