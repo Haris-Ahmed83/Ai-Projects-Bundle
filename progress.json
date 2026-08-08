@@ -1,10 +1,12 @@
 {
-  "global_number": 5,
+  "global_number": 7,
   "completed": [
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6
   ],
   "history": [
     {
@@ -38,8 +40,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 5,
+      "name": "Markdown Previewer",
+      "concepts": "Text Parsing, Real-time Preview",
+      "month": 1,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 6,
+      "name": "Expense Tracker Pro",
+      "concepts": "CRUD Operations, localStorage",
+      "month": 1,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-08-08T05:43:03Z",
-  "fallback_count": 1
+  "last_run": "2026-08-08T06:32:37Z",
+  "fallback_count": 3
 }
