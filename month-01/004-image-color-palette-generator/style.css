@@ -1,0 +1,191 @@
+:root {
+    --primary-bg: #f8f8f8;
+    --secondary-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --text-color: #333;
+    --heading-color: #2c3e50;
+    --accent-color: #3498db;
+    --button-hover: #2980b9;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--heading-color);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.upload-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px var(--shadow-light);
+}
+
+.upload-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.upload-button:hover {
+    background-color: var(--button-hover);
+}
+
+#fileName {
+    font-style: italic;
+    color: #555;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.image-display-container,
+.palette-display-container {
+    background-color: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.image-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; /* Minimum height for image area */
+    background-color: #f0f0f0;
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+#uploadedImage {
+    max-width: 100%;
+    max-height: 400px; /* Max height for the displayed image */
+    height: auto;
+    display: block; /* Ensure it doesn't leave extra space below */
+    object-fit: contain; /* Ensures the image fits within bounds without cropping */
+}
+
+.placeholder-text {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+}
+
+.color-palette-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    align-content: start; /* Align items to the top if there are few */
+}
+
+.color-swatch {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-swatch:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.color-box {
+    width: 100%;
+    height: 80px;
+    background-color: #ccc; /* Fallback */
+}
+
+.color-info {
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--text-color);
+    word-break: break-all; /* For long hex codes */
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    background-color: var(--heading-color);
+    color: #ffffff;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 4px var(--shadow-light);
+}

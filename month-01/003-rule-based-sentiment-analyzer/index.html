@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule-Based Sentiment Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rule-Based Sentiment Analyzer</h1>
+        <p>Enter text below to classify its sentiment as Positive, Negative, or Neutral based on pre-defined keywords.</p>
+        <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
+        <button id="analyzeBtn">Analyze Sentiment</button>
+        <div id="result" class="result neutral">
+            <p>Sentiment: <span id="sentimentOutput" class="sentiment-neutral">Neutral</span></p>
+            <p>Keywords found: <span id="keywordsFound">None</span></p>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border-left: 5px solid #6c757d; /* Neutral default */
+    transition: border-left-color 0.3s ease;
+}
+
+.result p {
+    margin: 8px 0;
+    color: #333;
+}
+
+/* Sentiment specific colors for text */
+.sentiment-positive {
+    color: #28a745;
+    font-weight: bold;
+}
+.sentiment-negative {
+    color: #dc3545;
+    font-weight: bold;
+}
+.sentiment-neutral {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+/* Sentiment specific colors for result box border */
+.result.positive { border-left-color: #28a745; }
+.result.negative { border-left-color: #dc3545; }
+.result.neutral { border-left-color: #6c757d; }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Image Color Palette Generator</h1>
+        <p>Upload an image to extract its dominant colors.</p>
+    </header>
+
+    <main>
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-button">
+                Choose Image
+                <input type="file" id="imageUpload" accept="image/*" hidden>
+            </label>
+            <span id="fileName">No image chosen</span>
+        </div>
+
+        <div class="content-container">
+            <div class="image-display-container">
+                <h2>Uploaded Image</h2>
+                <div class="image-wrapper">
+                    <img id="uploadedImage" src="#" alt="Uploaded Image" style="display: none;">
+                    <p id="imagePlaceholder" class="placeholder-text">Image will appear here</p>
+                </div>
+            </div>
+
+            <div class="palette-display-container">
+                <h2>Dominant Color Palette</h2>
+                <div id="colorPalette" class="color-palette-grid">
+                    <p class="placeholder-text">Upload an image to see its color palette.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Image Color Palette Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
