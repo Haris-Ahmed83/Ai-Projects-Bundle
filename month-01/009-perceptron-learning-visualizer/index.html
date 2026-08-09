@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptron Learning Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perceptron Learning Visualizer</h1>
+        <div class="controls">
+            <button id="addPositiveBtn" class="active">Add Positive (+1)</button>
+            <button id="addNegativeBtn">Add Negative (-1)</button>
+            <button id="resetBtn">Reset</button>
+            <div class="info">
+                <span>Learning Rate: <span id="learningRateDisplay"></span></span>
+                <span>Epochs/Frame: <span id="epochsPerFrameDisplay"></span></span>
+            </div>
+        </div>
+        <canvas id="perceptronCanvas" width="600" height="400"></canvas>
+        <p>Click on the canvas to add data points. Observe the decision boundary adjust.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

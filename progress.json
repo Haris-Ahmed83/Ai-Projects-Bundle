@@ -1,5 +1,5 @@
 {
-  "global_number": 9,
+  "global_number": 11,
   "completed": [
     1,
     2,
@@ -8,7 +8,9 @@
     5,
     6,
     7,
-    8
+    8,
+    9,
+    10
   ],
   "history": [
     {
@@ -74,8 +76,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 9,
+      "name": "Perceptron Learning Visualizer",
+      "concepts": "Machine Learning, Neural Networks, Data Visualization, Interactive Simulation",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 10,
+      "name": "AI Image Identifier",
+      "concepts": "AI, Machine Learning, TensorFlow.js, Image Recognition",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-09T05:46:02Z",
+  "last_run": "2026-08-09T06:38:20Z",
   "fallback_count": 3
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Identifier</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Identifier</h1>
+        <p>Upload an image or use your webcam to see what an AI model thinks it is!</p>
+
+        <div class="controls">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="webcamToggle">Use Webcam</button>
+        </div>
+
+        <div class="image-area">
+            <img id="imageDisplay" src="https://via.placeholder.com/300?text=Upload+or+Webcam" alt="Image to analyze">
+            <video id="webcamVideo" autoplay playsinline muted style="display: none;"></video>
+            <canvas id="webcamCanvas" style="display: none;"></canvas>
+            <button id="captureButton" style="display: none;">Capture Frame</button>
+        </div>
+
+        <div id="loading" class="loading-spinner" style="display: none;"></div>
+
+        <div id="predictions">
+            <h2>Predictions:</h2>
+            <ul id="predictionList">
+                <li>Loading AI model...</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
