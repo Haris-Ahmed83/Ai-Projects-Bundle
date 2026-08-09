@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Content Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Content Recommender</h1>
+
+        <div class="input-section">
+            <label for="preferences">Tell us your preferences (e.g., sci-fi, adventure, learning, history):</label>
+            <textarea id="preferences" rows="5" placeholder="Enter keywords separated by commas..."></textarea>
+            <button id="getRecommendations">Get Recommendations</button>
+        </div>
+
+        <div class="recommendations-section">
+            <h2>Your Personalized Recommendations:</h2>
+            <div id="recommendationsList" class="recommendations-grid">
+                <!-- Recommendations will be displayed here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Bar Chart Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Bar Chart Generator</h1>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="chartTitle">Chart Title:</label>
+                <input type="text" id="chartTitle" value="My Awesome Chart">
+            </div>
+
+            <div class="input-group">
+                <label for="dataInput">Numerical Data (comma-separated):</label>
+                <textarea id="dataInput" placeholder="e.g., 10,20,30,15,25">10,20,30,15,25</textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="labelsInput">Labels (comma-separated):</label>
+                <textarea id="labelsInput" placeholder="e.g., Jan,Feb,Mar,Apr,May">Jan,Feb,Mar,Apr,May</textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="barColor">Bar Color:</label>
+                <input type="color" id="barColor" value="#4CAF50">
+            </div>
+
+            <button id="generateChartBtn">Generate Chart</button>
+        </div>
+
+        <div class="chart-container" id="chartContainer">
+            <!-- Chart will be rendered here -->
+            <p class="placeholder">Input data and click "Generate Chart" to see your visualization!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
