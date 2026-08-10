@@ -1,5 +1,5 @@
 {
-  "global_number": 11,
+  "global_number": 13,
   "completed": [
     1,
     2,
@@ -10,7 +10,9 @@
     7,
     8,
     9,
-    10
+    10,
+    11,
+    12
   ],
   "history": [
     {
@@ -92,8 +94,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 11,
+      "name": "Voice Note & Transcription Pad",
+      "concepts": "Web Speech API, real-time transcription, audio input, local storage",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 12,
+      "name": "Text Readability Analyzer",
+      "concepts": "text analysis, natural language processing, metrics, user interface",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-09T06:38:20Z",
+  "last_run": "2026-08-10T06:11:33Z",
   "fallback_count": 3
 }

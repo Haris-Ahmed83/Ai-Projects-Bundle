@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Note & Transcription Pad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice Note & Transcription Pad</h1>
+        <p class="status-message" id="statusMessage">Click "Start Recording" to begin.</p>
+
+        <button id="recordButton">Start Recording</button>
+
+        <div class="transcription-output">
+            <h2>Current Transcription:</h2>
+            <p id="currentTranscription" class="interim-text"></p>
+        </div>
+
+        <div class="saved-notes">
+            <h2>Saved Notes:</h2>
+            <ul id="notesList">
+                <!-- Notes will be injected here by JavaScript -->
+            </ul>
+            <button id="clearNotesButton" class="secondary-button">Clear All Notes</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

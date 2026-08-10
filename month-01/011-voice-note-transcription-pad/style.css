@@ -1,0 +1,130 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.status-message {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.status-message.error {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.secondary-button {
+    background-color: #e74c3c;
+    margin-top: 20px;
+}
+
+.secondary-button:hover {
+    background-color: #c0392b;
+}
+
+.transcription-output {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 80px;
+    text-align: left;
+}
+
+#currentTranscription {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.saved-notes {
+    margin-top: 30px;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+#notesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#notesList li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#notesList li .note-timestamp {
+    font-size: 0.85em;
+    color: #888;
+    text-align: right;
+    margin-top: 5px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Readability Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Readability Analyzer</h1>
+        <p>Enter your text below to get various readability scores.</p>
+
+        <textarea id="textInput" placeholder="Paste your text here..." rows="15"></textarea>
+        <button id="analyzeButton">Analyze Text</button>
+
+        <div class="results-container">
+            <h2>Readability Scores</h2>
+            <div class="score-grid">
+                <div class="score-card">
+                    <h3>Flesch-Kincaid Grade Level</h3>
+                    <p id="fleschKincaid" class="score">--</p>
+                    <span class="score-desc">Easily understood by a person with a grade-level education.</span>
+                </div>
+                <div class="score-card">
+                    <h3>Automated Readability Index (ARI)</h3>
+                    <p id="ari" class="score">--</p>
+                    <span class="score-desc">Correlates to the U.S. grade level required to understand the text.</span>
+                </div>
+                <div class="score-card">
+                    <h3>SMOG Index</h3>
+                    <p id="smog" class="score">--</p>
+                    <span class="score-desc">Years of education needed to understand the text.</span>
+                </div>
+                <div class="score-card">
+                    <h3>Gunning Fog Index</h3>
+                    <p id="gunningFog" class="score">--</p>
+                    <span class="score-desc">Indicates the number of years of formal education a person needs to understand the text.</span>
+                </div>
+            </div>
+
+            <h2>Text Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Words</h3>
+                    <p id="wordCount" class="stat">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Sentences</h3>
+                    <p id="sentenceCount" class="stat">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Syllables (Avg)</h3>
+                    <p id="avgSyllables" class="stat">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Characters (Alpha-numeric)</h3>
+                    <p id="charCount" class="stat">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
