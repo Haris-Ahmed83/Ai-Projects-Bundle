@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.plot-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+canvas {
+    border: 2px solid #3498db;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.stats-output {
+    background-color: #e8f4f8;
+    border: 1px solid #aed6f1;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: fit-content;
+    text-align: left;
+    color: #2874a6;
+}
+
+.stats-output p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.stats-output span {
+    font-weight: bold;
+    color: #1a5276;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+@media (min-width: 768px) {
+    .plot-area {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+        width: auto;
+    }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression Line Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Regression Line Explorer</h1>
+        <p>Click on the plot to add data points. The regression line will update automatically.</p>
+        <div class="plot-area">
+            <canvas id="regressionCanvas" width="600" height="400"></canvas>
+            <div class="controls">
+                <div class="stats-output">
+                    <p>Equation: <span id="equationOutput">y = mx + b</span></p>
+                    <p>R-squared: <span id="rSquaredOutput">N/A</span></p>
+                </div>
+                <button id="clearDataBtn">Clear Data</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

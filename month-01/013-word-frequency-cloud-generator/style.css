@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 150px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end; /* Align button to the right */
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.results-section {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between words */
+    justify-content: center; /* Center words in the cloud */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-height: 100px;
+    border: 1px dashed #e0e0e0;
+    align-items: center; /* Vertically center content when few words */
+}
+
+.word-item {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    white-space: nowrap; /* Prevent words from breaking */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: default;
+    font-weight: bold;
+}
+
+.word-item:hover {
+    transform: translateY(-2px);
+    background-color: #dce0e1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    button {
+        align-self: stretch; /* Make button full width on smaller screens */
+    }
+    .word-cloud {
+        padding: 10px;
+    }
+}

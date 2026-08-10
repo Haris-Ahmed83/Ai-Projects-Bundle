@@ -1,5 +1,5 @@
 {
-  "global_number": 13,
+  "global_number": 15,
   "completed": [
     1,
     2,
@@ -12,7 +12,9 @@
     9,
     10,
     11,
-    12
+    12,
+    13,
+    14
   ],
   "history": [
     {
@@ -110,8 +112,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 13,
+      "name": "Word Frequency & Cloud Generator",
+      "concepts": "text analysis, data visualization, natural language processing (basic), client-side processing",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 14,
+      "name": "Regression Line Explorer",
+      "concepts": "data visualization, linear regression, statistics, machine learning fundamentals",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-10T06:11:33Z",
+  "last_run": "2026-08-10T07:09:48Z",
   "fallback_count": 3
 }
