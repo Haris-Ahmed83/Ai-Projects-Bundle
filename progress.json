@@ -1,5 +1,5 @@
 {
-  "global_number": 15,
+  "global_number": 17,
   "completed": [
     1,
     2,
@@ -14,7 +14,9 @@
     11,
     12,
     13,
-    14
+    14,
+    15,
+    16
   ],
   "history": [
     {
@@ -128,8 +130,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 15,
+      "name": "Spaced Repetition Flashcard App",
+      "concepts": "spaced repetition, flashcards, local storage, data tracking, learning algorithm",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 16,
+      "name": "Pathfinding Visualizer",
+      "concepts": "algorithms, data structures, interactive visualization, grid systems",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-10T07:09:48Z",
+  "last_run": "2026-08-11T05:54:05Z",
   "fallback_count": 3
 }

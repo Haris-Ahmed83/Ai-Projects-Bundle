@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaced Repetition Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flashcard Learner</h1>
+        <button id="add-card-btn" class="btn primary">Add New Card</button>
+
+        <div id="card-message" class="message" style="display: none;"></div>
+
+        <div id="card-container" class="flashcard" style="display: none;">
+            <p id="card-question" class="card-text"></p>
+            <p id="card-answer" class="card-text answer" style="display: none;"></p>
+            <button id="show-answer-btn" class="btn secondary">Show Answer</button>
+            <div id="rating-buttons" class="rating-buttons" style="display: none;">
+                <button id="hard-btn" class="btn rating hard">Hard</button>
+                <button id="good-btn" class="btn rating good">Good</button>
+                <button id="easy-btn" class="btn rating easy">Easy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Card Modal -->
+    <div id="add-card-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button" id="close-add-card-modal">&times;</span>
+            <h2>Add New Flashcard</h2>
+            <form id="add-card-form">
+                <div class="form-group">
+                    <label for="new-question">Question:</label>
+                    <textarea id="new-question" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="new-answer">Answer:</label>
+                    <textarea id="new-answer" required></textarea>
+                </div>
+                <button type="submit" class="btn primary">Save Card</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
