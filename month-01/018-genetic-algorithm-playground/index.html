@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Algorithm Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Genetic Algorithm Playground</h1>
+        <p>
+            Visualize natural selection and evolution to find a target phrase. Adjust parameters and watch the algorithm evolve solutions!
+        </p>
+
+        <div class="controls card">
+            <h2>Parameters</h2>
+            <div class="input-group">
+                <label for="targetPhrase">Target Phrase:</label>
+                <input type="text" id="targetPhrase" value="Hello World!" placeholder="e.g., Hello World!">
+            </div>
+            <div class="input-group">
+                <label for="populationSize">Population Size:</label>
+                <input type="number" id="populationSize" value="200" min="10">
+            </div>
+            <div class="input-group">
+                <label for="mutationRate">Mutation Rate (0-1):</label>
+                <input type="number" id="mutationRate" value="0.01" step="0.001" min="0" max="1">
+            </div>
+            <div class="buttons">
+                <button id="startBtn">Start Evolution</button>
+                <button id="stopBtn" disabled>Stop Evolution</button>
+            </div>
+        </div>
+
+        <div class="results-area">
+            <div class="card">
+                <h2>Current Best</h2>
+                <p>Generation: <span id="generation">0</span></p>
+                <p>Best Phrase: <span id="bestPhrase">N/A</span></p>
+                <p>Best Fitness: <span id="bestFitness">0%</span></p>
+            </div>
+            <div class="card">
+                <h2>Visualization</h2>
+                <canvas id="visualizationCanvas" width="400" height="50"></canvas>
+                <p>Population Sample:</p>
+                <div id="populationOutput" class="population-sample">
+                    <!-- Population sample will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

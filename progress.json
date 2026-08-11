@@ -1,5 +1,5 @@
 {
-  "global_number": 17,
+  "global_number": 19,
   "completed": [
     1,
     2,
@@ -16,7 +16,9 @@
     13,
     14,
     15,
-    16
+    16,
+    17,
+    18
   ],
   "history": [
     {
@@ -146,8 +148,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 17,
+      "name": "Cellular Automata Simulator",
+      "concepts": "cellular automata, simulation, grid visualization, algorithms, JavaScript canvas",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 18,
+      "name": "Genetic Algorithm Playground",
+      "concepts": "AI, Genetic Algorithms, Visualization, Canvas API",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-11T05:54:05Z",
+  "last_run": "2026-08-11T06:53:06Z",
   "fallback_count": 3
 }
