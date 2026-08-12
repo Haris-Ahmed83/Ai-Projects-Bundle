@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Webcam Filters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Webcam Filters</h1>
+
+        <div class="controls">
+            <label for="filter-select">Choose a Filter:</label>
+            <select id="filter-select">
+                <option value="none">No Filter</option>
+                <option value="grayscale">Grayscale</option>
+                <option value="sepia">Sepia</option>
+                <option value="invert">Invert</option>
+                <option value="threshold">Threshold</option>
+            </select>
+        </div>
+
+        <div class="webcam-display">
+            <video id="webcam-feed" autoplay playsinline></video>
+            <canvas id="filtered-feed"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

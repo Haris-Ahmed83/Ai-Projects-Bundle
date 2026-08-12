@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markov Chain Text Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Markov Chain Text Generator</h1>
+
+        <div class="input-section">
+            <label for="corpusText">Text Corpus:</label>
+            <textarea id="corpusText" rows="10" placeholder="Paste your text corpus here (e.g., a book chapter, article).">The quick brown fox jumps over the lazy dog. The dog barks. The fox runs away. The quick dog is lazy. This is a simple example to demonstrate the power of generative AI. Natural language processing is fascinating. With enough data, a markov chain can produce surprisingly coherent text. Experiment with different orders and lengths to see the effect on the generated output. The generated text is based on the statistical probabilities learned from your input corpus.</textarea>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="orderInput">Chain Order (N-gram size):</label>
+                <input type="number" id="orderInput" value="2" min="1">
+            </div>
+            <div class="control-group">
+                <label for="lengthInput">Generated Text Length (words):</label>
+                <input type="number" id="lengthInput" value="50" min="10">
+            </div>
+            <button id="generateButton">Generate Text</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Generated Text:</h2>
+            <p id="generatedOutput">Click 'Generate Text' to see output...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

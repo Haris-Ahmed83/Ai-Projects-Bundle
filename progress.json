@@ -1,5 +1,5 @@
 {
-  "global_number": 19,
+  "global_number": 21,
   "completed": [
     1,
     2,
@@ -18,7 +18,9 @@
     15,
     16,
     17,
-    18
+    18,
+    19,
+    20
   ],
   "history": [
     {
@@ -164,8 +166,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 19,
+      "name": "Markov Chain Text Generator",
+      "concepts": "AI, NLP, text generation, statistics, vanilla JS",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 20,
+      "name": "Live Webcam Filters",
+      "concepts": "WebRTC, Canvas API, image processing, real-time effects",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-11T06:53:06Z",
+  "last_run": "2026-08-12T06:13:37Z",
   "fallback_count": 3
 }
