@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Regex Tester & Explainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Tester & Explainer</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="regexPattern">Regex Pattern:</label>
+                <textarea id="regexPattern" placeholder="e.g., \bword\b" rows="2"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="regexFlags">Flags:</label>
+                <input type="text" id="regexFlags" value="g" placeholder="e.g., gi">
+            </div>
+            <div class="input-group">
+                <label for="testString">Test String:</label>
+                <textarea id="testString" placeholder="Enter text to test against the regex" rows="6"></textarea>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div class="output-group">
+                <h2>Matches Highlighted:</h2>
+                <div id="highlightedOutput" class="output-box">No matches yet.</div>
+            </div>
+            <div class="output-group">
+                <h2>Match List:</h2>
+                <ul id="matchList" class="output-box">
+                    <li>No matches yet.</li>
+                </ul>
+            </div>
+            <div class="output-group">
+                <h2>Regex Explanation:</h2>
+                <div id="regexExplanation" class="output-box">
+                    <p>Enter a regex pattern to see an explanation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

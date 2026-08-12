@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Data Mapper</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIINfBPHOGYa65VSBqfQ9HN3A/zM+ajMPdw="
+          crossorigin=""/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Location Data Mapper</h1>
+        </header>
+        <main>
+            <div class="input-panel">
+                <h2>Add Location Data</h2>
+                <div class="input-group">
+                    <label for="latitude">Latitude:</label>
+                    <input type="number" id="latitude" placeholder="e.g., 34.0522" min="-90" max="90" step="any" required>
+                </div>
+                <div class="input-group">
+                    <label for="longitude">Longitude:</label>
+                    <input type="number" id="longitude" placeholder="e.g., -118.2437" min="-180" max="180" step="any" required>
+                </div>
+                <div class="input-group">
+                    <label for="data">Data Info:</label>
+                    <input type="text" id="data" placeholder="e.g., My favorite coffee shop" required>
+                </div>
+                <button id="addPointBtn">Add Point to Map</button>
+            </div>
+            <div id="map"></div>
+        </main>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/4M+fv3yDPOfT0/AHXgSs="
+            crossorigin=""></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
