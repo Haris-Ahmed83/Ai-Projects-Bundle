@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.controls {
+    flex: 1 1 300px; /* Allow controls to shrink/grow, min-width 300px */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.visualization {
+    flex: 2 1 600px; /* Allow visualization to shrink/grow, min-width 600px */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-x: auto; /* Enable horizontal scrolling for wide trees */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group textarea,
+.input-group input[type="text"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#tree-container {
+    margin-top: 20px;
+    text-align: center;
+    min-height: 300px; /* Ensure some height even if tree is small */
+}
+
+#tree-svg {
+    width: 100%;
+    height: 600px; /* Default height, will be dynamically adjusted */
+    border: 1px dashed #eee;
+    overflow: visible; /* Allow content to overflow SVG bounds and trigger scroll on parent */
+}
+
+/* SVG Node Styling */
+.node rect {
+    fill: #ecf0f1;
+    stroke: #34495e;
+    stroke-width: 1.5px;
+    cursor: pointer;
+}
+
+.node.leaf rect {
+    fill: #d4edda; /* Lighter green for leaf nodes */
+    stroke: #28a745;
+}
+
+.node text {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    fill: #333;
+    text-anchor: middle;
+    pointer-events: none; /* Allow click to pass through to rect */
+}
+
+.link {
+    fill: none;
+    stroke: #95a5a6;
+    stroke-width: 1.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .controls, .visualization {
+        flex: 1 1 100%; /* Take full width on small screens */
+    }
+}

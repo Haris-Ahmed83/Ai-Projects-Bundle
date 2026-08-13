@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Tree Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Decision Tree Visualizer</h1>
+    </header>
+    <main>
+        <section class="controls">
+            <div class="input-group">
+                <label for="dataset-input">Dataset (CSV format, first row header):</label>
+                <textarea id="dataset-input" rows="10">
+Outlook,Temperature,Humidity,Windy,PlayTennis
+Sunny,Hot,High,False,No
+Sunny,Hot,High,True,No
+Overcast,Hot,High,False,Yes
+Rain,Mild,High,False,Yes
+Rain,Cool,Normal,False,Yes
+Rain,Cool,Normal,True,No
+Overcast,Cool,Normal,True,Yes
+Sunny,Mild,High,False,No
+Sunny,Cool,Normal,False,Yes
+Rain,Mild,Normal,False,Yes
+Sunny,Mild,Normal,True,Yes
+Overcast,Mild,High,True,Yes
+Overcast,Hot,Normal,False,Yes
+Rain,Mild,High,True,No</textarea>
+            </div>
+            <div class="input-group">
+                <label for="target-column">Target Column Name:</label>
+                <input type="text" id="target-column" value="PlayTennis">
+            </div>
+            <div class="input-group">
+                <label for="max-depth">Max Tree Depth (0 for no limit):</label>
+                <input type="number" id="max-depth" value="3" min="0">
+            </div>
+            <button id="build-tree-btn">Build Decision Tree</button>
+        </section>
+        <section class="visualization">
+            <h2>Decision Tree</h2>
+            <div id="tree-container">
+                <svg id="tree-svg"></svg>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
