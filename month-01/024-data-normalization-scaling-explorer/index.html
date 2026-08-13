@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Normalization & Scaling Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Data Normalization & Scaling Explorer</h1>
+        <p>Visualize the effects of Min-Max Scaling and Z-score Normalization on data distribution.</p>
+    </header>
+
+    <main class="container">
+        <section class="input-panel">
+            <h2>Input Data</h2>
+            <textarea id="dataInput" rows="8" placeholder="Enter comma-separated numbers (e.g., 10, 25, 40, 55, 70)"></textarea>
+            <div class="controls">
+                <button id="generateRandomData">Generate Random Data</button>
+                <button id="processData">Process Data</button>
+            </div>
+            <p class="hint"><em>Hint:</em> Use the buttons or modify the text area to see changes.</p>
+        </section>
+
+        <section class="visualization-panel">
+            <h2>Data Distributions</h2>
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Original Data</h3>
+                    <canvas id="originalChart" width="400" height="250"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Min-Max Scaled</h3>
+                    <canvas id="minMaxChart" width="400" height="250"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Z-score Normalized</h3>
+                    <canvas id="zScoreChart" width="400" height="250"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

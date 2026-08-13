@@ -1,5 +1,5 @@
 {
-  "global_number": 23,
+  "global_number": 25,
   "completed": [
     1,
     2,
@@ -22,7 +22,9 @@
     19,
     20,
     21,
-    22
+    22,
+    23,
+    24
   ],
   "history": [
     {
@@ -200,8 +202,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 23,
+      "name": "Gradient Descent Visualizer",
+      "concepts": "machine learning, optimization, data visualization, vanilla javascript",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 24,
+      "name": "Data Normalization & Scaling Explorer",
+      "concepts": "data preprocessing, feature scaling, min-max scaling, z-score normalization, data visualization",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-12T07:10:06Z",
+  "last_run": "2026-08-13T06:15:22Z",
   "fallback_count": 3
 }
