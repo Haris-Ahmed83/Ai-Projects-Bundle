@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anomaly Detector Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Anomaly Detector Sandbox</h1>
+        <p>Input numerical data, visualize, and detect outliers based on statistical rules.</p>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <h2>Data Input</h2>
+            <textarea id="dataInput" placeholder="Enter numbers separated by commas or newlines (e.g., 10, 12, 15, 100, 18, 20)"></textarea>
+            <button id="analyzeBtn">Analyze Data</button>
+        </section>
+
+        <section class="controls-section">
+            <h2>Detection Rules</h2>
+            <div class="control-group">
+                <label for="ruleType">Rule Type:</label>
+                <select id="ruleType">
+                    <option value="zscore">Z-score</option>
+                    <option value="iqr">IQR (Interquartile Range)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="threshold">Threshold:</label>
+                <input type="number" id="threshold" value="2" step="0.1">
+                <span class="threshold-info" id="thresholdInfo"> (e.g., Z-score > 2)</span>
+            </div>
+        </section>
+
+        <section class="visualization-section">
+            <h2>Data Visualization</h2>
+            <canvas id="dataCanvas"></canvas>
+        </section>
+
+        <section class="results-section">
+            <h2>Detected Anomalies</h2>
+            <ul id="anomalyList">
+                <li>No anomalies detected yet.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Anomaly Detector Sandbox</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

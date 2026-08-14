@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Limit Theorem Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Central Limit Theorem Visualizer</h1>
+        <p>Explore how the distribution of sample means approaches a normal distribution, regardless of the original population distribution. Increase the 'Sample Size (n)' to see the effect more clearly.</p>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="baseDist">Base Distribution:</label>
+                <select id="baseDist">
+                    <option value="uniform">Uniform (0,1)</option>
+                    <option value="exponential">Exponential (λ=0.5)</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="sampleSize">Sample Size (n):</label>
+                <input type="number" id="sampleSize" value="30" min="2" max="1000">
+            </div>
+            <div class="control-group">
+                <label for="numSamples">Number of Samples (N):</label>
+                <input type="number" id="numSamples" value="1000" min="10" max="10000">
+            </div>
+            <div class="button-group">
+                <button id="runSimulation">Run Simulation</button>
+                <button id="resetSimulation">Reset</button>
+            </div>
+        </div>
+
+        <div class="visualization">
+            <div class="chart-container">
+                <h2>Base Distribution (Population)</h2>
+                <canvas id="baseDistCanvas" width="500" height="300"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Distribution of Sample Means</h2>
+                <canvas id="sampleMeansCanvas" width="500" height="300"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

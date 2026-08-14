@@ -1,5 +1,5 @@
 {
-  "global_number": 27,
+  "global_number": 29,
   "completed": [
     1,
     2,
@@ -26,7 +26,9 @@
     23,
     24,
     25,
-    26
+    26,
+    27,
+    28
   ],
   "history": [
     {
@@ -236,8 +238,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 27,
+      "name": "Central Limit Theorem Visualizer",
+      "concepts": "statistics, probability, data visualization, sampling, normal distribution, histogram, interactive simulation",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 28,
+      "name": "Anomaly Detector Sandbox",
+      "concepts": "data visualization, anomaly detection, statistical analysis, interactive UI",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-13T07:20:38Z",
+  "last_run": "2026-08-14T06:14:05Z",
   "fallback_count": 3
 }
