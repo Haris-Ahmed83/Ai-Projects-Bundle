@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Text Extractor</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tesseract.js CDN for client-side OCR -->
+    <script src="https://unpkg.com/tesseract.js@5.0.0/dist/tesseract.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>OCR Text Extractor</h1>
+        <p>Upload an image and extract text using client-side Optical Character Recognition.</p>
+
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-button">Choose Image</label>
+            <div id="fileName" class="file-name">No image chosen</div>
+        </div>
+
+        <div class="image-preview-section">
+            <img id="imagePreview" src="#" alt="Image Preview" class="hidden">
+            <p id="noImageText">No image selected for preview.</p>
+        </div>
+
+        <div class="controls">
+            <button id="extractButton" disabled>Extract Text</button>
+            <p id="status" class="status-message"></p>
+        </div>
+
+        <div class="result-section">
+            <h2>Extracted Text</h2>
+            <textarea id="extractedText" rows="10" placeholder="Extracted text will appear here..." readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

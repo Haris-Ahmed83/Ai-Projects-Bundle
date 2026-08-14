@@ -1,0 +1,223 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#imageUpload {
+    display: none; /* Hide the default file input */
+}
+
+.upload-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+    min-width: 150px;
+    display: inline-block;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+.file-name {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    text-align: center;
+    word-break: break-all; /* Allow long file names to wrap */
+}
+
+.image-preview-section {
+    text-align: center;
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 150px; /* Ensure some height even without image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent image from overflowing */
+}
+
+#imagePreview {
+    max-width: 100%;
+    max-height: 300px; /* Limit preview height */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    object-fit: contain; /* Ensure the whole image is visible */
+}
+
+#noImageText {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#extractButton {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 200px;
+}
+
+#extractButton:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#extractButton:disabled {
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.status-message {
+    color: var(--secondary-color);
+    font-style: italic;
+    min-height: 20px; /* Reserve space for status message */
+    text-align: center;
+}
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#extractedText {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    line-height: 1.6;
+    resize: vertical; /* Allow vertical resizing */
+    background-color: #fefefe;
+    color: var(--text-color);
+    min-height: 150px;
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    #imagePreview {
+        max-height: 250px;
+    }
+
+    .upload-button,
+    #extractButton {
+        min-width: unset;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .upload-button,
+    #extractButton {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    #imagePreview {
+        max-height: 200px;
+    }
+}

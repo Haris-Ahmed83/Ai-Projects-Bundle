@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naive Bayes Classifier Explainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Naive Bayes Classifier Explainer</h1>
+
+        <section class="explanation">
+            <p>
+                This interactive tool visually demonstrates the Naive Bayes classification algorithm.
+                Naive Bayes is a probabilistic machine learning algorithm used for classification tasks.
+                It's based on Bayes' Theorem with an assumption of independence among predictors (features).
+                Here, we classify 2D data points into two classes (A or B) based on their X and Y coordinates.
+            </p>
+            <p>
+                <strong>How it works:</strong>
+                <ol>
+                    <li><strong>Training:</strong> Add data points belonging to Class A or Class B. The algorithm learns the probability distribution (mean and standard deviation for X and Y) for each class.</li>
+                    <li><strong>Classification:</strong> Input a new point. Naive Bayes calculates the probability that this new point belongs to Class A versus Class B, based on the learned distributions and the prior probabilities of each class.</li>
+                    <li><strong>Assumption:</strong> It assumes that the X and Y features are independent given the class.</li>
+                </ol>
+            </p>
+        </section>
+
+        <div class="controls-grid">
+            <div class="data-input-section">
+                <h2>Add Training Data</h2>
+                <div class="input-group">
+                    <label for="addDataX">X:</label>
+                    <input type="number" id="addDataX" value="20" min="0" max="100">
+                </div>
+                <div class="input-group">
+                    <label for="addDataY">Y:</label>
+                    <input type="number" id="addDataY" value="30" min="0" max="100">
+                </div>
+                <div class="input-group">
+                    <label for="addDataClass">Class:</label>
+                    <select id="addDataClass">
+                        <option value="A">Class A</option>
+                        <option value="B">Class B</option>
+                    </select>
+                </div>
+                <button id="addPointBtn" class="btn">Add Data Point</button>
+                <button id="resetDataBtn" class="btn btn-secondary">Reset Data</button>
+            </div>
+
+            <div class="classification-section">
+                <h2>Classify New Point</h2>
+                <div class="input-group">
+                    <label for="classifyX">X:</label>
+                    <input type="number" id="classifyX" value="50" min="0" max="100">
+                </div>
+                <div class="input-group">
+                    <label for="classifyY">Y:</label>
+                    <input type="number" id="classifyY" value="50" min="0" max="100">
+                </div>
+                <button id="classifyPointBtn" class="btn">Classify Point</button>
+                <div id="classificationResults" class="results-box">
+                    <strong>Predicted Class:</strong> <span id="predictedClass">N/A</span><br>
+                    <strong>Probabilities:</strong><br>
+                    P(Class A | X, Y): <span id="probA">N/A</span><br>
+                    P(Class B | X, Y): <span id="probB">N/A</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="visualization-section">
+            <h2>Data Visualization</h2>
+            <canvas id="bayesCanvas" width="600" height="400"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
