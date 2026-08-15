@@ -1,0 +1,185 @@
+/* Basic Reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fbfd;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #34495e;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #e0e6ea;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.input-section, .controls-section {
+    grid-column: span 1;
+}
+
+.visualization-section {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 992px) {
+    main {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    .input-section { grid-column: 1; }
+    .controls-section { grid-column: 2; }
+    .visualization-section { grid-column: 3; }
+}
+
+@media (max-width: 991px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .input-section, .controls-section, .visualization-section {
+        grid-column: 1;
+    }
+}
+
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    resize: vertical;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.input-actions button,
+.control-group button,
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.control-group {
+    margin-bottom: 18px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.control-group select,
+.control-group input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fdfdfd;
+}
+
+.chart-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+canvas {
+    display: block;
+    background-color: #fafafa;
+    border: 1px solid #e0e6ea;
+    border-radius: 8px;
+    max-width: 100%;
+    height: 400px; /* Fixed height for consistent visualization */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.legend {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.legend-item {
+    display: inline-block;
+    margin: 0 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #555;
+}
+
+.legend-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.legend-item.original-data::before {
+    background-color: #3498db; /* Blue */
+}
+
+.legend-item.forecast-data::before {
+    background-color: #e74c3c; /* Red */
+    border-top: 2px dashed #e74c3c; /* Dashed line for forecast */
+    background-image: none; /* Override background-color for dashed effect */
+}

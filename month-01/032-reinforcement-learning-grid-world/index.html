@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RL Grid World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reinforcement Learning Grid World</h1>
+        <p class="description">
+            A simple agent learns to navigate a grid to reach a goal, avoiding obstacles, using a simplified Q-learning algorithm.
+            The agent explores the environment and updates its knowledge (Q-values) to find the optimal path.
+        </p>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="grid-size">Grid Size:</label>
+                <input type="number" id="grid-size" value="10" min="5" max="20">
+            </div>
+            <div class="control-group">
+                <label for="speed-slider">Simulation Speed:</label>
+                <input type="range" id="speed-slider" min="10" max="1000" value="100">
+                <span id="speed-value">100ms</span>
+            </div>
+            <div class="control-group">
+                <button id="reset-button">Reset Grid</button>
+                <button id="learn-button">Start Learning</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div id="grid-container" class="grid-container"></div>
+            <div class="info-panel">
+                <p>Episode: <span id="episode-display">0</span></p>
+                <p>Total Steps: <span id="steps-display">0</span></p>
+                <p>Epsilon (Exploration Rate): <span id="epsilon-display">1.0</span></p>
+                <p>Status: <span id="status-display">Ready. Adjust grid size and press 'Reset Grid'.</span></p>
+                <div class="legend">
+                    <h3>Legend:</h3>
+                    <div class="legend-item"><span class="cell start-legend"></span> Start</div>
+                    <div class="legend-item"><span class="cell goal-legend"></span> Goal</div>
+                    <div class="legend-item"><span class="cell agent-legend"></span> Agent</div>
+                    <div class="legend-item"><span class="cell obstacle-legend"></span> Obstacle</div>
+                    <div class="legend-item"><span class="cell empty-legend"></span> Empty</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "global_number": 31,
+  "global_number": 33,
   "completed": [
     1,
     2,
@@ -30,7 +30,9 @@
     27,
     28,
     29,
-    30
+    30,
+    31,
+    32
   ],
   "history": [
     {
@@ -272,8 +274,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 31,
+      "name": "Time Series Forecasting Explorer",
+      "concepts": "Time Series Analysis, Data Visualization, Predictive Modeling, Moving Average, Exponential Smoothing",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 32,
+      "name": "Reinforcement Learning Grid World",
+      "concepts": "reinforcement learning, agent simulation, Q-learning (simplified), grid visualization",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-14T07:09:37Z",
+  "last_run": "2026-08-15T05:23:12Z",
   "fallback_count": 3
 }
