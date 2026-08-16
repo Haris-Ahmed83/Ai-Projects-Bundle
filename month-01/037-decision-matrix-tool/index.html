@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Matrix Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Decision Matrix Tool</h1>
+        <p class="description">List your options and criteria, assign weights to criteria, then score each option against each criterion to find the best decision.</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="option-name-input" placeholder="e.g., Car Model A">
+                <button id="add-option-btn">Add Option</button>
+            </div>
+            <div class="input-group">
+                <input type="text" id="criterion-name-input" placeholder="e.g., Price, Features">
+                <button id="add-criterion-btn">Add Criterion</button>
+            </div>
+        </div>
+
+        <div class="matrix-section">
+            <h2>Criteria & Weights <span class="info">(1 = Low Importance, 10 = High Importance)</span></h2>
+            <div id="criteria-list">
+                <!-- Criteria inputs will go here -->
+            </div>
+
+            <h2>Decision Matrix <span class="info">(1 = Poor, 5 = Excellent)</span></h2>
+            <div class="matrix-table-container">
+                <table id="decision-matrix-table">
+                    <thead>
+                        <tr id="matrix-header-row">
+                            <th>Options \ Criteria</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matrix-body">
+                        <!-- Options rows will go here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="calculate-btn">Calculate Scores</button>
+        </div>
+
+        <div class="results-section">
+            <h2>Results</h2>
+            <div id="results-display">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

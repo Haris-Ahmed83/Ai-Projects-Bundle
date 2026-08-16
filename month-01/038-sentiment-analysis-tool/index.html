@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Tool</h1>
+        <p class="description">
+            Analyze the emotional tone of any given text. Input your text below and see a breakdown of its sentiment.
+        </p>
+
+        <div class="input-section">
+            <label for="textInput">Enter your text here:</label>
+            <textarea id="textInput" rows="10" placeholder="Type or paste text here..."></textarea>
+            <button id="analyzeBtn">Analyze Sentiment</button>
+        </div>
+
+        <div id="resultsContainer" class="results-section">
+            <h2>Sentiment Breakdown</h2>
+            <div class="sentiment-item">
+                <span class="sentiment-label positive">Positive:</span>
+                <div class="progress-bar-container">
+                    <div id="positiveBar" class="progress-bar positive"></div>
+                </div>
+                <span id="positiveScore" class="sentiment-score">0%</span>
+            </div>
+
+            <div class="sentiment-item">
+                <span class="sentiment-label neutral">Neutral:</span>
+                <div class="progress-bar-container">
+                    <div id="neutralBar" class="progress-bar neutral"></div>
+                </div>
+                <span id="neutralScore" class="sentiment-score">0%</span>
+            </div>
+
+            <div class="sentiment-item">
+                <span class="sentiment-label negative">Negative:</span>
+                <div class="progress-bar-container">
+                    <div id="negativeBar" class="progress-bar negative"></div>
+                </div>
+                <span id="negativeScore" class="sentiment-score">0%</span>
+            </div>
+            <p class="disclaimer">
+                <small>Note: This tool uses a simplified keyword-based analysis and may not capture complex nuances of human language.</small>
+            </p>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "global_number": 37,
+  "global_number": 39,
   "completed": [
     1,
     2,
@@ -36,7 +36,9 @@
     33,
     34,
     35,
-    36
+    36,
+    37,
+    38
   ],
   "history": [
     {
@@ -326,8 +328,24 @@
       "month": 1,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 37,
+      "name": "Decision Matrix Tool",
+      "concepts": "decision making, criteria weighting, data visualization, interactive UI",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 38,
+      "name": "Sentiment Analysis Tool",
+      "concepts": "natural language processing, text analysis, data visualization, web forms",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-16T05:26:10Z",
+  "last_run": "2026-08-16T06:22:53Z",
   "fallback_count": 5
 }
