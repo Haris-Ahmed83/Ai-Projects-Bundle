@@ -1,0 +1,184 @@
+:root {
+    --bg-color: #282c34;
+    --text-color: #ffffff;
+    --card-bg: #3a404a;
+    --header-bg: #1e2127;
+    --footer-bg: #1e2127;
+    --accent-color: #61dafb;
+    --border-color: #444b56;
+
+    --status-normal: #28a745; /* Green */
+    --status-warn: #ffc107;   /* Yellow */
+    --status-critical: #dc3545; /* Red */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.dashboard-container {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dashboard-header {
+    background-color: var(--header-bg);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-header h1 {
+    font-size: 2em;
+    color: var(--accent-color);
+}
+
+.controls button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.controls button:hover {
+    background-color: #4ac2e8;
+    transform: translateY(-1px);
+}
+
+.controls button:active {
+    transform: translateY(0);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.value-display {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+    transition: color 0.3s ease;
+}
+
+.value-display .value {
+    display: inline-block;
+    min-width: 80px; /* Ensure consistent width */
+    text-align: right;
+}
+
+.value-display .unit {
+    font-size: 0.6em;
+    opacity: 0.7;
+    margin-left: 5px;
+}
+
+/* Status Colors for values */
+.value-display.status-normal .value { color: var(--status-normal); }
+.value-display.status-warn .value    { color: var(--status-warn); }
+.value-display.status-critical .value { color: var(--status-critical); }
+
+.trend-sparkline {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    overflow: hidden;
+    padding: 2px;
+}
+
+.spark-bar {
+    flex-grow: 1;
+    background-color: var(--accent-color);
+    min-width: 2px;
+    border-radius: 2px;
+    transition: height 0.1s ease-out, background-color 0.3s ease;
+}
+
+.spark-bar.status-normal { background-color: var(--status-normal); }
+.spark-bar.status-warn   { background-color: var(--status-warn); }
+.spark-bar.status-critical { background-color: var(--status-critical); }
+
+.dashboard-footer {
+    background-color: var(--footer-bg);
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #bbb;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dashboard-header h1 {
+        margin-bottom: 15px;
+    }
+    .controls button {
+        margin: 5px;
+    }
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
