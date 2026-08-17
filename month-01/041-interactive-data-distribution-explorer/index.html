@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Distribution Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Data Distribution Explorer</h1>
+
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="distribution-select">Distribution Type:</label>
+                <select id="distribution-select">
+                    <option value="normal">Normal</option>
+                    <option value="uniform">Uniform</option>
+                    <option value="exponential">Exponential</option>
+                </select>
+            </div>
+
+            <div id="normal-params" class="param-group">
+                <div class="control-group">
+                    <label for="normal-mean">Mean (μ):</label>
+                    <input type="number" id="normal-mean" value="0" step="0.1">
+                </div>
+                <div class="control-group">
+                    <label for="normal-stddev">Std Dev (σ):</label>
+                    <input type="number" id="normal-stddev" value="1" step="0.1" min="0.1">
+                </div>
+            </div>
+
+            <div id="uniform-params" class="param-group hidden">
+                <div class="control-group">
+                    <label for="uniform-min">Min:</label>
+                    <input type="number" id="uniform-min" value="0" step="0.1">
+                </div>
+                <div class="control-group">
+                    <label for="uniform-max">Max:</label>
+                    <input type="number" id="uniform-max" value="1" step="0.1">
+                </div>
+            </div>
+
+            <div id="exponential-params" class="param-group hidden">
+                <div class="control-group">
+                    <label for="exponential-lambda">Lambda (λ):</label>
+                    <input type="number" id="exponential-lambda" value="1" step="0.1" min="0.1">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="sample-count">Sample Count:</label>
+                <input type="number" id="sample-count" value="10000" min="100" max="100000">
+            </div>
+
+            <button id="generate-button">Generate & Visualize</button>
+        </div>
+
+        <div class="visualization-panel">
+            <h2>Distribution Visualization</h2>
+            <canvas id="distribution-canvas" width="800" height="400"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

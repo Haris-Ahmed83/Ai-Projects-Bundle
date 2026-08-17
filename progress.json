@@ -1,5 +1,5 @@
 {
-  "global_number": 41,
+  "global_number": 43,
   "completed": [
     1,
     2,
@@ -40,7 +40,9 @@
     37,
     38,
     39,
-    40
+    40,
+    41,
+    42
   ],
   "history": [
     {
@@ -362,8 +364,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 41,
+      "name": "Interactive Data Distribution Explorer",
+      "concepts": "statistics, data visualization, probability, JavaScript",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 42,
+      "name": "Sentiment Analysis Dashboard",
+      "concepts": "Fetch API, JSON Parsing",
+      "month": 1,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-08-17T05:33:47Z",
-  "fallback_count": 5
+  "last_run": "2026-08-17T06:33:02Z",
+  "fallback_count": 6
 }
