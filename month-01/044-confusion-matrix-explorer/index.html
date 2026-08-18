@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confusion Matrix Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Confusion Matrix Explorer</h1>
+        <p>An interactive tool to visualize classification model performance. Input values to calculate key metrics and see a color-coded confusion matrix.</p>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <h2>Input Data</h2>
+            <div class="input-grid">
+                <div>
+                    <label for="tp">True Positives (TP):</label>
+                    <input type="number" id="tp" value="100" min="0">
+                </div>
+                <div>
+                    <label for="fp">False Positives (FP):</label>
+                    <input type="number" id="fp" value="10" min="0">
+                </div>
+                <div>
+                    <label for="fn">False Negatives (FN):</label>
+                    <input type="number" id="fn" value="5" min="0">
+                </div>
+                <div>
+                    <label for="tn">True Negatives (TN):</label>
+                    <input type="number" id="tn" value="80" min="0">
+                </div>
+            </div>
+            <button id="calculateBtn">Calculate Metrics</button>
+        </section>
+
+        <section class="results-section">
+            <div class="matrix-metrics-container">
+                <div class="confusion-matrix-container">
+                    <h2>Confusion Matrix</h2>
+                    <div class="confusion-matrix">
+                        <div class="matrix-cell empty"></div>
+                        <div class="matrix-cell label-header">Predicted Positive</div>
+                        <div class="matrix-cell label-header">Predicted Negative</div>
+
+                        <div class="matrix-cell label-header">Actual Positive</div>
+                        <div class="matrix-cell matrix-tp" id="matrix-tp">0</div>
+                        <div class="matrix-cell matrix-fn" id="matrix-fn">0</div>
+
+                        <div class="matrix-cell label-header">Actual Negative</div>
+                        <div class="matrix-cell matrix-fp" id="matrix-fp">0</div>
+                        <div class="matrix-cell matrix-tn" id="matrix-tn">0</div>
+                    </div>
+                </div>
+
+                <div class="metrics-container">
+                    <h2>Performance Metrics</h2>
+                    <div class="metric-item">
+                        <span>Accuracy:</span>
+                        <span id="accuracy">N/A</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Precision:</span>
+                        <span id="precision">N/A</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>Recall:</span>
+                        <span id="recall">N/A</span>
+                    </div>
+                    <div class="metric-item">
+                        <span>F1-Score:</span>
+                        <span id="f1score">N/A</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

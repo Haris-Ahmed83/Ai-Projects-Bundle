@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceptron Learning Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perceptron Visualizer</h1>
+        <div class="controls">
+            <div class="class-selection">
+                <span>Add point as:</span>
+                <input type="radio" id="class1" name="add_class" value="1" checked>
+                <label for="class1" class="class1-label">Class 1 (+1)</label>
+                <input type="radio" id="class2" name="add_class" value="-1">
+                <label for="class2" class="class2-label">Class 2 (-1)</label>
+            </div>
+            <button id="startButton">Start Training</button>
+            <button id="resetButton">Reset</button>
+            <div class="stats">
+                <p>Iterations: <span id="iterationsDisplay">0</span></p>
+                <p>Accuracy: <span id="accuracyDisplay">0%</span></p>
+                <p>Weights: W1=<span id="weight1Display">0.00</span>, W2=<span id="weight2Display">0.00</span></p>
+                <p>Bias: <span id="biasDisplay">0.00</span></p>
+            </div>
+        </div>
+        <canvas id="perceptronCanvas" width="400" height="400"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

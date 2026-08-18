@@ -1,5 +1,5 @@
 {
-  "global_number": 43,
+  "global_number": 45,
   "completed": [
     1,
     2,
@@ -42,7 +42,9 @@
     39,
     40,
     41,
-    42
+    42,
+    43,
+    44
   ],
   "history": [
     {
@@ -380,8 +382,24 @@
       "month": 1,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 43,
+      "name": "Perceptron Learning Visualizer",
+      "concepts": "Machine Learning, Perceptron, Neural Networks, Classification, Data Visualization, Interactive Learning",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 44,
+      "name": "Confusion Matrix Explorer",
+      "concepts": "Machine Learning, Classification, Model Evaluation, Data Visualization, Performance Metrics",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-17T06:33:02Z",
+  "last_run": "2026-08-18T05:27:47Z",
   "fallback_count": 6
 }

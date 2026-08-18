@@ -1,0 +1,125 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.class-selection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95em;
+}
+
+.class-selection input[type="radio"] {
+    margin-left: 10px;
+}
+
+.class1-label {
+    color: #e74c3c; /* Red */
+    font-weight: bold;
+}
+
+.class2-label {
+    color: #3498db; /* Blue */
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#startButton {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+#startButton.stop {
+    background-color: #dc3545; /* Red */
+}
+
+#startButton:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+#startButton.stop:hover {
+    background-color: #c82333;
+}
+
+#resetButton {
+    background-color: #6c757d; /* Gray */
+    color: white;
+}
+
+#resetButton:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.stats p {
+    margin: 0;
+}
+
+.stats span {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+canvas {
+    border: 2px solid #ccc;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    align-self: center; /* Center canvas in flex container */
+}
