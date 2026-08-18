@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Synthesis & Recognition Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Speech Synthesis & Recognition</h1>
+
+        <section class="synthesis-section">
+            <h2>Text-to-Speech</h2>
+            <div class="control-group">
+                <label for="text-to-speak">Text to speak:</label>
+                <textarea id="text-to-speak" placeholder="Enter text here..." rows="5">Hello, this is a speech synthesis and recognition demo using the Web Speech API.</textarea>
+            </div>
+            <div class="control-group">
+                <label for="voice-select">Voice:</label>
+                <select id="voice-select"></select>
+            </div>
+            <div class="control-group">
+                <label for="pitch">Pitch: <span id="pitch-value">1</span></label>
+                <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+            </div>
+            <div class="control-group">
+                <label for="rate">Rate: <span id="rate-value">1</span></label>
+                <input type="range" id="rate" min="0.1" max="10" value="1" step="0.1">
+            </div>
+            <div class="button-group">
+                <button id="speak-button">Speak</button>
+                <button id="stop-synthesis-button" disabled>Stop Speaking</button>
+            </div>
+        </section>
+
+        <section class="recognition-section">
+            <h2>Speech-to-Text</h2>
+            <p class="warning" id="recognition-warning"></p>
+            <div class="button-group">
+                <button id="start-recognition-button">Start Listening</button>
+                <button id="stop-recognition-button" disabled>Stop Listening</button>
+            </div>
+            <div class="recognition-output">
+                <h3>Recognized Text:</h3>
+                <p id="recognition-result">Click 'Start Listening' and speak into your microphone.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

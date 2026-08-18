@@ -1,5 +1,5 @@
 {
-  "global_number": 45,
+  "global_number": 47,
   "completed": [
     1,
     2,
@@ -44,7 +44,9 @@
     41,
     42,
     43,
-    44
+    44,
+    45,
+    46
   ],
   "history": [
     {
@@ -398,8 +400,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 45,
+      "name": "Interactive Linear Regression Fitter",
+      "concepts": "linear regression, data visualization, least squares, vanilla JavaScript",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 46,
+      "name": "Speech Synthesis & Recognition Demo",
+      "concepts": "Web Speech API, Natural Language Processing, Accessibility, JavaScript",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-18T05:27:47Z",
+  "last_run": "2026-08-18T06:25:11Z",
   "fallback_count": 6
 }

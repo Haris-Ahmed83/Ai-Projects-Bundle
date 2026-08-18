@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Linear Regression Fitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Linear Regression</h1>
+        <div class="main-content">
+            <canvas id="regressionCanvas" width="600" height="400"></canvas>
+            <div class="controls-and-results">
+                <button id="clearBtn">Clear Points</button>
+                <div class="results">
+                    <p>Slope (m): <span id="slopeOutput">N/A</span></p>
+                    <p>Y-Intercept (b): <span id="interceptOutput">N/A</span></p>
+                    <p>R-squared: <span id="rSquaredOutput">N/A</span></p>
+                </div>
+            </div>
+        </div>
+        <p class="instructions">Click on the canvas to add data points. The best-fit line will update automatically.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
