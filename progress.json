@@ -1,5 +1,5 @@
 {
-  "global_number": 47,
+  "global_number": 49,
   "completed": [
     1,
     2,
@@ -46,7 +46,9 @@
     43,
     44,
     45,
-    46
+    46,
+    47,
+    48
   ],
   "history": [
     {
@@ -416,8 +418,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 47,
+      "name": "Real-time Audio FX Playground",
+      "concepts": "Web Audio API, audio visualization, sound effects, real-time processing",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 48,
+      "name": "Interactive Word Cloud Generator",
+      "concepts": "data visualization, text processing, word frequency, DOM manipulation",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-18T06:25:11Z",
+  "last_run": "2026-08-19T05:29:09Z",
   "fallback_count": 6
 }

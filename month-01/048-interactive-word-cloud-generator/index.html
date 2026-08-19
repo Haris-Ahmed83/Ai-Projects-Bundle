@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Word Cloud Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Word Cloud Generator</h1>
+        <p>Enter your text below to generate a visual word cloud. Hover over words to see their frequency.</p>
+        
+        <textarea id="textInput" placeholder="Type or paste your text here...
+
+Example: The quick brown fox jumps over the lazy dog. The dog barks. Fox is fast. Brown is a color."></textarea>
+        
+        <button id="generateButton">Generate Word Cloud</button>
+        
+        <div id="wordCloudContainer" class="word-cloud-container">
+            <!-- Word cloud will be generated here -->
+            <p class="placeholder-text">Your word cloud will appear here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+}
+
+p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    height: 180px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.word-cloud-container {
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    min-height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #fdfdfd;
+}
+
+.word-cloud-container .placeholder-text {
+    color: #999;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.word-item {
+    display: inline-block;
+    margin: 5px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    cursor: help;
+    font-weight: bold;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Example colors - can be randomized by JS */
+.word-item:nth-child(3n+0) { color: #e74c3c; }
+.word-item:nth-child(3n+1) { color: #2ecc71; }
+.word-item:nth-child(3n+2) { color: #f39c12; }
+
+.word-item:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
