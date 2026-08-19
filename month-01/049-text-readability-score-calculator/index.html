@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readability Score Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Readability Score Calculator</h1>
+
+        <div class="input-section">
+            <textarea id="textInput" placeholder="Paste your text here..." rows="15"></textarea>
+            <p class="word-count">Words: <span id="wordCount">0</span></p>
+        </div>
+
+        <div class="results-section">
+            <h2>Readability Scores</h2>
+            <div id="results" class="results-grid">
+                <div class="score-card">
+                    <h3>Flesch-Kincaid Reading Ease</h3>
+                    <p id="fkReadingEase" class="score-value">N/A</p>
+                    <p class="score-description">Higher score means easier to read (0-100+).</p>
+                </div>
+                <div class="score-card">
+                    <h3>Flesch-Kincaid Grade Level</h3>
+                    <p id="fkGradeLevel" class="score-value">N/A</p>
+                    <p class="score-description">U.S. grade level required to understand the text.</p>
+                </div>
+                <div class="score-card">
+                    <h3>Automated Readability Index (ARI)</h3>
+                    <p id="ari" class="score-value">N/A</p>
+                    <p class="score-description">Grade level equivalent based on characters per word.</p>
+                </div>
+                <div class="score-card">
+                    <h3>SMOG Index</h3>
+                    <p id="smog" class="score-value">N/A</p>
+                    <p class="score-description">Grade level based on polysyllabic words. (Requires ~30 sentences for accuracy)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

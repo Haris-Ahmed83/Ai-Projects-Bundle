@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pathfinding Algorithm Visualizer</h1>
+
+    <div class="controls">
+        <button id="clearGridBtn">Clear Grid</button>
+        <button id="setStartBtn" class="active-mode">Set Start</button>
+        <button id="setEndBtn">Set End</button>
+        <button id="setWallBtn">Draw Walls</button>
+        <select id="algorithmSelect">
+            <option value="dijkstra">Dijkstra's Algorithm</option>
+            <!-- A* could be added later for more complexity -->
+        </select>
+        <button id="visualizeBtn">Visualize!</button>
+    </div>
+
+    <div class="legend">
+        <span class="legend-item"><div class="node node-start"></div> Start Node</span>
+        <span class="legend-item"><div class="node node-end"></div> End Node</span>
+        <span class="legend-item"><div class="node node-wall"></div> Wall Node</span>
+        <span class="legend-item"><div class="node node-visited"></div> Visited Node</span>
+        <span class="legend-item"><div class="node node-path"></div> Path Node</span>
+    </div>
+
+    <div id="gridContainer" class="grid-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
