@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markov Chain Text Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Markov Chain Text Generator</h1>
+
+        <p>Enter a block of text below to train the Markov chain. The application will then generate new text based on the patterns it learns. Specify the desired length of the generated text and click "Generate"!</p>
+
+        <div class="input-group">
+            <label for="source-text">Source Text:</label>
+            <textarea id="source-text" rows="10" placeholder="Paste your text here..."></textarea>
+        </div>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="output-length">Output Length (words):</label>
+                <input type="number" id="output-length" value="50" min="1">
+            </div>
+            <button id="generate-btn">Generate Text</button>
+        </div>
+
+        <div class="output-group">
+            <label for="generated-text">Generated Text:</label>
+            <textarea id="generated-text" rows="10" readonly placeholder="Generated text will appear here..."></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

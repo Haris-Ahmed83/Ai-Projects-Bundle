@@ -1,5 +1,5 @@
 {
-  "global_number": 51,
+  "global_number": 53,
   "completed": [
     1,
     2,
@@ -50,7 +50,9 @@
     47,
     48,
     49,
-    50
+    50,
+    51,
+    52
   ],
   "history": [
     {
@@ -452,8 +454,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 51,
+      "name": "Markov Chain Text Generator",
+      "concepts": "Markov Chains, Natural Language Processing (NLP), text generation, probability, vanilla JS",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 52,
+      "name": "Habit Tracker Calendar",
+      "concepts": "Calendar View, localStorage",
+      "month": 1,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-08-19T06:26:51Z",
-  "fallback_count": 6
+  "last_run": "2026-08-20T05:30:32Z",
+  "fallback_count": 7
 }
