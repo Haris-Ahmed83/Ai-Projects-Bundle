@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Color Theory Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Theory Explorer</h1>
+
+        <div class="base-color-section">
+            <label for="baseColorPicker">Select Base Color:</label>
+            <input type="color" id="baseColorPicker" value="#3498db">
+            <div class="base-color-display">
+                <div class="color-swatch base-swatch" id="baseColorSwatch"></div>
+                <div class="color-info">
+                    <p>HEX: <span id="baseHex"></span></p>
+                    <p>RGB: <span id="baseRgb"></span></p>
+                    <p>HSL: <span id="baseHsl"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-schemes-grid">
+            <section class="color-scheme">
+                <h2>Monochromatic</h2>
+                <p class="scheme-description">Variations in lightness and saturation of the same hue.</p>
+                <div class="scheme-palette" id="monochromaticPalette"></div>
+            </section>
+
+            <section class="color-scheme">
+                <h2>Analogous</h2>
+                <p class="scheme-description">Colors adjacent to each other on the color wheel (e.g., ±30°, ±60°).</p>
+                <div class="scheme-palette" id="analogousPalette"></div>
+            </section>
+
+            <section class="color-scheme">
+                <h2>Complementary</h2>
+                <p class="scheme-description">Colors directly opposite (180°) on the color wheel.</p>
+                <div class="scheme-palette" id="complementaryPalette"></div>
+            </section>
+
+            <section class="color-scheme">
+                <h2>Triadic</h2>
+                <p class="scheme-description">Three colors equally spaced (120°) on the color wheel.</p>
+                <div class="scheme-palette" id="triadicPalette"></div>
+            </section>
+
+            <section class="color-scheme">
+                <h2>Tetradic (Square)</h2>
+                <p class="scheme-description">Four colors equally spaced (90°) on the color wheel.</p>
+                <div class="scheme-palette" id="tetradicPalette"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

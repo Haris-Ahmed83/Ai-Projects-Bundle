@@ -1,5 +1,5 @@
 {
-  "global_number": 53,
+  "global_number": 55,
   "completed": [
     1,
     2,
@@ -52,7 +52,9 @@
     49,
     50,
     51,
-    52
+    52,
+    53,
+    54
   ],
   "history": [
     {
@@ -470,8 +472,24 @@
       "month": 1,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 53,
+      "name": "Interactive Color Theory Explorer",
+      "concepts": "color theory, HSL, RGB, HEX, web design, accessibility, vanilla JS",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 54,
+      "name": "Sorting Algorithm Visualizer",
+      "concepts": "data visualization, algorithms, array manipulation, animation",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-20T05:30:32Z",
+  "last_run": "2026-08-20T06:29:49Z",
   "fallback_count": 7
 }

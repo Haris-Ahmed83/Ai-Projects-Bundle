@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sorting Algorithm Visualizer</h1>
+        <div class="controls">
+            <label for="arraySize">Array Size: <span id="arraySizeValue">50</span></label>
+            <input type="range" id="arraySize" min="10" max="150" value="50">
+
+            <label for="speed">Animation Speed: <span id="speedValue">50</span>ms</label>
+            <input type="range" id="speed" min="10" max="500" value="50">
+
+            <select id="algorithmSelect">
+                <option value="bubble">Bubble Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+            </select>
+
+            <button id="newArrayBtn">New Array</button>
+            <button id="sortBtn">Sort!</button>
+        </div>
+        <div class="visualizer" id="visualizer">
+            <!-- Bars will be rendered here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
