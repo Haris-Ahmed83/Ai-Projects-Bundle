@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NER Highlighter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Named Entity Recognition (NER) Highlighter</h1>
+        <p>Paste text below and click "Highlight Entities" to see detected persons, organizations, locations, and dates highlighted.</p>
+
+        <textarea id="inputText" placeholder="Paste your text here..." rows="10"></textarea>
+        <button id="highlightBtn">Highlight Entities</button>
+
+        <div class="output-container">
+            <h2>Highlighted Text</h2>
+            <div id="highlightedText" class="highlighted-content">
+                <p>No text highlighted yet. Try pasting some text!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

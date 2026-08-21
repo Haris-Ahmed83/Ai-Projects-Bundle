@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Pattern Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Pattern Visualizer</h1>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="regexPattern">Regular Expression:</label>
+                <input type="text" id="regexPattern" value="a(b|c)+d" placeholder="e.g., a(b|c)+d">
+            </div>
+            <div class="input-group">
+                <label for="testString">Test String:</label>
+                <input type="text" id="testString" value="abbcd and acccd" placeholder="e.g., abbcd and acccd">
+            </div>
+            <button id="visualizeBtn">Visualize Pattern</button>
+            <p id="error-message" class="error-message"></p>
+        </div>
+
+        <div class="visualization-section">
+            <h2>Visualization</h2>
+            <div id="visualizationArea" class="visualization-area"></div>
+            
+            <div class="controls">
+                <button id="prevBtn" disabled>&#9664; Prev</button>
+                <button id="playPauseBtn">&#9654; Play</button>
+                <button id="nextBtn" disabled>Next &#9658;</button>
+            </div>
+            <p id="stepInfo" class="step-info"></p>
+            <p id="matchResultInfo" class="match-result-info"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

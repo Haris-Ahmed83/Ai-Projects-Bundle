@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.visualization-section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.visualization-area {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 100px;
+    background-color: #fdfdfd;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4em;
+    white-space: pre-wrap; /* Allows text to wrap but preserves spaces */
+    word-wrap: break-word;
+    line-height: 1.6;
+    display: flex; /* Use flex to align character spans */
+    flex-wrap: wrap;
+    gap: 1px; /* Small gap between characters */
+    align-items: center;
+}
+
+.char-span {
+    display: inline-block;
+    padding: 2px 0px;
+    margin: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 3px;
+    min-width: 0.8em; /* Ensure single characters have some width */
+    text-align: center;
+}
+
+.current-focus {
+    background-color: #ffeb3b; /* Yellow */
+    border: 1px solid #fbc02d;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(255, 235, 59, 0.5);
+}
+
+.matched {
+    background-color: #8bc34a; /* Light Green */
+    color: white;
+    font-weight: bold;
+    border: 1px solid #689f38;
+    box-shadow: 0 0 5px rgba(139, 195, 74, 0.5);
+}
+
+.final-matched {
+    background-color: #2196f3; /* Blue */
+    color: white;
+    font-weight: bold;
+    border: 1px solid #1976d2;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    min-width: 100px;
+}
+
+#playPauseBtn {
+    background-color: #28a745; /* Green for Play */
+}
+
+#playPauseBtn.playing {
+    background-color: #ffc107; /* Orange for Pause */
+}
+
+.step-info, .match-result-info {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+.match-result-info {
+    font-weight: bold;
+}
+
+.match-result-info.no-match-info {
+    color: #dc3545;
+}
+
+.match-result-info:not(.no-match-info) {
+    color: #28a745; /* Default for matches */
+}
+
+.match-result-info.match-found-summary {
+    color: #007bff; /* Blue for overall summary */
+}
