@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Similarity Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Similarity Visualizer</h1>
+        <p class="description">Enter two text snippets below to calculate and visualize their Jaccard similarity score.</p>
+        
+        <div class="input-section">
+            <textarea id="text1" placeholder="Enter first text snippet here..."></textarea>
+            <textarea id="text2" placeholder="Enter second text snippet here..."></textarea>
+        </div>
+        
+        <button id="calculateBtn">Calculate Similarity</button>
+        
+        <div class="result-section">
+            <p>Similarity Score: <span id="scoreValue">N/A</span></p>
+            <div class="similarity-bar-container">
+                <div id="similarityBar" class="similarity-bar"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
