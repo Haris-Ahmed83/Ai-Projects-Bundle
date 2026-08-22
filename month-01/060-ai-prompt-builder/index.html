@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Prompt Builder</h1>
+            <p>Craft effective and precise prompts for AI models.</p>
+        </header>
+
+        <main class="prompt-builder">
+            <section class="input-section">
+                <h2>Build Your Prompt</h2>
+                <div class="form-group">
+                    <label for="coreIdea">Core Idea / Task:</label>
+                    <textarea id="coreIdea" placeholder="e.g., Explain quantum physics simply"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" placeholder="e.g., a high school teacher, an expert programmer">
+                </div>
+
+                <div class="form-group">
+                    <label for="context">Context / Background:</label>
+                    <textarea id="context" placeholder="e.g., for a 10-year-old, I'm building a website, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="format">Output Format:</label>
+                    <input type="text" id="format" placeholder="e.g., a bulleted list, Python code, a short story">
+                </div>
+
+                <div class="form-group">
+                    <label for="constraints">Constraints / Specifics:</label>
+                    <textarea id="constraints" placeholder="e.g., max 200 words, avoid jargon, include examples"></textarea>
+                </div>
+
+                <button id="generatePromptBtn">Generate Prompt</button>
+            </section>
+
+            <section class="output-section">
+                <h2>Generated Prompt</h2>
+                <textarea id="generatedPrompt" readonly placeholder="Your crafted prompt will appear here..."></textarea>
+                <div class="output-actions">
+                    <button id="copyPromptBtn">Copy Prompt</button>
+                    <span id="copyFeedback" class="feedback-message"></span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

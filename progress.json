@@ -1,5 +1,5 @@
 {
-  "global_number": 59,
+  "global_number": 61,
   "completed": [
     1,
     2,
@@ -58,7 +58,9 @@
     55,
     56,
     57,
-    58
+    58,
+    59,
+    60
   ],
   "history": [
     {
@@ -524,8 +526,24 @@
       "month": 1,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 59,
+      "name": "Decision Tree Visualizer",
+      "concepts": "machine learning, data visualization, decision trees, interactive graphics",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 60,
+      "name": "AI Prompt Builder",
+      "concepts": "Natural Language Processing, Prompt Engineering, User Experience, Vanilla JavaScript, HTML, CSS",
+      "month": 1,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-21T06:27:56Z",
+  "last_run": "2026-08-22T05:25:44Z",
   "fallback_count": 8
 }
