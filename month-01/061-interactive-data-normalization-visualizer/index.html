@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Normalization Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Normalization Visualizer</h1>
+
+        <div class="input-section">
+            <label for="dataInput">Enter numbers (comma-separated):</label>
+            <textarea id="dataInput" rows="5" placeholder="e.g., 10, 20, 30, 40, 50, 100"></textarea>
+            <div class="buttons">
+                <button id="minMaxBtn">Normalize (Min-Max)</button>
+                <button id="zScoreBtn">Normalize (Z-score)</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Results</h2>
+            <div class="data-display">
+                <h3>Original Data:</h3>
+                <p id="originalDataDisplay"></p>
+                <div id="originalChart" class="chart"></div>
+            </div>
+            <div class="data-display">
+                <h3>Normalized Data:</h3>
+                <p id="normalizedDataDisplay"></p>
+                <div id="normalizedChart" class="chart"></div>
+                <p id="normalizationType"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

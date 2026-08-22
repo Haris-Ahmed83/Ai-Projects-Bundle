@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-section, .results-section, .visualization-section {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+textarea, input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input[type="number"] {
+    max-width: 150px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to the left within flex container */
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#anomalyResults {
+    min-height: 40px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px dashed #bdc3c7;
+    white-space: pre-wrap; /* Preserve whitespace and allow wrapping */
+}
+
+canvas {
+    display: block; /* Remove extra space below canvas */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%; /* Make canvas responsive within its container */
+    max-width: 800px; /* Limit max width of canvas */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the canvas */
+}
