@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naive Bayes Classifier Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Naive Bayes Classifier Visualizer</h1>
+            <p>Input data points for training, then classify new points based on learned probabilities.</p>
+        </header>
+
+        <main class="main-content">
+            <div class="controls-panel">
+                <h2>Training Data</h2>
+                <div class="input-group">
+                    <label for="trainX">X:</label>
+                    <input type="number" id="trainX" value="100" min="0" max="500">
+                </div>
+                <div class="input-group">
+                    <label for="trainY">Y:</label>
+                    <input type="number" id="trainY" value="100" min="0" max="500">
+                </div>
+                <div class="input-group">
+                    <label for="trainClass">Class:</label>
+                    <select id="trainClass">
+                        <option value="A">Class A</option>
+                        <option value="B">Class B</option>
+                    </select>
+                </div>
+                <button id="addPointBtn">Add Training Point</button>
+
+                <h2>Classify New Point</h2>
+                <div class="input-group">
+                    <label for="classifyX">X:</label>
+                    <input type="number" id="classifyX" value="250" min="0" max="500">
+                </div>
+                <div class="input-group">
+                    <label for="classifyY">Y:</label>
+                    <input type="number" id="classifyY" value="250" min="0" max="500">
+                </div>
+                <button id="classifyBtn">Classify Point</button>
+                <div id="classificationResult" class="result-display"></div>
+
+                <button id="resetBtn" class="reset-button">Reset All</button>
+
+                <div class="legend">
+                    <h3>Legend</h3>
+                    <div class="legend-item"><span class="dot class-A"></span> Class A</div>
+                    <div class="legend-item"><span class="dot class-B"></span> Class B</div>
+                    <div class="legend-item"><span class="dot class-predicted"></span> Predicted Point</div>
+                </div>
+            </div>
+
+            <div class="visualization-panel">
+                <h2>Visualization</h2>
+                <canvas id="classifierCanvas" width="500" height="500"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

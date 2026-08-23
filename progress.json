@@ -1,5 +1,5 @@
 {
-  "global_number": 65,
+  "global_number": 67,
   "completed": [
     1,
     2,
@@ -64,7 +64,9 @@
     61,
     62,
     63,
-    64
+    64,
+    65,
+    66
   ],
   "history": [
     {
@@ -578,8 +580,24 @@
       "month": 2,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 65,
+      "name": "Markdown Previewer",
+      "concepts": "Text Parsing, Real-time Preview",
+      "month": 2,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 66,
+      "name": "Naive Bayes Classifier Visualizer",
+      "concepts": "machine learning, classification, probability, data visualization",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-23T05:27:23Z",
-  "fallback_count": 9
+  "last_run": "2026-08-23T06:23:59Z",
+  "fallback_count": 10
 }
