@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Means Clustering Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>K-Means Clustering Visualizer</h1>
+        <p class="description">Visualize the K-Means clustering algorithm. Generate random data or upload your own, then watch the algorithm group points into clusters.</p>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="kValue">Number of Clusters (K):</label>
+                <input type="number" id="kValue" value="3" min="1" max="10" step="1">
+            </div>
+            <div class="control-group">
+                <label for="numPoints">Number of Data Points:</label>
+                <input type="number" id="numPoints" value="100" min="10" max="1000" step="10">
+                <button id="generateDataBtn">Generate Random Data</button>
+            </div>
+            <div class="control-group">
+                <label for="fileInput">Upload CSV Data (X,Y):</label>
+                <input type="file" id="fileInput" accept=".csv">
+            </div>
+            <div class="control-group">
+                <label for="animationSpeed">Animation Speed (ms):</label>
+                <input type="range" id="animationSpeed" min="50" max="1000" value="200" step="50">
+                <span>200ms</span>
+            </div>
+            <div class="control-group">
+                <button id="startClusteringBtn">Start Clustering</button>
+                <button id="resetClusteringBtn">Reset</button>
+            </div>
+        </div>
+
+        <canvas id="kmeansCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
