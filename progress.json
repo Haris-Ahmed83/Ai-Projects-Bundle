@@ -1,5 +1,5 @@
 {
-  "global_number": 69,
+  "global_number": 71,
   "completed": [
     1,
     2,
@@ -68,7 +68,9 @@
     65,
     66,
     67,
-    68
+    68,
+    69,
+    70
   ],
   "history": [
     {
@@ -614,8 +616,24 @@
       "month": 2,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 69,
+      "name": "Interactive Feature Importance Explorer",
+      "concepts": "machine learning, data visualization, feature engineering, model interpretability, data science",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 70,
+      "name": "Interactive PCA Visualizer",
+      "concepts": "Dimensionality Reduction, Principal Component Analysis, Data Visualization, Feature Engineering",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-24T05:36:58Z",
+  "last_run": "2026-08-24T06:38:10Z",
   "fallback_count": 10
 }

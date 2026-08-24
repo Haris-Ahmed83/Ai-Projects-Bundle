@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Importance Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feature Importance Explorer</h1>
+
+        <div class="controls">
+            <div class="input-group">
+                <label for="csvFile">Upload CSV Dataset:</label>
+                <input type="file" id="csvFile" accept=".csv">
+            </div>
+
+            <div class="input-group">
+                <label for="targetVariable">Select Target Variable:</label>
+                <select id="targetVariable" disabled>
+                    <option value="">Upload data first</option>
+                </select>
+            </div>
+
+            <button id="visualizeBtn" disabled>Visualize Importance</button>
+        </div>
+
+        <div class="chart-container" id="chartContainer">
+            <p>Upload a CSV file and select a target variable to see feature importances.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
