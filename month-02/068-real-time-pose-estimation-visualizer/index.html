@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Pose Estimation Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- p5.js for drawing on canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <!-- ml5.js for PoseNet model -->
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Real-time Pose Estimation</h1>
+        <p class="instructions">Grant webcam access to see your pose detected!</p>
+        <p id="status" class="status-message">Initializing...</p>
+        <div id="canvas-container"></div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

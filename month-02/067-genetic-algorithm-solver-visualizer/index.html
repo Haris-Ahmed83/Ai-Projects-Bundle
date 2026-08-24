@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Algorithm Solver Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Genetic Algorithm Solver Visualizer</h1>
+
+        <div class="controls">
+            <div class="param-group">
+                <label for="targetString">Target String:</label>
+                <input type="text" id="targetString" value="Hello World!">
+            </div>
+            <div class="param-group">
+                <label for="populationSize">Population Size:</label>
+                <input type="number" id="populationSize" value="200" min="10">
+            </div>
+            <div class="param-group">
+                <label for="mutationRate">Mutation Rate (0-1):</label>
+                <input type="number" id="mutationRate" value="0.01" step="0.001" min="0" max="1">
+            </div>
+            <div class="button-group">
+                <button id="startButton">Start Evolution</button>
+                <button id="stopButton" disabled>Stop Evolution</button>
+            </div>
+        </div>
+
+        <div class="visualization">
+            <h2>Current State</h2>
+            <div class="info-grid">
+                <div><strong>Generation:</strong> <span id="generation">0</span></div>
+                <div><strong>Best Fitness:</strong> <span id="bestFitness">0.00</span></div>
+                <div class="full-width"><strong>Best Individual:</strong> <span id="bestIndividual"></span></div>
+            </div>
+
+            <h3>Top Individuals</h3>
+            <div id="populationDisplay" class="population-display">
+                <!-- Top individuals will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
