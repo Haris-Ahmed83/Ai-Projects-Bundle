@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Series Forecasting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Adapter for date-fns for time scales -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Time Series Forecasting Visualizer</h1>
+
+        <div class="input-section">
+            <h2>1. Input Data</h2>
+            <textarea id="dataInput" placeholder="Enter CSV data (e.g., Date,Value&#10;2023-01-01,10&#10;2023-01-02,12)&#10;Note: Dates must be YYYY-MM-DD"></textarea>
+            <input type="file" id="fileInput" accept=".csv">
+            <button id="loadDataBtn">Load Data</button>
+        </div>
+
+        <div class="controls-section">
+            <h2>2. Select Model & Parameters</h2>
+            <label for="modelSelect">Forecasting Model:</label>
+            <select id="modelSelect">
+                <option value="none">-- Select a model --</option>
+                <option value="movingAverage">Moving Average</option>
+                <option value="exponentialSmoothing">Exponential Smoothing</option>
+            </select>
+
+            <div id="modelParams" class="model-params">
+                <!-- Model-specific parameters will be injected here -->
+            </div>
+
+            <label for="forecastSteps">Forecast Steps:</label>
+            <input type="number" id="forecastSteps" value="5" min="1">
+
+            <button id="applyForecastBtn">Apply Forecast</button>
+        </div>
+
+        <div class="chart-section">
+            <h2>3. Visualization</h2>
+            <canvas id="timeSeriesChart"></canvas>
+            <div id="resultsDisplay" class="results"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

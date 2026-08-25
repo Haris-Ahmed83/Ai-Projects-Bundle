@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Digit Recognizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js library - required for client-side AI -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Handwritten Digit Recognizer</h1>
+        <p>Draw a single digit (0-9) in the box below, then click "Predict".</p>
+        <canvas id="drawingCanvas" width="280" height="280"></canvas>
+        <div class="controls">
+            <button id="predictBtn">Predict</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+        <div id="status">Loading AI model...</div>
+        <div id="predictionResult"></div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "global_number": 71,
+  "global_number": 73,
   "completed": [
     1,
     2,
@@ -70,7 +70,9 @@
     67,
     68,
     69,
-    70
+    70,
+    71,
+    72
   ],
   "history": [
     {
@@ -632,8 +634,24 @@
       "month": 2,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 71,
+      "name": "Interactive Time Series Forecasting Visualizer",
+      "concepts": "time series, forecasting, machine learning, data visualization, interactive charts",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 72,
+      "name": "Handwritten Digit Recognizer",
+      "concepts": "machine learning, TensorFlow.js, client-side AI, canvas API, image processing",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-24T06:38:10Z",
+  "last_run": "2026-08-25T05:29:59Z",
   "fallback_count": 10
 }
