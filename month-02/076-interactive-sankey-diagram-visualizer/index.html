@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sankey Diagram Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <h1>Sankey Diagram Visualizer</h1>
+            <p>Input your data as JSON with "nodes" (array of {id: string}) and "links" (array of {source: string, target: string, value: number}). Node 'id' must match link 'source'/'target'.</p>
+            <textarea id="dataInput" rows="15" cols="50"></textarea>
+            <button id="renderButton">Render Sankey Diagram</button>
+            <div id="errorMessage" class="error"></div>
+        </div>
+        <div class="diagram-container">
+            <svg id="sankeyDiagram"></svg>
+            <div id="tooltip" class="tooltip"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/d3@7"></script>
+    <script src="https://unpkg.com/d3-sankey@0"></script>
+    <script src="script.js"></script>
+</body>
+</html>

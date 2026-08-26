@@ -1,5 +1,5 @@
 {
-  "global_number": 75,
+  "global_number": 77,
   "completed": [
     1,
     2,
@@ -74,7 +74,9 @@
     71,
     72,
     73,
-    74
+    74,
+    75,
+    76
   ],
   "history": [
     {
@@ -668,8 +670,24 @@
       "month": 2,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 75,
+      "name": "Interactive Text Sentiment Analyzer",
+      "concepts": "Natural Language Processing, Sentiment Analysis, Text Analysis, Data Visualization",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 76,
+      "name": "Interactive Sankey Diagram Visualizer",
+      "concepts": "Data Visualization, D3.js, Data Flow Analysis, Interactive UI",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-25T06:45:28Z",
+  "last_run": "2026-08-26T05:32:53Z",
   "fallback_count": 12
 }
