@@ -1,5 +1,5 @@
 {
-  "global_number": 77,
+  "global_number": 79,
   "completed": [
     1,
     2,
@@ -76,7 +76,9 @@
     73,
     74,
     75,
-    76
+    76,
+    77,
+    78
   ],
   "history": [
     {
@@ -686,8 +688,24 @@
       "month": 2,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 77,
+      "name": "Image Classification Playground",
+      "concepts": "TensorFlow.js, client-side ML, image classification, webcam integration, modern web tech",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 78,
+      "name": "Interactive Data Imputation Visualizer",
+      "concepts": "data preprocessing, missing data, imputation strategies, data visualization",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-26T05:32:53Z",
+  "last_run": "2026-08-26T06:30:09Z",
   "fallback_count": 12
 }

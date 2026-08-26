@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Imputation Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Data Imputation Visualizer</h1>
+
+        <section class="file-upload-section card">
+            <h2>1. Upload Dataset (CSV/TSV)</h2>
+            <input type="file" id="fileInput" accept=".csv, .tsv">
+            <p id="missingInfo">No data loaded. Please upload a file.</p>
+        </section>
+
+        <section class="controls-section card">
+            <h2>2. Imputation Strategy</h2>
+            <div class="control-group">
+                <label for="imputationStrategy">Strategy:</label>
+                <select id="imputationStrategy">
+                    <option value="mean">Mean</option>
+                    <option value="median">Median</option>
+                    <option value="mode">Mode (for numeric/categorical)</option>
+                    <option value="zero">Zero</option>
+                    <option value="custom">Custom Value</option>
+                </select>
+            </div>
+            <div class="control-group custom-value-input hidden">
+                <label for="customValue">Custom Value:</label>
+                <input type="text" id="customValue" placeholder="e.g., 0, 'N/A'">
+            </div>
+            <button id="applyImputationBtn" disabled>Apply Imputation</button>
+        </section>
+
+        <section class="data-visualization-section">
+            <div class="data-table-container card">
+                <h2>3. Data View</h2>
+                <div class="table-scroll">
+                    <table id="dataTable">
+                        <!-- Data will be loaded here -->
+                    </table>
+                </div>
+            </div>
+
+            <div class="visualization-container card">
+                <h2>4. Missing Value Imputation Overview</h2>
+                <p>Bars show the number of missing values per column before (original) and after (imputed) applying the selected strategy.</p>
+                <div id="chartContainer" class="chart-area"></div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

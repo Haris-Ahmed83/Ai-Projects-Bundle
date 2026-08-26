@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <!-- MobileNet model CDN (part of tfjs-models) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest/dist/mobilenet.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Classification Playground</h1>
+        <p>Explore real-time image classification using your webcam and TensorFlow.js.</p>
+
+        <div class="status" id="status">Loading model...</div>
+
+        <div class="main-content">
+            <div class="video-container">
+                <video id="webcam" autoplay playsinline muted width="400" height="300"></video>
+            </div>
+            <div class="results-container">
+                <h2>Predictions</h2>
+                <ul id="predictions">
+                    <li>Waiting for model to load...</li>
+                </ul>
+            </div>
+        </div>
+        <button id="startButton" disabled>Start Classification</button>
+        <button id="stopButton" disabled>Stop Classification</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
