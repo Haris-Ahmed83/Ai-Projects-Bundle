@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Word Cloud Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Word Cloud Generator</h1>
+        <p>Paste your text below and instantly generate a customizable word cloud.</p>
+
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Paste your text here..." rows="10"></textarea>
+            <div class="controls">
+                <label for="maxWords">Max Words:</label>
+                <input type="number" id="maxWords" value="50" min="10" max="200">
+                <label for="minFontSize">Min Font Size (px):</label>
+                <input type="number" id="minFontSize" value="14" min="8" max="30">
+                <label for="maxFontSize">Max Font Size (px):</label>
+                <input type="number" id="maxFontSize" value="60" min="30" max="100">
+                <button id="generateButton">Generate Word Cloud</button>
+            </div>
+        </div>
+
+        <div class="word-cloud-container" id="wordCloudContainer">
+            <p class="placeholder">Your word cloud will appear here.</p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

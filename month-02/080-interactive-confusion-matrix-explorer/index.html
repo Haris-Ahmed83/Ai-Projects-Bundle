@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Confusion Matrix Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Confusion Matrix Explorer</h1>
+        <p>Input your true and predicted classification labels below (comma-separated). The tool will dynamically generate a confusion matrix and per-class metrics (Precision, Recall, F1-Score).</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="trueLabels">True Labels:</label>
+                <textarea id="trueLabels" rows="6" placeholder="e.g., cat,dog,cat,cat,dog,bird"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="predictedLabels">Predicted Labels:</label>
+                <textarea id="predictedLabels" rows="6" placeholder="e.g., cat,cat,dog,cat,dog,bird"></textarea>
+            </div>
+            <button id="generateBtn">Generate Matrix & Metrics</button>
+        </div>
+
+        <div id="errorMessages" class="error-message" aria-live="assertive"></div>
+
+        <div class="results-section">
+            <h2 id="confusionMatrixTitle" style="display: none;">Confusion Matrix</h2>
+            <div id="confusionMatrixTable" class="matrix-container"></div>
+
+            <h2 id="metricsTitle" style="display: none;">Per-Class Metrics</h2>
+            <div id="metricsResults" class="metrics-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "global_number": 79,
+  "global_number": 81,
   "completed": [
     1,
     2,
@@ -78,7 +78,9 @@
     75,
     76,
     77,
-    78
+    78,
+    79,
+    80
   ],
   "history": [
     {
@@ -704,8 +706,24 @@
       "month": 2,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 79,
+      "name": "Interactive Word Cloud Generator",
+      "concepts": "text processing, data visualization, frequency analysis, modern web UI",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 80,
+      "name": "Interactive Confusion Matrix Explorer",
+      "concepts": "machine learning, classification, confusion matrix, precision, recall, F1-score",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-26T06:30:09Z",
+  "last_run": "2026-08-27T16:08:31Z",
   "fallback_count": 12
 }
