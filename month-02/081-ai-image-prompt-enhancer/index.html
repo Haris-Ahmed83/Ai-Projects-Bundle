@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Prompt Enhancer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Prompt Enhancer</h1>
+        <p class="description">Enter a short description or keywords, and our AI will expand it into a detailed, creative prompt suitable for image generation tools.</p>
+
+        <div class="input-section">
+            <label for="shortPrompt">Your Short Prompt/Keywords:</label>
+            <textarea id="shortPrompt" placeholder="e.g., 'cat in space' or 'futuristic city at night'" rows="4"></textarea>
+            <button id="enhanceButton">Enhance Prompt</button>
+        </div>
+
+        <div class="output-section">
+            <label for="enhancedPrompt">Enhanced Prompt:</label>
+            <textarea id="enhancedPrompt" readonly rows="8"></textarea>
+            <button id="copyButton" class="copy-button">Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

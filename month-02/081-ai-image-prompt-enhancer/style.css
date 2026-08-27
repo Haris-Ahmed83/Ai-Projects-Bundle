@@ -1,0 +1,152 @@
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #1a202c;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    color: #7dd3fc;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+}
+
+.description {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+.input-section,
+.output-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #94a3b8;
+    font-size: 1.1em;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background-color: #2d3748;
+    color: #f8fafc;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 80px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #38b2ac;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(56, 178, 172, 0.3);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #38b2ac;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #319795;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.copy-button {
+    background-color: #4a5568;
+}
+
+.copy-button:hover {
+    background-color: #2d3748;
+}
+
+#enhancedPrompt {
+    min-height: 150px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .description {
+        font-size: 0.95em;
+    }
+
+    textarea {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    button {
+        align-self: stretch; /* Make button full width on small screens */
+    }
+}
