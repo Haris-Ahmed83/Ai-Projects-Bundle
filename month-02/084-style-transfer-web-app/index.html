@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Style Transfer Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Neural Style Transfer</h1>
+        <p>Upload a content image and a style image to apply artistic flair!</p>
+    </header>
+
+    <main class="app-container">
+        <section class="image-upload-section">
+            <div class="image-input-group">
+                <h2>1. Content Image</h2>
+                <input type="file" id="contentImageInput" accept="image/*">
+                <div class="image-preview-container">
+                    <img id="contentImagePreview" src="https://via.placeholder.com/300x200?text=Content+Image" alt="Content Image Preview">
+                </div>
+            </div>
+
+            <div class="image-input-group">
+                <h2>2. Style Image</h2>
+                <input type="file" id="styleImageInput" accept="image/*">
+                <div class="image-preview-container">
+                    <img id="styleImagePreview" src="https://via.placeholder.com/300x200?text=Style+Image" alt="Style Image Preview">
+                </div>
+            </div>
+        </section>
+
+        <button id="applyStyleBtn">Apply Style</button>
+
+        <section class="result-section">
+            <h2>3. Transferred Style</h2>
+            <div class="loading-spinner hidden" id="loadingSpinner"></div>
+            <div class="image-preview-container result-image">
+                <img id="resultImage" src="https://via.placeholder.com/400x300?text=Result+Image" alt="Result Image">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

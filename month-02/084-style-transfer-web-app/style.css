@@ -1,0 +1,229 @@
+/* Basic Resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.app-container {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.image-upload-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.image-input-group {
+    flex: 1 1 45%; /* Allows items to grow and shrink, minimum width 45% */
+    min-width: 300px; /* Ensure a reasonable minimum width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+.image-input-group h2 {
+    font-size: 1.6em;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+input[type="file"] {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    width: 100%;
+    max-width: 300px; /* Limit input width */
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #2980b9;
+}
+
+.image-preview-container {
+    width: 100%;
+    max-width: 350px; /* Max width for previews */
+    height: 250px; /* Fixed height for consistent layout */
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure image doesn't overflow */
+    background-color: #f0f0f0;
+}
+
+.image-preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the whole image is visible */
+    display: block;
+}
+
+.result-image {
+    max-width: 500px; /* Larger max width for result */
+    height: 350px;
+    border-color: #3498db;
+    background-color: #eaf6fd;
+}
+
+button#applyStyleBtn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+button#applyStyleBtn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+button#applyStyleBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(46, 204, 113, 0.3);
+}
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.result-section h2 {
+    font-size: 2em;
+    color: #3498db;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px 0;
+}
+
+.loading-spinner.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 20px;
+    }
+    .image-upload-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-input-group {
+        width: 90%;
+        min-width: unset;
+        flex: none;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .image-preview-container, .result-image {
+        max-width: 90%;
+        height: 200px;
+    }
+    button#applyStyleBtn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .app-container {
+        padding: 15px;
+    }
+    .image-input-group {
+        padding: 15px;
+    }
+    input[type="file"] {
+        font-size: 0.9em;
+    }
+}

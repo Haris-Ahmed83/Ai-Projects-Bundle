@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAN Latent Space Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GAN Latent Space Explorer</h1>
+        <p>Manipulate 'latent' dimensions to explore creative image variations.</p>
+    </header>
+
+    <main class="container">
+        <section class="image-display">
+            <!-- Using a placeholder image service to simulate a 'base' generated image -->
+            <img id="ganImage" src="https://picsum.photos/id/1018/600/600" alt="Generated Image">
+            <div class="image-overlay"></div>
+        </section>
+
+        <section class="controls">
+            <h2>Latent Dimensions</h2>
+            <div id="sliderContainer" class="slider-grid">
+                <!-- Sliders will be injected here by JavaScript -->
+            </div>
+            <div class="button-group">
+                <button id="randomizeBtn">Randomize</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GAN Explorer. Concept by AI.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
