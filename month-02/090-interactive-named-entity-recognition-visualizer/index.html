@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive NER Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Named Entity Recognition Visualizer</h1>
+        <p>Enter text below to identify and highlight Persons, Locations, Organizations, and Dates.</p>
+        <textarea id="textInput" placeholder="Enter your text here... Example: John Doe visited New York on January 15, 2023 to meet with Apple representatives."></textarea>
+        <button id="analyzeButton">Analyze Text</button>
+        <div id="result" class="result-display">
+            <p class="placeholder">Analyzed entities will appear here.</p>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

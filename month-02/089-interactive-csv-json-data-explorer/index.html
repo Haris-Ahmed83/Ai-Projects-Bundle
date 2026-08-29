@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive CSV/JSON Data Explorer</h1>
+
+        <div class="controls">
+            <div class="file-upload">
+                <label for="fileInput">Upload File (CSV or JSON):</label>
+                <input type="file" id="fileInput" accept=".csv, .json">
+            </div>
+
+            <div class="filter-search">
+                <label for="filterInput">Filter Data:</label>
+                <input type="text" id="filterInput" placeholder="Type to filter...">
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div id="tableContainer" class="table-container">
+            <p>Upload a CSV or JSON file to start exploring!</p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

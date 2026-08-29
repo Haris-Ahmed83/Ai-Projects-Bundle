@@ -1,5 +1,5 @@
 {
-  "global_number": 89,
+  "global_number": 91,
   "completed": [
     1,
     2,
@@ -88,7 +88,9 @@
     85,
     86,
     87,
-    88
+    88,
+    89,
+    90
   ],
   "history": [
     {
@@ -794,8 +796,24 @@
       "month": 2,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 89,
+      "name": "Interactive CSV/JSON Data Explorer",
+      "concepts": "data exploration, file upload, table rendering, sorting, filtering, modern web tech",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 90,
+      "name": "Interactive Named Entity Recognition Visualizer",
+      "concepts": "NLP, Text Analysis, Information Extraction, Client-side JavaScript",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-29T11:29:20Z",
+  "last_run": "2026-08-29T11:59:18Z",
   "fallback_count": 15
 }
