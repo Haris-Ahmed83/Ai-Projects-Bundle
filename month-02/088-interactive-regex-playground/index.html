@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Regex Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Regex Playground</h1>
+
+        <div class="input-group">
+            <label for="regexPattern">Regex Pattern (add /i for case-insensitive, etc.):</label>
+            <input type="text" id="regexPattern" placeholder="e.g., \bword\b" value="\b(\w+)\b">
+            <div id="regexError" class="error-message"></div>
+        </div>
+
+        <div class="input-group">
+            <label for="sampleText">Sample Text:</label>
+            <textarea id="sampleText" rows="10" placeholder="Enter text to test your regex against...">The quick brown fox jumps over the lazy dog. Regex is fun!</textarea>
+        </div>
+
+        <div class="output-section">
+            <h2>Highlighted Text:</h2>
+            <div id="matchedTextOutput" class="highlight-output"></div>
+
+            <h2>Matches Found:</h2>
+            <ul id="matchList" class="match-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

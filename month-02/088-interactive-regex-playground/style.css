@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-top: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    min-height: 1.2em;
+    margin-top: 5px;
+}
+
+.output-section {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.highlight-output {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 100px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
+    word-wrap: break-word;
+}
+
+.match {
+    background-color: #d4edda; /* Light green for matches */
+    color: #155724; /* Dark green text */
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.match-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.match-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95em;
+}
+
+.match-list li:last-child {
+    border-bottom: none;
+}
+
+.match-list li:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.match-list li strong {
+    color: #007bff;
+}
