@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: vertical;
+    min-height: 150px;
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align button to start */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.results-container {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.results-container h2 {
+    grid-column: 1 / -1; /* Span full width */
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.score-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+.score-card h3 {
+    margin-top: 0;
+    color: #34495e;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.score-card p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 5px 0;
+}
+
+.stats-card p {
+    font-size: 1rem;
+    color: #555;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.stats-card p span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tooltip styles */
+.info-tooltip {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: help;
+    transition: background-color 0.2s;
+    z-index: 1;
+}
+
+.info-tooltip:hover {
+    background-color: #ccc;
+}
+
+.info-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%; /* Position above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 10;
+}
+
+.info-tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        gap: 20px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    button {
+        width: 100%;
+        align-self: center;
+    }
+    .score-card p {
+        font-size: 1.2rem;
+    }
+    .score-card p span {
+        font-size: 1rem;
+    }
+    .results-container {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    textarea {
+        min-height: 100px;
+    }
+}

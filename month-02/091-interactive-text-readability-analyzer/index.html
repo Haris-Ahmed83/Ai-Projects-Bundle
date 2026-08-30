@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Readability Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Text Readability Analyzer</h1>
+        <textarea id="textInput" placeholder="Paste your text here to analyze readability..." rows="10"></textarea>
+        <button id="analyzeBtn">Analyze Text</button>
+
+        <div class="results-container">
+            <h2>Analysis Results</h2>
+            
+            <div class="score-card">
+                <h3>Flesch-Kincaid Readability Score:</h3>
+                <p id="fkScore">N/A</p>
+                <span class="info-tooltip" data-tooltip="Higher scores mean easier to understand. Ranges from 0 (very difficult) to 100 (very easy).">i</span>
+            </div>
+            
+            <div class="score-card">
+                <h3>Gunning Fog Index:</h3>
+                <p id="gfScore">N/A</p>
+                <span class="info-tooltip" data-tooltip="Lower scores mean easier to understand. A score of 12 is generally considered readable by a high school student.">i</span>
+            </div>
+
+            <div class="score-card stats-card">
+                <h3>Text Statistics:</h3>
+                <p>Words: <span id="wordCount">0</span></p>
+                <p>Sentences: <span id="sentenceCount">0</span></p>
+                <p>Syllables: <span id="syllableCount">0</span></p>
+                <p>Complex Words: <span id="complexWordCount">0</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
