@@ -1,5 +1,5 @@
 {
-  "global_number": 93,
+  "global_number": 95,
   "completed": [
     1,
     2,
@@ -92,7 +92,9 @@
     89,
     90,
     91,
-    92
+    92,
+    93,
+    94
   ],
   "history": [
     {
@@ -830,8 +832,24 @@
       "month": 2,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 93,
+      "name": "Interactive Data Normalization Visualizer",
+      "concepts": "data preprocessing, machine learning, data visualization, normalization, scaling, min-max scaling, z-score standardization",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 94,
+      "name": "Real-time Speech-to-Text Transcriber",
+      "concepts": "Web Speech API, real-time transcription, audio processing, modern web tech",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-30T10:17:19Z",
+  "last_run": "2026-08-30T10:54:22Z",
   "fallback_count": 16
 }

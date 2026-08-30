@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Normalization Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Data Normalization Visualizer</h1>
+            <p>Upload a small dataset (CSV) or use a sample to visualize the impact of different data normalization techniques like Min-Max Scaling and Z-score Standardization.</p>
+            <p><strong>Key Concepts:</strong> data preprocessing, machine learning, data visualization, normalization, scaling, min-max scaling, z-score standardization.</p>
+        </header>
+
+        <main>
+            <section class="input-controls">
+                <h2>1. Load Data</h2>
+                <div class="data-input-group">
+                    <label for="csvFile">Upload CSV File:</label>
+                    <input type="file" id="csvFile" accept=".csv">
+                </div>
+                <div class="data-input-group">
+                    <label for="csvData">Or paste CSV data:</label>
+                    <textarea id="csvData" rows="8" placeholder="FeatureA,FeatureB\n10,1\n20,5\n5,2\n30,10"></textarea>
+                </div>
+                <button id="loadSampleBtn" class="btn">Load Sample Data</button>
+
+                <h2>2. Select Normalization Method</h2>
+                <div class="normalization-options">
+                    <label>
+                        <input type="radio" name="normalizationType" value="minMax" checked> Min-Max Scaling
+                    </label>
+                    <div id="minMaxOptions" class="normalization-params">
+                        <label for="minRange">New Min:</label>
+                        <input type="number" id="minRange" value="0" step="any">
+                        <label for="maxRange">New Max:</label>
+                        <input type="number" id="maxRange" value="1" step="any">
+                    </div>
+                    <label>
+                        <input type="radio" name="normalizationType" value="zScore"> Z-score Standardization
+                    </label>
+                    <div id="zScoreOptions" class="normalization-params hidden">
+                        <p>Transforms data to have a mean of 0 and a standard deviation of 1.</p>
+                    </div>
+                </div>
+
+                <button id="visualizeBtn" class="btn btn-primary">Visualize Normalization</button>
+            </section>
+
+            <section class="output-visualization">
+                <h2>3. Results</h2>
+                <div id="errorMessage" class="error-message hidden"></div>
+
+                <div class="data-display">
+                    <h3>Original Data</h3>
+                    <div id="originalDataTable" class="data-table-container"></div>
+                </div>
+
+                <div class="data-display">
+                    <h3>Normalized Data</h3>
+                    <div id="normalizedDataTable" class="data-table-container"></div>
+                </div>
+
+                <div class="visualization-controls">
+                    <h3>4. Visualize Feature Impact</h3>
+                    <label for="featureSelect">Select Feature to Visualize:</label>
+                    <select id="featureSelect"></select>
+                    <p class="hint">Visualizes the selected feature's values before and after normalization.</p>
+                </div>
+                <div id="visualizationArea" class="visualization-area"></div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Data Normalization Visualizer</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

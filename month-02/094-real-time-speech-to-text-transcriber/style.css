@@ -1,0 +1,135 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.description {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#startButton {
+    background-color: #28a745; /* Green for start */
+}
+#startButton:hover {
+    background-color: #218838;
+}
+#startButton.stop {
+    background-color: #dc3545; /* Red for stop */
+}
+#startButton.stop:hover {
+    background-color: #c82333;
+}
+
+.transcription-output {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    min-height: 150px;
+    padding: 20px;
+    text-align: left;
+    white-space: pre-wrap; /* Preserves whitespace and wraps text */
+    word-wrap: break-word; /* Breaks long words */
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+    overflow-y: auto; /* Scroll for long text */
+    max-height: 400px; /* Limit height for scroll */
+}
+
+#finalTranscript {
+    margin: 0; /* Remove default paragraph margin */
+    display: inline;
+}
+
+#interimTranscript {
+    color: #888;
+    font-style: italic;
+}
+
+.status-message {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

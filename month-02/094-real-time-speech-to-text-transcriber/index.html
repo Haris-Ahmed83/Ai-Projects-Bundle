@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Speech-to-Text Transcriber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real-time Speech-to-Text Transcriber</h1>
+        <p class="description">Leveraging the Web Speech API to convert your spoken words into text instantly.</p>
+
+        <div class="controls">
+            <button id="startButton">Start Transcription</button>
+            <button id="copyButton" disabled>Copy Text</button>
+            <button id="clearButton" disabled>Clear Text</button>
+        </div>
+
+        <div class="transcription-output">
+            <p id="finalTranscript"></p>
+            <span id="interimTranscript"></span>
+        </div>
+
+        <p class="status-message" id="statusMessage">Click "Start Transcription" to begin.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
