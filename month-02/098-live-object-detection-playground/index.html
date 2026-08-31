@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Object Detection Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js and COCO-SSD Model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Object Detection Playground</h1>
+        <p>Perform real-time object detection using your webcam or by uploading an image. This application leverages TensorFlow.js and a pre-trained COCO-SSD model.</p>
+
+        <div class="section">
+            <h2>Webcam Detection</h2>
+            <div class="webcam-controls">
+                <button id="webcamToggleBtn" disabled>Start Webcam</button>
+                <div id="webcamStatus" class="status-message"></div>
+            </div>
+            <div class="video-container">
+                <video id="webcamVideo" autoplay muted playsinline></video>
+                <canvas id="webcamCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Image Upload Detection</h2>
+            <div class="image-controls">
+                <input type="file" id="imageUpload" accept="image/*">
+                <button id="detectImageBtn" disabled>Detect Objects</button>
+                <div id="imageStatus" class="status-message"></div>
+            </div>
+            <div class="image-display-container">
+                <img id="uploadedImage" alt="Upload an image" style="display: none;">
+                <canvas id="imageCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

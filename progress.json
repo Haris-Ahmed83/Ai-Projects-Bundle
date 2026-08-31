@@ -1,5 +1,5 @@
 {
-  "global_number": 97,
+  "global_number": 99,
   "completed": [
     1,
     2,
@@ -96,7 +96,9 @@
     93,
     94,
     95,
-    96
+    96,
+    97,
+    98
   ],
   "history": [
     {
@@ -866,8 +868,24 @@
       "month": 2,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 97,
+      "name": "Geolocation Data Visualizer",
+      "concepts": "mapping, geospatial data, interactive maps, API integration",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 98,
+      "name": "Live Object Detection Playground",
+      "concepts": "Machine Learning, Computer Vision, TensorFlow.js, Webcam API, Real-time",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-31T11:21:23Z",
+  "last_run": "2026-08-31T12:14:15Z",
   "fallback_count": 18
 }

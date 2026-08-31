@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Data Visualizer</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzxH+vp3fgws+/ftGFGu2Sz1cAM="
+          crossorigin=""/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Geolocation Data Visualizer</h1>
+    </header>
+    <main>
+        <section class="input-section">
+            <label for="locationInput">Enter Location (e.g., address, city, coordinates):</label>
+            <div class="input-group">
+                <input type="text" id="locationInput" placeholder="E.g., Eiffel Tower, Paris or 48.8584,2.2945">
+                <button id="addLocationBtn">Add to Map</button>
+            </div>
+            <div id="message" class="message"></div>
+        </section>
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nSL0+1BCS3A3g8J4N5w5I4e20uP4f6z6z8U7J6K8="
+            crossorigin=""></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

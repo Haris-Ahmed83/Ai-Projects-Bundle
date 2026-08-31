@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #eef2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    max-width: 960px;
+    width: 100%;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+.section {
+    margin-bottom: 40px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+}
+
+.section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.webcam-controls, .image-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+input[type="file"] {
+    border: 1px solid #ccddee;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9fcff;
+    color: #333;
+    font-size: 1rem;
+    max-width: 300px;
+}
+
+.video-container, .image-display-container {
+    position: relative;
+    width: 100%;
+    max-width: 720px; /* Adjusted for common webcam resolutions */
+    margin: 0 auto;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.video-container video, .image-display-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensure full video/image is visible */
+}
+
+.video-container canvas, .image-display-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.status-message {
+    font-style: italic;
+    color: #666;
+    min-width: 180px; /* Reserve space for messages */
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin: 10px 0;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 0.95rem;
+    }
+    .webcam-controls, .image-controls {
+        flex-direction: column;
+        gap: 12px;
+    }
+    button, input[type="file"] {
+        width: 100%;
+        max-width: none;
+    }
+    .status-message {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+}
