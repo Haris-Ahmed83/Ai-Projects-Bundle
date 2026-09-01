@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js and BodyPix CDN links for client-side AI model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Background Remover</h1>
+        <p>Upload any image (preferably with a person) and watch its background disappear instantly, powered by a client-side AI model. Note: This model is optimized for human segmentation.</p>
+
+        <div class="input-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-button">Choose Image</label>
+            <div id="loadingIndicator" class="loading-spinner"></div>
+        </div>
+
+        <div class="canvas-section">
+            <div class="canvas-wrapper">
+                <h3>Original Image</h3>
+                <canvas id="originalCanvas"></canvas>
+            </div>
+            <div class="canvas-wrapper">
+                <h3>Result (Transparent Background)</h3>
+                <canvas id="resultCanvas"></canvas>
+            </div>
+        </div>
+
+        <button id="downloadBtn" class="download-button" style="display: none;">Download Result</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
