@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Generation Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Text Generation Playground</h1>
+        <p>Unleash creativity with prompt-based text generation.</p>
+    </header>
+
+    <main>
+        <div class="input-section">
+            <div class="input-group">
+                <label for="prompt-input">Prompt:</label>
+                <textarea id="prompt-input" rows="8" placeholder="e.g., Write a short story about a detective solving a mystery in a futuristic city, or generate Python code for a linked list."></textarea>
+            </div>
+
+            <div class="parameters-group">
+                <h3>Generation Parameters</h3>
+                <div class="param-item">
+                    <label for="max-tokens">Max Tokens:</label>
+                    <input type="number" id="max-tokens" value="250" min="10" max="1000">
+                </div>
+                <div class="param-item">
+                    <label for="temperature">Temperature:</label>
+                    <input type="number" id="temperature" value="0.7" min="0.1" max="1.5" step="0.1">
+                </div>
+                <button id="generate-btn">Generate Text</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Generated Output</h2>
+            <textarea id="output-text" rows="15" readonly placeholder="Your AI-generated text will appear here..."></textarea>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

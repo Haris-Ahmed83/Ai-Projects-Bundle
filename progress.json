@@ -1,5 +1,5 @@
 {
-  "global_number": 99,
+  "global_number": 101,
   "completed": [
     1,
     2,
@@ -98,7 +98,9 @@
     95,
     96,
     97,
-    98
+    98,
+    99,
+    100
   ],
   "history": [
     {
@@ -884,8 +886,24 @@
       "month": 2,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 99,
+      "name": "Text-to-Speech Studio",
+      "concepts": "AI, Machine Learning, Text-to-Speech, API Integration, Web Audio API",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 100,
+      "name": "AI Text Generation Playground",
+      "concepts": "large language models, text generation, API integration, natural language processing",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-08-31T12:14:15Z",
+  "last_run": "2026-09-01T09:46:00Z",
   "fallback_count": 18
 }

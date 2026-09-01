@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text-to-Speech Studio</h1>
+
+        <div class="input-section">
+            <label for="textInput">Enter text:</label>
+            <textarea id="textInput" placeholder="Type or paste your text here..." rows="8">Hello! Welcome to the Text-to-Speech Studio. Select a voice and language to hear your text spoken aloud.</textarea>
+        </div>
+
+        <div class="controls-grid">
+            <div class="control-group">
+                <label for="languageSelect">Language:</label>
+                <select id="languageSelect"></select>
+            </div>
+            <div class="control-group">
+                <label for="voiceSelect">Voice:</label>
+                <select id="voiceSelect"></select>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="playButton">Play</button>
+            <button id="downloadButton">Download Audio</button>
+            <button id="shareButton">Share</button>
+        </div>
+
+        <div class="audio-player-section">
+            <!-- This audio element is included for a complete project feel, 
+                 but native SpeechSynthesis API plays audio directly and does not pipe to it. -->
+            <audio id="audioPlayer" controls></audio>
+        </div>
+
+        <p class="note">
+            Note: Audio playback uses your browser's native Text-to-Speech. Direct download of the synthesized audio 
+            from this API is not supported without a backend service. The 'Download Audio' button provides a placeholder action.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
