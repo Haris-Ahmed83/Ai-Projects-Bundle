@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Document Summarizer</h1>
+    </header>
+    <main class="container">
+        <section class="input-section">
+            <h2>Input Document</h2>
+            <textarea id="documentText" placeholder="Paste your text here or upload a document..." rows="15"></textarea>
+            <div class="file-upload">
+                <label for="fileUpload" class="upload-button">Upload Document</label>
+                <input type="file" id="fileUpload" accept=".txt" hidden>
+                <span id="fileName">No file chosen</span>
+            </div>
+            <button id="summarizeBtn">Summarize</button>
+        </section>
+        <section class="output-section">
+            <h2>Summary</h2>
+            <div id="summaryOutput" class="summary-box">
+                Your AI-generated summary will appear here.
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 AI Summarizer. All rights reserved. (Simulated AI)</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
