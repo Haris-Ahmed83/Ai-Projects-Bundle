@@ -1,5 +1,5 @@
 {
-  "global_number": 103,
+  "global_number": 105,
   "completed": [
     1,
     2,
@@ -102,7 +102,9 @@
     99,
     100,
     101,
-    102
+    102,
+    103,
+    104
   ],
   "history": [
     {
@@ -920,8 +922,24 @@
       "month": 2,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 103,
+      "name": "Interactive Model Explainer",
+      "concepts": "Explainable AI, Machine Learning, Data Visualization, API Integration",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 104,
+      "name": "Interactive Recommendation Engine Visualizer",
+      "concepts": "Machine Learning, Recommendation Systems, Data Visualization, Interactive UI, Collaborative Filtering, Content-Based Filtering",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-01T11:00:39Z",
+  "last_run": "2026-09-02T09:18:56Z",
   "fallback_count": 19
 }

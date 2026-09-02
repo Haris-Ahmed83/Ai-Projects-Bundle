@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2, h3 {
+    color: #34495e;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.input-section, .output-section {
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: calc(100% - 22px); /* Account for padding and border */
+    max-width: 200px;
+    transition: border-color 0.2s;
+}
+
+.input-group input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    background-color: #216a9a;
+    transform: translateY(0);
+}
+
+.prediction-box {
+    background-color: #e8f4f8;
+    border: 1px solid #d0e7f2;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.prediction-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+#predictionOutput {
+    font-weight: bold;
+    color: #e74c3c; /* A distinct color for the prediction */
+    font-size: 1.2rem;
+}
+
+.explanation-box {
+    margin-top: 20px;
+}
+
+.chart-container {
+    background-color: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+    overflow-x: auto; /* In case chart overflows */
+    margin-bottom: 15px;
+}
+
+#explanationChart {
+    display: block; /* Removes extra space below SVG */
+    font-family: sans-serif; /* For SVG text */
+}
+
+/* SVG specific styles for bars and text */
+.bar.positive { fill: #2ecc71; } /* Green for positive contribution */
+.bar.negative { fill: #e74c3c; } /* Red for negative contribution */
+.bar-label { fill: #333; font-size: 0.9em; dominant-baseline: middle; }
+.bar-value { fill: #333; font-size: 0.8em; dominant-baseline: middle; text-anchor: middle; }
+.zero-line { stroke: #999; stroke-width: 1; }
+
+#explanationText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .input-section {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .output-section {
+        flex: 2;
+        min-width: 400px;
+    }
+
+    .input-group input[type="number"] {
+        max-width: none; /* Let inputs expand in larger view */
+    }
+}

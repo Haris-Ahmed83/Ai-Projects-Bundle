@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive ML Model Explainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ML Model Explainer</h1>
+
+        <div class="input-section">
+            <h2>Input Features</h2>
+            <div class="input-group">
+                <label for="age">Age (years):</label>
+                <input type="number" id="age" value="30" min="1">
+            </div>
+            <div class="input-group">
+                <label for="income">Income (k USD):</label>
+                <input type="number" id="income" value="50" min="0">
+            </div>
+            <div class="input-group">
+                <label for="education">Education Years:</label>
+                <input type="number" id="education" value="12" min="0">
+            </div>
+            <button id="explainBtn">Predict & Explain</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Model Output</h2>
+            <div class="prediction-box">
+                <p>Predicted Value: <span id="predictionOutput">N/A</span></p>
+            </div>
+
+            <div class="explanation-box">
+                <h3>Explanation (Feature Contributions)</h3>
+                <div id="explanationChartContainer" class="chart-container">
+                    <svg id="explanationChart" width="100%" height="200"></svg>
+                </div>
+                <p id="explanationText"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

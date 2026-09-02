@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Recommendation Engine Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Recommendation Engine Visualizer</h1>
+        <p>Explore how recommendations are made based on user preferences and item features.</p>
+    </header>
+
+    <main class="container">
+        <section class="user-selection-panel panel">
+            <h2>Select a User</h2>
+            <select id="userSelect"></select>
+        </section>
+
+        <section class="user-data-panel panel">
+            <h2><span id="currentUserName"></span>'s Rated Movies</h2>
+            <div id="ratedMoviesList" class="movie-list">
+                <p>Select a user to see their ratings.</p>
+            </div>
+        </section>
+
+        <section class="recommendations-panel panel">
+            <h2>Recommended Movies for <span id="recommendedForUserName"></span></h2>
+            <div id="recommendedMoviesList" class="movie-list">
+                <p>Select a user to see recommendations.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
