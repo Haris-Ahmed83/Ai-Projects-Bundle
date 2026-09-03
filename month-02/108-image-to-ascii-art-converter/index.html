@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to ASCII Art Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image to ASCII Art Converter</h1>
+
+        <div class="controls">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="convertBtn" disabled>Convert to ASCII</button>
+        </div>
+
+        <div class="image-area">
+            <img id="uploadedImage" src="#" alt="Uploaded Image" style="display: none;">
+            <canvas id="imageCanvas"></canvas>
+        </div>
+
+        <div class="ascii-output">
+            <h2>ASCII Art Output</h2>
+            <pre id="asciiOutput"></pre>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

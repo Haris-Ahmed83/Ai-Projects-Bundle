@@ -1,5 +1,5 @@
 {
-  "global_number": 107,
+  "global_number": 109,
   "completed": [
     1,
     2,
@@ -106,7 +106,9 @@
     103,
     104,
     105,
-    106
+    106,
+    107,
+    108
   ],
   "history": [
     {
@@ -956,8 +958,24 @@
       "month": 2,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 107,
+      "name": "Quiz Application",
+      "concepts": "DOM Manipulation, Event Listeners",
+      "month": 2,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 108,
+      "name": "Image to ASCII Art Converter",
+      "concepts": "vanilla JavaScript, HTML Canvas, image processing, DOM manipulation",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-02T10:29:27Z",
-  "fallback_count": 20
+  "last_run": "2026-09-03T09:29:29Z",
+  "fallback_count": 21
 }
