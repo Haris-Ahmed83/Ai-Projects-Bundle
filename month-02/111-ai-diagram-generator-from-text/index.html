@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Diagram Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Diagram Generator from Text</h1>
+        <p class="description">Input a natural language description, and our AI (simulated) will generate a diagram structure in Mermaid syntax.</p>
+        
+        <textarea id="diagramInput" rows="10" placeholder="e.g., 'a flowchart for user login with success and failure paths', 'a sequence diagram for an online order process', 'a simple class diagram for a library system'"></textarea>
+        
+        <button id="generateBtn">Generate Diagram</button>
+        
+        <h2>Generated Diagram (Mermaid Syntax)</h2>
+        <div id="outputArea">
+            <p>Your generated diagram structure will appear here. Try describing a 'flowchart', 'sequence diagram', 'class diagram', 'state diagram', or 'ERD'.</p>
+        </div>
+    </div>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>

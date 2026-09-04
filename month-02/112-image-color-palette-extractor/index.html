@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Color Palette Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Color Palette Extractor</h1>
+
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-button">Upload Image</label>
+            <p id="fileNameDisplay"></p>
+        </div>
+
+        <div class="image-display-section">
+            <img id="uploadedImage" src="#" alt="Uploaded Image" style="display: none;">
+            <canvas id="imageCanvas" style="display: none;"></canvas>
+        </div>
+
+        <div class="palette-section">
+            <h2>Extracted Color Palette</h2>
+            <div id="colorPalette" class="color-palette">
+                <p class="placeholder">Upload an image to see its color palette.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

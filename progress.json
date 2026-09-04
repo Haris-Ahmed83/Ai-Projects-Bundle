@@ -1,5 +1,5 @@
 {
-  "global_number": 111,
+  "global_number": 113,
   "completed": [
     1,
     2,
@@ -110,7 +110,9 @@
     107,
     108,
     109,
-    110
+    110,
+    111,
+    112
   ],
   "history": [
     {
@@ -992,8 +994,24 @@
       "month": 2,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 111,
+      "name": "AI Diagram Generator from Text",
+      "concepts": "AI, Text-to-Diagram, Natural Language Processing, Web Visualization",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 112,
+      "name": "Image Color Palette Extractor",
+      "concepts": "image processing, color analysis, web canvas API, data visualization",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-04T09:20:26Z",
+  "last_run": "2026-09-04T10:09:44Z",
   "fallback_count": 22
 }

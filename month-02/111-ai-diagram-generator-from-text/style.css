@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.description {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#outputArea {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 100px;
+    overflow-x: auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+#outputArea pre {
+    background-color: #e8eaf6;
+    border: 1px solid #c5cae9;
+    padding: 15px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+    color: #3f51b5;
+}
+
+#outputArea p {
+    margin-bottom: 10px;
+}
+
+#outputArea p:last-child {
+    margin-bottom: 0;
+    font-style: italic;
+    color: #888;
+    font-size: 0.85rem;
+}
