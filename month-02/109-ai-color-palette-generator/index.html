@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Color Palette Generator</h1>
+        <p>Upload an image or input keywords to generate beautiful, harmonious color palettes using AI.</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="imageUpload">Upload Image:</label>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <div class="input-group">
+                <label for="keywordInput">Or enter keywords (e.g., nature, ocean, sunset):</label>
+                <input type="text" id="keywordInput" placeholder="e.g., 'forest, calm'">
+            </div>
+            <button id="generatePaletteBtn">Generate Palette</button>
+        </div>
+
+        <div class="palette-display" id="paletteDisplay">
+            <!-- Palettes will be inserted here -->
+            <p class="placeholder-text">Generated palettes will appear here.</p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
