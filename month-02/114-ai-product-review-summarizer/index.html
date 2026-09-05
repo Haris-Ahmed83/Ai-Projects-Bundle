@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Product Review Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Product Review Summarizer</h1>
+        <p>Enter multiple product reviews below to get a concise summary, key pros, cons, and overall sentiment.</p>
+
+        <div class="input-section">
+            <label for="reviewInput">Product Reviews (one per line or separated by paragraphs):</label>
+            <textarea id="reviewInput" rows="15" placeholder="Enter reviews here...
+Example:
+This product is amazing! The battery life is excellent and it's super fast. Highly recommend.
+---
+It's okay. A bit expensive for what it offers and the design could be better. Performance is decent.
+---
+Absolutely terrible. Broke after a week. Don't buy it!"></textarea>
+            <button id="summarizeBtn">Summarize Reviews</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Summary Results</h2>
+            <div id="loading" class="hidden">Summarizing...</div>
+            <div class="result-box" id="summaryOutput">
+                <h3>Summary:</h3>
+                <p>No summary generated yet.</p>
+            </div>
+            <div class="result-box" id="prosOutput">
+                <h3>Key Pros:</h3>
+                <ul><li>No pros identified yet.</li></ul>
+            </div>
+            <div class="result-box" id="consOutput">
+                <h3>Key Cons:</h3>
+                <ul><li>No cons identified yet.</li></ul>
+            </div>
+            <div class="result-box" id="sentimentOutput">
+                <h3>Overall Sentiment:</h3>
+                <p>Neutral</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

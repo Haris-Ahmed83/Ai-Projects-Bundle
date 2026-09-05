@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recipe Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Recipe Generator</h1>
+            <p>Input your ingredients and preferences, and let AI cook up a unique recipe!</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="ingredients">Available Ingredients (comma-separated):</label>
+                    <textarea id="ingredients" placeholder="e.g., chicken, rice, broccoli, garlic, soy sauce" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Dietary Preferences:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="preference" value="vegetarian"> Vegetarian</label>
+                        <label><input type="checkbox" name="preference" value="vegan"> Vegan</label>
+                        <label><input type="checkbox" name="preference" value="gluten-free"> Gluten-Free</label>
+                        <label><input type="checkbox" name="preference" value="keto"> Keto</label>
+                        <label><input type="checkbox" name="preference" value="dairy-free"> Dairy-Free</label>
+                    </div>
+                </div>
+
+                <button id="generateBtn">Generate Recipe</button>
+            </section>
+
+            <section class="output-section">
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Generating deliciousness...</p>
+                </div>
+
+                <div id="recipeOutput" class="recipe-card hidden">
+                    <h2 id="recipeTitle"></h2>
+                    <h3>Ingredients:</h3>
+                    <ul id="recipeIngredients"></ul>
+                    <h3>Instructions:</h3>
+                    <ol id="recipeInstructions"></ol>
+                    <button id="saveBtn" class="hidden">Save Recipe</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Recipe Generator. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

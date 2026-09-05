@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto+Slab:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #FFC107; /* Amber */
+    --background-color: #f4f7f6; /* Light Grey */
+    --card-background: #ffffff; /* White */
+    --text-color: #333;
+    --light-text-color: #666;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for longer content */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    width: 100%;
+    max-width: 900px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--primary-color);
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--light-text-color);
+    font-size: 1.1em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-section, .output-section {
+    background: var(--background-color);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.05em;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.output-section {
+    min-height: 150px; /* Ensure some space even when empty */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center loading spinner */
+    justify-content: center; /* Center loading spinner */
+}
+
+.recipe-card {
+    width: 100%;
+    background: var(--card-background);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.recipe-card h2 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.recipe-card h3 {
+    color: var(--text-color);
+    font-size: 1.4em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+.recipe-card ul,
+.recipe-card ol {
+    list-style-position: inside;
+    padding-left: 20px; /* For better indentation */
+    margin-bottom: 15px;
+}
+
+.recipe-card ul li,
+.recipe-card ol li {
+    margin-bottom: 8px;
+    color: var(--light-text-color);
+}
+
+.recipe-card ul li::marker {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.recipe-card ol li::marker {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#saveBtn {
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#saveBtn:hover {
+    background-color: #fbaf00;
+    color: var(--text-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Loading Spinner */
+#loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: var(--light-text-color);
+    font-size: 1.1em;
+}
+
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--light-text-color);
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .input-section, .output-section {
+        padding: 20px;
+    }
+
+    .recipe-card h2 {
+        font-size: 1.6em;
+    }
+
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .recipe-card h3 {
+        font-size: 1.2em;
+    }
+
+    .recipe-card ul,
+    .recipe-card ol {
+        padding-left: 15px;
+    }
+}
