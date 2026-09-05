@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Caption Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Caption Generator</h1>
+        <p>Upload an image and get an AI-generated descriptive caption.</p>
+
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-button">Choose Image</label>
+            <div id="imagePreview" class="image-preview">
+                <p>No image selected</p>
+            </div>
+            <button id="generateCaptionBtn" disabled>Generate Caption</button>
+        </div>
+
+        <div class="caption-section">
+            <h2>Generated Caption:</h2>
+            <p id="captionOutput" class="caption-output">Your caption will appear here...</p>
+            <div id="loadingIndicator" class="loading-indicator hidden">
+                <div class="spinner"></div>
+                <p>Generating caption...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
