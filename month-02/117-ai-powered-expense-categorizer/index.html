@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Expense Categorizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Expense Categorizer</h1>
+
+        <div class="expense-input-card">
+            <h2>Add New Expense</h2>
+            <div class="input-group">
+                <label for="expenseDescription">Description:</label>
+                <input type="text" id="expenseDescription" placeholder="e.g., Groceries at SuperMart">
+            </div>
+            <div class="input-group">
+                <label for="expenseAmount">Amount ($):</label>
+                <input type="number" id="expenseAmount" placeholder="e.g., 55.75" step="0.01">
+            </div>
+            <button id="addExpenseBtn">Add Expense</button>
+        </div>
+
+        <div class="expense-list-card">
+            <h2>Your Expenses</h2>
+            <div id="expenseList">
+                <!-- Expenses will be rendered here by JavaScript -->
+                <p class="no-expenses-message">No expenses yet. Add one above!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

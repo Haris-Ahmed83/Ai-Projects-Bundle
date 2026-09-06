@@ -1,5 +1,5 @@
 {
-  "global_number": 117,
+  "global_number": 119,
   "completed": [
     1,
     2,
@@ -116,7 +116,9 @@
     113,
     114,
     115,
-    116
+    116,
+    117,
+    118
   ],
   "history": [
     {
@@ -1046,8 +1048,24 @@
       "month": 2,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 117,
+      "name": "AI-Powered Expense Categorizer",
+      "concepts": "AI, machine learning, data categorization, finance, local storage, JavaScript",
+      "month": 2,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 118,
+      "name": "Password Generator",
+      "concepts": "Random Generation, Clipboard API",
+      "month": 2,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-09-05T09:55:01Z",
-  "fallback_count": 23
+  "last_run": "2026-09-06T09:10:10Z",
+  "fallback_count": 24
 }
