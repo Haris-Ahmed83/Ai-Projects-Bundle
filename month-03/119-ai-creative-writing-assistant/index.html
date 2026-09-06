@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creative Writing Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Creative Writing Assistant</h1>
+        <p>Overcome writer's block with AI-generated ideas!</p>
+
+        <div class="input-section">
+            <label for="userInput">Your current idea or desired topic:</label>
+            <textarea id="userInput" placeholder="e.g., A detective investigating a strange disappearance in a futuristic city..."></textarea>
+
+            <label for="promptType">What kind of idea do you need?</label>
+            <select id="promptType">
+                <option value="general">General Prompt</option>
+                <option value="plotTwist">Plot Twist</option>
+                <option value="characterIdea">Character Idea</option>
+                <option value="settingDescription">Setting Description</option>
+            </select>
+
+            <button id="generateBtn">Generate Idea</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Generated Idea:</h2>
+            <div id="outputDisplay" class="output-box">
+                Your AI-generated idea will appear here.
+            </div>
+            <div id="loadingIndicator" class="loading-spinner" style="display: none;"></div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
