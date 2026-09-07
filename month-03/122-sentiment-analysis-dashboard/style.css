@@ -1,0 +1,6 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Segoe UI", sans-serif; background: linear-gradient(135deg, #1a1a2e, #16213e); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.container { max-width: 600px; text-align: center; }
+h1 { color: #fff; margin-bottom: 16px; font-size: 28px; }
+.desc { color: rgba(255,255,255,0.7); font-size: 16px; margin-bottom: 24px; }
+.content { padding: 30px; background: rgba(255,255,255,0.05); border-radius: 16px; color: #e0e0e0; }

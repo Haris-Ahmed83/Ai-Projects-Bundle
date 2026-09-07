@@ -1,5 +1,5 @@
 {
-  "global_number": 121,
+  "global_number": 123,
   "completed": [
     1,
     2,
@@ -120,7 +120,9 @@
     117,
     118,
     119,
-    120
+    120,
+    121,
+    122
   ],
   "history": [
     {
@@ -1082,8 +1084,24 @@
       "month": 3,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 121,
+      "name": "AI Image Style Transfer",
+      "concepts": "AI, Image Processing, Neural Style Transfer, API Integration",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 122,
+      "name": "Sentiment Analysis Dashboard",
+      "concepts": "Fetch API, JSON Parsing",
+      "month": 3,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-09-06T10:08:53Z",
-  "fallback_count": 25
+  "last_run": "2026-09-07T09:57:25Z",
+  "fallback_count": 26
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Style Transfer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Image Style Transfer</h1>
+        <p>Upload a content image and a style image, then use AI to generate a new image where the content image is re-rendered in the artistic style of the style image.</p>
+    </header>
+
+    <main class="container">
+        <section class="input-section">
+            <h2>Upload Images</h2>
+            <div class="image-upload-group">
+                <div class="image-input-wrapper">
+                    <label for="contentImage">Content Image:</label>
+                    <input type="file" id="contentImage" accept="image/*">
+                    <img id="contentPreview" class="image-preview" src="" alt="Content Image Preview" style="display: none;">
+                </div>
+                <div class="image-input-wrapper">
+                    <label for="styleImage">Style Image:</label>
+                    <input type="file" id="styleImage" accept="image/*">
+                    <img id="stylePreview" class="image-preview" src="" alt="Style Image Preview" style="display: none;">
+                </div>
+            </div>
+            <button id="transferStyleBtn">Transfer Style</button>
+            <p id="errorMessage" class="error-message" style="display: none;"></p>
+        </section>
+
+        <section class="output-section">
+            <h2>Result</h2>
+            <div id="loadingIndicator" class="loading" style="display: none;"></div>
+            <img id="resultImage" class="result-image" src="" alt="Style Transferred Image" style="display: none;">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AI Style Transfer. (Backend AI processing is simulated)</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
