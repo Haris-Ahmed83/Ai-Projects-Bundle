@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mood Journal & Mindfulness Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mindful AI Companion</h1>
+
+        <div class="chat-section">
+            <div class="chat-history" id="chat-history">
+                <!-- Initial bot message will be loaded by script.js -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Share your feelings, ask for a prompt...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+        <div class="journal-section">
+            <h2>Private Journal</h2>
+            <textarea id="journal-entry" placeholder="Write down your thoughts, reflections, or gratitude here..."></textarea>
+            <button id="save-journal-btn">Save Journal</button>
+            <div id="journal-feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
