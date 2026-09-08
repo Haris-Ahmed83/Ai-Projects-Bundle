@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Paraphraser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Text Paraphraser</h1>
+        <p class="description">Input your text below to receive multiple paraphrased versions, offering different tones and styles.</p>
+
+        <div class="input-section">
+            <label for="inputText">Enter your text:</label>
+            <textarea id="inputText" placeholder="Type or paste text here..." rows="8"></textarea>
+            <button id="paraphraseButton">Paraphrase Text</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Paraphrased Versions</h2>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Processing text with AI...</p>
+            </div>
+            <div id="results">
+                <!-- Paraphrased results will be displayed here dynamically by JavaScript -->
+                <p class="placeholder-text">Your paraphrased results will appear here after processing.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
