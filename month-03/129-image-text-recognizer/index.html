@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Text Recognizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tesseract.js CDN for client-side OCR -->
+    <script src="https://unpkg.com/tesseract.js@5.0.0/dist/tesseract.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Text Recognizer</h1>
+        <p>Upload an image containing text, and we'll extract it for you!</p>
+
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-button">
+                Choose Image
+            </label>
+            <input type="file" id="imageUpload" accept="image/*">
+            <span id="fileName" class="file-name">No file chosen</span>
+        </div>
+
+        <div id="imagePreviewContainer" class="image-preview-container">
+            <img id="imagePreview" src="#" alt="Image Preview" class="hidden">
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Processing image...</p>
+        </div>
+
+        <div class="result-section">
+            <h2>Extracted Text</h2>
+            <textarea id="extractedText" rows="10" placeholder="Text will appear here..."></textarea>
+            <button id="copyTextBtn" class="copy-button" disabled>Copy Text</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

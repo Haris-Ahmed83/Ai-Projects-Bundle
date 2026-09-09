@@ -1,5 +1,5 @@
 {
-  "global_number": 129,
+  "global_number": 131,
   "completed": [
     1,
     2,
@@ -128,7 +128,9 @@
     125,
     126,
     127,
-    128
+    128,
+    129,
+    130
   ],
   "history": [
     {
@@ -1154,8 +1156,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 129,
+      "name": "Image Text Recognizer",
+      "concepts": "OCR, image processing, text extraction, API integration",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 130,
+      "name": "AI Text-to-Speech Reader",
+      "concepts": "AI, Text-to-Speech, Speech Synthesis, Web Audio API, Modern Web Tech",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-08T10:16:29Z",
+  "last_run": "2026-09-09T09:24:36Z",
   "fallback_count": 28
 }

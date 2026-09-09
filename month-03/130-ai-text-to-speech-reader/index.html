@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text-to-Speech Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Text-to-Speech Reader</h1>
+        <p>Paste or type text below to have it read aloud using advanced speech synthesis.</p>
+
+        <div class="input-section">
+            <textarea id="textInput" placeholder="Enter your text here..." rows="10"></textarea>
+        </div>
+
+        <div class="controls-section">
+            <div class="voice-selection">
+                <label for="voiceSelect">Select Voice:</label>
+                <select id="voiceSelect"></select>
+            </div>
+            <div class="action-buttons">
+                <button id="readButton">Read Text</button>
+                <button id="stopButton" disabled>Stop Reading</button>
+            </div>
+        </div>
+
+        <div id="supportMessage" class="support-message" style="display: none;">
+            <p><strong>Browser Not Supported:</strong> Your browser does not fully support the Web Speech API. Please try a modern browser like Chrome, Edge, or Firefox.</p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
