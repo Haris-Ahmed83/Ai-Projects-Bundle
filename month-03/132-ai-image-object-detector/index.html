@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Object Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Object Detector</h1>
+        <p>Upload an image and let the AI identify objects within it.</p>
+
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-button">Choose Image</label>
+        </div>
+
+        <div class="image-display-area">
+            <div class="image-wrapper">
+                <img id="uploadedImage" src="#" alt="Uploaded Image" class="hidden">
+                <canvas id="detectionCanvas"></canvas>
+            </div>
+            <p id="noImageMessage">Upload an image to get started.</p>
+        </div>
+
+        <button id="detectButton" class="action-button" disabled>Detect Objects</button>
+        <div id="loadingIndicator" class="loading hidden"></div>
+
+        <div class="results-section">
+            <h2>Detected Objects</h2>
+            <ul id="objectList">
+                <li>No objects detected yet.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

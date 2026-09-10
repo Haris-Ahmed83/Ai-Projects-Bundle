@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Explainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Code Explainer</h1>
+        <p>Input your code snippet below and receive a plain English explanation.</p>
+
+        <div class="input-section">
+            <textarea id="code-input" placeholder="Paste your code here...
+
+Example JavaScript:
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+greet('World');
+
+Example Python:
+def factorial(n):
+  if n == 0:
+    return 1
+  else:
+    return n * factorial(n-1)
+print(factorial(5))"></textarea>
+            <button id="explain-button">Explain Code</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Explanation:</h2>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <span>Generating explanation...</span>
+            </div>
+            <pre id="explanation-output">Your explanation will appear here.</pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
