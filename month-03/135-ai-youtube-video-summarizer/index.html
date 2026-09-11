@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI YouTube Video Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI YouTube Video Summarizer</h1>
+        <p>Paste a YouTube video URL to get a concise summary of its content.</p>
+
+        <div class="input-group">
+            <input type="text" id="youtubeUrl" placeholder="e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <button id="summarizeBtn">Summarize Video</button>
+        </div>
+
+        <div id="statusMessage" class="status-message"></div>
+
+        <div id="summaryOutput" class="summary-output hidden">
+            <h2>Summary:</h2>
+            <div id="summaryText"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
