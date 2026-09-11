@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Podcast Summary Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Podcast Summary Generator</h1>
+        <p class="description">Upload an audio file (e.g., MP3, WAV) and get a concise summary of its content. <em>(Note: This is a client-side simulation. Actual AI processing requires a backend service.)</em></p>
+
+        <div class="upload-section">
+            <input type="file" id="audioFileInput" accept="audio/*">
+            <button id="generateSummaryBtn">Generate Summary</button>
+        </div>
+
+        <div id="statusMessage" class="status-message"></div>
+
+        <div class="summary-output-section">
+            <h2>Podcast Summary</h2>
+            <div id="summaryOutput" class="summary-output">No summary generated yet. Upload an audio file to begin.</div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

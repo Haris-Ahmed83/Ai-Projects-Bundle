@@ -1,0 +1,206 @@
+/* General Styles */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50E3C2;
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --card-bg: #fff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for better content flow */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+}
+
+.description {
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Upload Section */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    border: 1px dashed var(--border-color);
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+input[type="file"] {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #3a7bd5;
+}
+
+button#generateSummaryBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+button#generateSummaryBtn:hover {
+    background-color: #3a7bd5;
+    transform: translateY(-1px);
+}
+
+button#generateSummaryBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Status Message */
+.status-message {
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    min-height: 20px; /* Ensure space even when empty */
+}
+
+.status-message.loading {
+    color: var(--primary-color);
+}
+
+.status-message.error {
+    color: #e74c3c;
+}
+
+.status-message.success {
+    color: #27ae60;
+}
+
+/* Summary Output Section */
+.summary-output-section {
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+}
+
+.summary-output-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.summary-output {
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 150px;
+    line-height: 1.8;
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    word-wrap: break-word;
+    overflow-y: auto;
+    max-height: 400px;
+    font-size: 1.05em;
+}
+
+/* Loading Spinner (Simple CSS animation) */
+.loading-spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid var(--primary-color); /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button#generateSummaryBtn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    input[type="file"] {
+        padding: 10px;
+    }
+
+    .summary-output {
+        padding: 15px;
+        font-size: 1em;
+    }
+}
