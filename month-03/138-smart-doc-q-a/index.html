@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Doc Q&A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Doc Q&A</h1>
+        <p class="description">Upload any PDF or text document, then ask natural language questions about its content. The AI will provide answers.</p>
+
+        <section class="upload-section card">
+            <h2>1. Upload Document</h2>
+            <div class="file-input-wrapper">
+                <input type="file" id="documentUpload" accept=".pdf,.txt" class="file-input">
+                <label for="documentUpload" class="upload-button">Choose File</label>
+                <span id="fileName" class="file-name">No file chosen</span>
+            </div>
+            <p class="error-message" id="uploadError"></p>
+            <div class="loading-spinner" id="uploadSpinner"></div>
+        </section>
+
+        <section class="qa-section card">
+            <h2>2. Ask Questions</h2>
+            <div class="document-preview">
+                <h3>Document Content Preview:</h3>
+                <textarea id="documentContentPreview" readonly placeholder="Upload a document to see its content here..." rows="8"></textarea>
+            </div>
+
+            <div class="question-input-wrapper">
+                <label for="questionInput">Your Question:</label>
+                <textarea id="questionInput" placeholder="e.g., 'What is the main topic?', 'Who are the key figures mentioned?', 'When did event X happen?'" rows="3"></textarea>
+                <button id="askButton" class="ask-button" disabled>Ask AI</button>
+            </div>
+            <p class="error-message" id="questionError"></p>
+            <div class="loading-spinner" id="qaSpinner"></div>
+
+            <div class="answer-output">
+                <h3>AI Answer:</h3>
+                <p id="aiAnswer" class="answer-text">Upload a document and ask a question to get an AI-powered answer.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

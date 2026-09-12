@@ -1,5 +1,5 @@
 {
-  "global_number": 137,
+  "global_number": 139,
   "completed": [
     1,
     2,
@@ -136,7 +136,9 @@
     133,
     134,
     135,
-    136
+    136,
+    137,
+    138
   ],
   "history": [
     {
@@ -1226,8 +1228,24 @@
       "month": 3,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 137,
+      "name": "AI Code Refactor & Optimization Assistant",
+      "concepts": "AI, code analysis, optimization, refactoring, web development",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 138,
+      "name": "Smart Doc Q&A",
+      "concepts": "AI, Large Language Models, Document Processing, Semantic Search, Q&A, Web API",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-11T10:30:05Z",
+  "last_run": "2026-09-12T09:04:09Z",
   "fallback_count": 29
 }
