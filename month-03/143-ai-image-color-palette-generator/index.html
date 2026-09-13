@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Color Palette Generator</h1>
+        <p>Upload an image and let AI analyze its dominant colors to generate a beautiful, coherent color palette.</p>
+
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-button">Upload Image</label>
+            <input type="file" id="imageUpload" accept="image/*">
+            <span id="fileName">No image chosen</span>
+        </div>
+
+        <div class="image-display">
+            <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none;">
+            <canvas id="imageCanvas" style="display: none;"></canvas>
+        </div>
+
+        <div class="palette-section">
+            <h2>Generated Palette</h2>
+            <div id="colorPalette" class="color-palette"></div>
+            <p id="paletteMessage" class="message">Upload an image to see its color palette.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

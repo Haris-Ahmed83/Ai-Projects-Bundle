@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Resume Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Smart Resume Optimizer</h1>
+        <p class="description">Upload your resume and provide a target job description. Our AI-powered tool will analyze both and provide tailored suggestions to optimize your resume for the job.</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="resumeUpload">Upload Resume (PDF, DOCX):</label>
+                <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx">
+            </div>
+
+            <div class="input-group">
+                <label for="jobDescription">Target Job Description:</label>
+                <textarea id="jobDescription" placeholder="Paste the full job description here..." rows="10"></textarea>
+            </div>
+
+            <button id="analyzeButton">Analyze & Optimize Resume</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Optimization Suggestions:</h2>
+            <div id="suggestionsOutput" class="suggestions-box">
+                <p class="placeholder">Upload your resume and paste a job description to get started!</p>
+            </div>
+            <div id="loadingIndicator" class="loading-indicator">Analyzing...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
