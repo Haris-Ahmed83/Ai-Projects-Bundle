@@ -1,5 +1,5 @@
 {
-  "global_number": 141,
+  "global_number": 143,
   "completed": [
     1,
     2,
@@ -140,7 +140,9 @@
     137,
     138,
     139,
-    140
+    140,
+    141,
+    142
   ],
   "history": [
     {
@@ -1262,8 +1264,24 @@
       "month": 3,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 141,
+      "name": "AI Image Background Remover",
+      "concepts": "AI, Computer Vision, Image Processing, API Integration",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 142,
+      "name": "Sentiment Analysis Dashboard",
+      "concepts": "Fetch API, JSON Parsing",
+      "month": 3,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-09-12T09:44:28Z",
-  "fallback_count": 31
+  "last_run": "2026-09-13T09:59:35Z",
+  "fallback_count": 32
 }

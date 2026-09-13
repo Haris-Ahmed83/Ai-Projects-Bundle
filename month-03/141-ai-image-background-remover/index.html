@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Background Remover</h1>
+        <p class="description">Upload any image and let the AI automatically detect and remove the background, providing a clean, transparent foreground image.</p>
+
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-button">
+                <span>Choose Image</span>
+                <input type="file" id="imageUpload" accept="image/*" hidden>
+            </label>
+            <button id="removeBgBtn" class="action-button" disabled>Remove Background</button>
+        </div>
+
+        <div class="image-display-section">
+            <div class="image-card">
+                <h2>Original Image</h2>
+                <div class="image-wrapper">
+                    <img id="previewImage" src="#" alt="Image Preview" class="hidden">
+                    <p id="uploadPrompt" class="prompt">Upload an image to see it here.</p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <h2>Processed Image</h2>
+                <div class="image-wrapper">
+                    <img id="resultImage" src="#" alt="Processed Image" class="hidden">
+                    <div id="loadingSpinner" class="spinner hidden"></div>
+                    <p id="resultPrompt" class="prompt">Processed image will appear here.</p>
+                </div>
+                <a id="downloadBtn" class="action-button hidden" download="transparent-image.png">Download Result</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
