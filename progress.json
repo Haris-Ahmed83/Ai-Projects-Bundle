@@ -1,5 +1,5 @@
 {
-  "global_number": 145,
+  "global_number": 147,
   "completed": [
     1,
     2,
@@ -144,7 +144,9 @@
     141,
     142,
     143,
-    144
+    144,
+    145,
+    146
   ],
   "history": [
     {
@@ -1298,8 +1300,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 145,
+      "name": "AI Ingredient-to-Recipe Generator",
+      "concepts": "AI, Recipe Generation, API Integration, Web Development",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 146,
+      "name": "AI Text Translation App",
+      "concepts": "AI, Machine Learning, Language Translation, API Integration",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-13T10:46:46Z",
+  "last_run": "2026-09-14T10:20:08Z",
   "fallback_count": 32
 }

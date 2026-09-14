@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ingredient-to-Recipe Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Recipe Generator</h1>
+        <p class="description">Input your ingredients, and our AI will craft unique recipe ideas just for you!</p>
+
+        <div class="input-section">
+            <label for="ingredients">What ingredients do you have? (e.g., chicken, rice, broccoli, garlic)</label>
+            <textarea id="ingredients" placeholder="List your ingredients, separated by commas or new lines..." rows="6"></textarea>
+            <button id="generateBtn">Generate Recipe</button>
+        </div>
+
+        <div class="output-section" id="recipeOutput">
+            <h2>Your Custom Recipe</h2>
+            <p id="statusMessage" class="status-message"></p>
+            <div id="recipeContent" class="recipe-content">
+                <h3 id="recipeTitle"></h3>
+                <div class="recipe-details">
+                    <h4>Ingredients:</h4>
+                    <ul id="outputIngredients"></ul>
+                    <h4>Instructions:</h4>
+                    <ol id="outputInstructions"></ol>
+                </div>
+            </div>
+            <p class="note"><em>Note: This is a simulated AI response. In a real application, this would connect to a powerful AI API.</em></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
