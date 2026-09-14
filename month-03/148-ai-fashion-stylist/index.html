@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fashion Stylist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Fashion Stylist</h1>
+        <p>Upload a photo of your clothing item to get AI analysis and styling recommendations.</p>
+
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-button">Upload Clothing Item</label>
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+            <div id="imagePreview" class="image-preview">
+                <img id="uploadedImage" src="" alt="Uploaded Clothing Item" class="hidden">
+                <p id="previewPlaceholder">No image selected</p>
+            </div>
+        </div>
+
+        <div class="analysis-section">
+            <h2>AI Analysis</h2>
+            <div id="analysisResults" class="results-box">
+                <p>Upload an image to see analysis.</p>
+            </div>
+        </div>
+
+        <div class="recommendation-section">
+            <h2>Recommendations</h2>
+            <div id="recommendationResults" class="results-box">
+                <p>Recommendations will appear here.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

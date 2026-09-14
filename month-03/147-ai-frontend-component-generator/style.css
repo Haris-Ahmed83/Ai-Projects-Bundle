@@ -1,0 +1,334 @@
+/* Basic Reset & Variables */
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --header-bg: #2c3e50;
+    --header-text: #ffffff;
+    --code-bg: #2d2d2d;
+    --code-text: #f8f8f2;
+    --tab-inactive-bg: #e9ecef;
+    --tab-active-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: var(--card-bg);
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Grid Layout for Main Sections */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 900px) {
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* Input Section */
+.input-section textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    min-height: 150px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.input-section textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#generateBtn {
+    align-self: flex-end;
+}
+
+/* Output Section */
+.output-section {
+    justify-content: space-between;
+}
+
+.tab-navigation {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-button {
+    flex: 1;
+    background-color: var(--tab-inactive-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 6px 6px 0 0;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 5px; /* Space between buttons */
+}
+
+.tab-button:last-child {
+    margin-right: 0;
+}
+
+.tab-button.active {
+    background-color: var(--tab-active-bg);
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    font-weight: bold;
+}
+
+.tab-content-container {
+    flex-grow: 1;
+    position: relative;
+    min-height: 250px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.tab-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content pre {
+    margin: 0;
+    padding: 0;
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.9em;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.tab-content code {
+    display: block; /* Ensures code block takes full width and wraps */
+    padding: 15px;
+}
+
+.component-preview {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.component-preview > * {
+    /* Basic styling for previewed elements */
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+#copyCodeBtn {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9em;
+    border-top: 1px solid var(--border-color);
+    margin-top: 20px;
+}
+
+/* Specific component styles for preview */
+/* (These styles are generic examples and will be overridden by generated CSS) */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #444;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.dark-mode-toggle {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.primary-btn-preview {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn-preview:hover {
+    background-color: #0056b3;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.product-card p {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    background-color: #28a745;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+.product-card button:hover {
+    background-color: #218838;
+}

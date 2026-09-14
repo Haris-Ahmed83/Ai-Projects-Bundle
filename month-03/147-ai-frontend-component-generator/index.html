@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Frontend Component Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Frontend Component Generator</h1>
+            <p>Describe your desired UI component and let AI generate the code!</p>
+        </header>
+
+        <main class="grid-layout">
+            <section class="input-section card">
+                <h2>1. Describe Your Component</h2>
+                <textarea id="componentDescription" placeholder="e.g., 'A dark mode navigation bar with a logo and three links', 'A responsive product card with an image, title, price, and add to cart button', 'A simple blue button'" rows="8"></textarea>
+                <button id="generateBtn">Generate Component</button>
+            </section>
+
+            <section class="output-section card">
+                <h2>2. Generated Component</h2>
+                <div class="tab-navigation">
+                    <button class="tab-button active" data-tab="html">HTML</button>
+                    <button class="tab-button" data-tab="css">CSS</button>
+                    <button class="tab-button" data-tab="js">JavaScript</button>
+                    <button class="tab-button" data-tab="preview">Preview</button>
+                </div>
+                <div class="tab-content-container">
+                    <div id="htmlContent" class="tab-content active">
+                        <pre><code class="language-html"></code></pre>
+                    </div>
+                    <div id="cssContent" class="tab-content">
+                        <pre><code class="language-css"></code></pre>
+                    </div>
+                    <div id="jsContent" class="tab-content">
+                        <pre><code class="language-javascript"></code></pre>
+                    </div>
+                    <div id="previewContent" class="tab-content component-preview">
+                        <!-- Generated component will be rendered here -->
+                    </div>
+                </div>
+                <button id="copyCodeBtn">Copy All Code</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Component Generator. Powered by Vanilla JS.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
