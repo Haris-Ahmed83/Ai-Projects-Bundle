@@ -1,0 +1,208 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px; /* Space from top */
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Task Input Section */
+.task-input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#newTaskInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+#newTaskInput:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Task List Section */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.no-tasks {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-left: 5px solid; /* For priority indicator */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-3px);
+}
+
+.task-text {
+    font-size: 1.1em;
+    color: #444;
+    flex-grow: 1;
+}
+
+.priority-tag {
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: white;
+    margin-left: 15px;
+    min-width: 70px; /* Ensure consistent width */
+    text-align: center;
+}
+
+/* Priority Colors */
+.priority-high {
+    background-color: #e74c3c; /* Red */
+    border-left-color: #e74c3c;
+}
+
+.priority-medium {
+    background-color: #f39c12; /* Orange */
+    border-left-color: #f39c12;
+}
+
+.priority-low {
+    background-color: #27ae60; /* Green */
+    border-left-color: #27ae60;
+}
+
+/* AI Insights Section */
+.ai-insights-section {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+}
+
+.ai-insights-section p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.ai-insights-section button {
+    background-color: #1abc9c;
+}
+
+.ai-insights-section button:hover {
+    background-color: #16a085;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .task-input-section {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .priority-tag {
+        margin-left: 0;
+        align-self: flex-end; /* Align tag to end on small screens */
+    }
+}

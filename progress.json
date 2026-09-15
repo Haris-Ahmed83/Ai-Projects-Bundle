@@ -1,5 +1,5 @@
 {
-  "global_number": 149,
+  "global_number": 151,
   "completed": [
     1,
     2,
@@ -148,7 +148,9 @@
     145,
     146,
     147,
-    148
+    148,
+    149,
+    150
   ],
   "history": [
     {
@@ -1334,8 +1336,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 149,
+      "name": "AI Smart Task Prioritizer",
+      "concepts": "AI, task management, productivity, machine learning, React, Node.js, API",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 150,
+      "name": "AI Plant Doctor",
+      "concepts": "AI, Computer Vision, Image Recognition, Plant Health, API Integration, React/Node.js",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-14T11:13:23Z",
+  "last_run": "2026-09-15T09:47:27Z",
   "fallback_count": 32
 }

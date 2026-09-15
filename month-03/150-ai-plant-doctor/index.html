@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Plant Doctor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 AI Plant Doctor</h1>
+        <p>Upload a photo of your plant for an AI-powered health analysis.</p>
+
+        <div class="upload-section">
+            <label for="plantImage" class="upload-button">
+                Choose Plant Photo
+                <input type="file" id="plantImage" accept="image/*" hidden>
+            </label>
+            <div id="imagePreview" class="image-preview">
+                <p>No image selected</p>
+            </div>
+            <button id="analyzeButton" class="analyze-button" disabled>Analyze Plant</button>
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Analyzing plant image...</p>
+        </div>
+
+        <div id="diagnosisResult" class="diagnosis-result hidden">
+            <h2>Diagnosis:</h2>
+            <p id="diagnosisText"></p>
+            <h3>Suggested Treatment:</h3>
+            <p id="treatmentText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
