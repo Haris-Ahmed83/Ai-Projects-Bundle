@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text-to-Image Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Text-to-Image Creator</h1>
+        <p>Unleash your imagination. Describe what you want to see, and our AI will bring it to life!</p>
+
+        <div class="input-section">
+            <textarea id="promptInput" placeholder="A futuristic city at sunset, with flying cars and neon lights, highly detailed, cyberpunk style."></textarea>
+            <button id="generateBtn">Generate Image</button>
+        </div>
+
+        <div class="result-section">
+            <div id="loadingIndicator" class="hidden">Generating image...</div>
+            <img id="generatedImage" src="https://via.placeholder.com/800x600?text=Your+AI+Image+Here" alt="Generated AI Image">
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

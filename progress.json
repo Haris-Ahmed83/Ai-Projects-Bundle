@@ -1,5 +1,5 @@
 {
-  "global_number": 151,
+  "global_number": 153,
   "completed": [
     1,
     2,
@@ -150,7 +150,9 @@
     147,
     148,
     149,
-    150
+    150,
+    151,
+    152
   ],
   "history": [
     {
@@ -1352,8 +1354,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 151,
+      "name": "Recipe Finder App",
+      "concepts": "Fetch API, Search/Filter",
+      "month": 3,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 152,
+      "name": "AI Text-to-Image Creator",
+      "concepts": "AI, Generative AI, Text-to-Image, API Integration, Web Development",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-15T09:47:27Z",
-  "fallback_count": 32
+  "last_run": "2026-09-15T10:59:47Z",
+  "fallback_count": 33
 }
