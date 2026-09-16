@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Budget Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 AI Smart Budget Optimizer</h1>
+        <p class="description">Input your financial data, income, and goals. Our AI analyzes your spending patterns to provide personalized budget recommendations and help you achieve your financial aspirations.</p>
+
+        <div class="input-section">
+            <h2>Your Financial Data</h2>
+            <div class="input-group">
+                <label for="income">Monthly Income ($):</label>
+                <input type="number" id="income" value="5000" min="0">
+            </div>
+            <div class="input-group">
+                <label for="housing">Housing/Rent ($):</label>
+                <input type="number" id="housing" value="1500" min="0">
+            </div>
+            <div class="input-group">
+                <label for="food">Food/Groceries ($):</label>
+                <input type="number" id="food" value="600" min="0">
+            </div>
+            <div class="input-group">
+                <label for="transportation">Transportation ($):</label>
+                <input type="number" id="transportation" value="300" min="0">
+            </div>
+            <div class="input-group">
+                <label for="utilities">Utilities ($):</label>
+                <input type="number" id="utilities" value="200" min="0">
+            </div>
+            <div class="input-group">
+                <label for="entertainment">Entertainment ($):</label>
+                <input type="number" id="entertainment" value="400" min="0">
+            </div>
+            <div class="input-group">
+                <label for="other">Other Expenses ($):</label>
+                <input type="number" id="other" value="200" min="0">
+            </div>
+            <div class="input-group">
+                <label for="goals">Financial Goals (e.g., "Save for down payment", "Pay off debt"):</label>
+                <input type="text" id="goals" value="Save 10k for a car in 12 months">
+            </div>
+            <button id="optimizeBtn">Optimize My Budget</button>
+        </div>
+
+        <div class="results-section">
+            <h2>AI Budget Recommendations</h2>
+            <div id="recommendations">
+                <p>Enter your financial data and click "Optimize My Budget" to receive personalized AI recommendations.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
