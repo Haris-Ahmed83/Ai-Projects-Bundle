@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Visual Mood Board Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Visual Mood Board Generator</h1>
+            <p>Unleash your creativity. Get unique visual concepts and mood board ideas.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <label for="keywords">Enter Keywords or Theme:</label>
+                <input type="text" id="keywords" placeholder="e.g., 'futuristic city', 'coastal calm', 'vintage elegance'">
+                <button id="generateBtn">Generate Ideas</button>
+            </section>
+
+            <section class="output-section">
+                <h2>Generated Mood Board Concept:</h2>
+                <div id="outputArea" class="output-card">
+                    <p class="placeholder-text">Enter your keywords or theme above and click "Generate Ideas" to get started!</p>
+                </div>
+                <div id="loadingIndicator" class="loading-indicator hidden">Generating...</div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Visual Mood Board Generator. Powered by imagination.</p>
+        </footer>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
