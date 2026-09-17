@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SEO Content Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI SEO Content Optimizer</h1>
+        <p>Paste your content below to get SEO insights and improvement suggestions.</p>
+
+        <textarea id="contentInput" placeholder="Paste your article or text here for analysis..." rows="15"></textarea>
+        <button id="analyzeBtn">Analyze Content</button>
+
+        <div id="results" class="results-section">
+            <h2>Analysis Results</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Readability Score</h3>
+                    <p id="readabilityScore">N/A</p>
+                    <small id="readabilityGrade"></small>
+                </div>
+                <div class="metric-card">
+                    <h3>Total Words</h3>
+                    <p id="wordCount">0</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Estimated Reading Time</h3>
+                    <p id="readingTime">0 min</p>
+                </div>
+            </div>
+
+            <div class="keywords-section">
+                <h3>Top Keywords & Density</h3>
+                <ul id="keywordList">
+                    <li>No keywords found.</li>
+                </ul>
+            </div>
+
+            <div class="suggestions-section">
+                <h3>Suggestions for Improvement</h3>
+                <ul id="suggestionsList">
+                    <li>No suggestions yet.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
