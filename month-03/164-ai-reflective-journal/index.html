@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Reflective Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>AI Reflective Journal</h1>
+        <p>Log your thoughts, gain insights.</p>
+    </header>
+
+    <main class="app-container">
+        <section class="journal-input-section">
+            <h2>New Entry</h2>
+            <textarea id="journalEntry" placeholder="What's on your mind today?" rows="10"></textarea>
+            <button id="submitEntry">Reflect & Analyze</button>
+        </section>
+
+        <section class="ai-insights-section">
+            <h2>AI Insights</h2>
+            <div id="aiSentiment" class="insight-card">
+                <h3>Overall Mood</h3>
+                <p>No entries yet.</p>
+            </div>
+            <div id="aiThemes" class="insight-card">
+                <h3>Recurring Themes</h3>
+                <p>No entries yet.</p>
+            </div>
+            <div id="aiTrends" class="insight-card">
+                <h3>Emotional Trends</h3>
+                <p>No entries yet.</p>
+            </div>
+            <div id="aiPrompts" class="insight-card">
+                <h3>Reflection Prompt</h3>
+                <p>Write your first entry to get started!</p>
+            </div>
+        </section>
+
+        <section class="past-entries-section">
+            <h2>Past Entries</h2>
+            <div id="pastEntriesList" class="entries-list">
+                <p class="no-entries-message">No entries yet. Start journaling!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2023 AI Reflective Journal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

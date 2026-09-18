@@ -1,0 +1,213 @@
+/* Basic Reset & Body */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #607D8B; /* Blue Grey */
+    --accent-color: #FFC107; /* Amber */
+    --background-light: #f4f7f6;
+    --text-dark: #333;
+    --text-light: #fefefe;
+    --card-bg: #ffffff;
+    --border-color: #eee;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.app-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+/* Main Container (Grid for layout) */
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    flex-grow: 1; /* Allow main content to grow */
+}
+
+@media (min-width: 768px) {
+    .app-container {
+        grid-template-columns: 2fr 1fr; /* Journal input & past entries on left, AI insights on right */
+        grid-template-areas:
+            "input insights"
+            "entries insights";
+    }
+    .journal-input-section { grid-area: input; }
+    .ai-insights-section { grid-area: insights; }
+    .past-entries-section { grid-area: entries; }
+}
+@media (min-width: 1024px) {
+    .app-container {
+        grid-template-columns: 1.5fr 1fr 1.5fr; /* Input | Insights | Entries */
+        grid-template-areas:
+            "input insights entries";
+    }
+}
+
+
+/* Sections */
+section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Journal Input */
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    button {
+        width: auto;
+    }
+}
+
+button:hover {
+    background-color: #43a047; /* Darker green */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* AI Insights */
+.ai-insights-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.insight-card {
+    background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 1px 3px var(--shadow-light);
+}
+
+.insight-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.sentiment-positive { color: #28a745; } /* Bootstrap success green */
+.sentiment-neutral { color: #6c757d; } /* Bootstrap secondary grey */
+.sentiment-negative { color: #dc3545; } /* Bootstrap danger red */
+
+/* Past Entries */
+.entries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.entry-card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.entry-card .entry-date {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    display: block;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.entry-card .entry-text {
+    margin-bottom: 0.5rem;
+}
+
+.entry-card .entry-sentiment,
+.entry-card .entry-themes {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.entry-card .entry-sentiment span,
+.entry-card .entry-themes span {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.no-entries-message {
+    text-align: center;
+    color: var(--secondary-color);
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Footer */
+.app-footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem 1rem;
+    margin-top: auto; /* Push footer to bottom */
+}

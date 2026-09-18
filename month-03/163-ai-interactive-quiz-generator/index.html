@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interactive Quiz Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Interactive Quiz Generator</h1>
+        <p>Upload your text, and let AI create a custom quiz for you!</p>
+    </header>
+
+    <main class="container">
+        <section class="input-section card">
+            <h2>1. Provide Your Content</h2>
+            <textarea id="textInput" placeholder="Paste your article, document, or any text here..." rows="15"></textarea>
+            <button id="generateQuizBtn">Generate Quiz</button>
+        </section>
+
+        <section class="quiz-section card">
+            <h2>2. Your Custom Quiz</h2>
+            <div id="quizDisplay">
+                <p class="placeholder-text">Your generated quiz will appear here after you provide content and click 'Generate Quiz'.</p>
+            </div>
+            <button id="submitQuizBtn" class="hidden">Submit Quiz</button>
+        </section>
+
+        <section class="results-section card">
+            <h2>3. Quiz Results</h2>
+            <div id="quizResults">
+                <p class="placeholder-text">Quiz results and feedback will be displayed here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AI Quiz Generator. Powered by simulated AI.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
