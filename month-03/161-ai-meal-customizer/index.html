@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meal Customizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Meal Customizer</h1>
+        <p>Input your existing recipe and tell us your dietary needs for an AI-powered modification!</p>
+
+        <div class="input-section">
+            <label for="originalRecipe">Original Recipe:</label>
+            <textarea id="originalRecipe" placeholder="e.g., Chicken Curry with Basmati Rice.\nIngredients: chicken breast, 1 can coconut milk, 2 tbsp curry powder, 1 onion, 3 cloves garlic, 1 inch ginger, 2 cups basmati rice, 2 tbsp oil.\nSteps: 1. Sauté onion, garlic, ginger. 2. Add chicken, curry powder. 3. Stir in coconut milk, simmer. 4. Cook rice separately. 5. Serve curry over rice."></textarea>
+
+            <label for="dietaryRestrictions">Dietary Restrictions / Preferences:</label>
+            <input type="text" id="dietaryRestrictions" placeholder="e.g., vegan, gluten-free, low-carb, nut-free">
+
+            <button id="customizeButton">Customize Recipe</button>
+        </div>
+
+        <div id="loading" class="loading-spinner hidden"></div>
+
+        <div class="output-section">
+            <h2>Modified Recipe:</h2>
+            <pre id="modifiedRecipe" class="recipe-output"></pre>
+            <p id="errorMessage" class="error-message hidden"></p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

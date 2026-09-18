@@ -1,5 +1,5 @@
 {
-  "global_number": 161,
+  "global_number": 163,
   "completed": [
     1,
     2,
@@ -160,7 +160,9 @@
     157,
     158,
     159,
-    160
+    160,
+    161,
+    162
   ],
   "history": [
     {
@@ -1442,8 +1444,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 161,
+      "name": "AI Meal Customizer",
+      "concepts": "AI, recipe modification, dietary needs, ingredient substitution, web development, API integration",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 162,
+      "name": "AI Interview Coach",
+      "concepts": "AI, Natural Language Processing, Speech-to-Text, Conversational AI, Feedback System",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-17T10:38:22Z",
+  "last_run": "2026-09-18T09:25:35Z",
   "fallback_count": 34
 }

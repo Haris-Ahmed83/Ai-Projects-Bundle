@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Coach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>AI Interview Coach</h1>
+            <p>Practice your job interviews with AI-powered feedback.</p>
+        </header>
+
+        <main class="interview-area">
+            <div class="section question-section">
+                <h2>AI Question:</h2>
+                <p id="ai-question">Click 'Start Interview' to begin!</p>
+            </div>
+
+            <div class="section user-response-section">
+                <h2>Your Response:</h2>
+                <p id="user-transcript" class="transcript"></p>
+                <div id="recording-indicator" class="recording-indicator"></div>
+            </div>
+
+            <div class="section feedback-section">
+                <h2>AI Feedback:</h2>
+                <p id="ai-feedback">Feedback will appear here after each answer.</p>
+            </div>
+        </main>
+
+        <div class="controls">
+            <button id="start-btn" class="btn btn-primary">Start Interview</button>
+            <button id="stop-btn" class="btn btn-secondary" disabled>Stop Interview</button>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2023 AI Interview Coach. Powered by Web Speech API.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
