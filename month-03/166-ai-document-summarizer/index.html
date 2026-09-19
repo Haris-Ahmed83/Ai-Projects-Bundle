@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Document Summarizer</h1>
+        <p class="description">Paste your long article or document below, and our AI will provide a concise summary.</p>
+
+        <div class="input-section">
+            <label for="document-input">Document to Summarize:</label>
+            <textarea id="document-input" placeholder="Paste your document here..."></textarea>
+            <button id="summarize-btn">Summarize Document</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Summary:</h2>
+            <div id="loading-indicator" class="hidden">
+                <div class="spinner"></div>
+                <span>Summarizing... Please wait.</span>
+            </div>
+            <div id="summary-output" class="summary-content">
+                Your summary will appear here.
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
