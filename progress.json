@@ -1,5 +1,5 @@
 {
-  "global_number": 167,
+  "global_number": 169,
   "completed": [
     1,
     2,
@@ -166,7 +166,9 @@
     163,
     164,
     165,
-    166
+    166,
+    167,
+    168
   ],
   "history": [
     {
@@ -1496,8 +1498,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 167,
+      "name": "AI Public Speaking Coach",
+      "concepts": "AI, Speech Analysis, Public Speaking, Web Audio API, Real-time Feedback, Machine Learning, Data Visualization",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 168,
+      "name": "AI Language Tutor",
+      "concepts": "AI, Natural Language Processing, Conversational AI, API Integration",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-19T09:11:49Z",
+  "last_run": "2026-09-19T10:06:39Z",
   "fallback_count": 34
 }

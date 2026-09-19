@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Language Tutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Language Tutor</h1>
+            <p>Practice speaking or typing in your target language and get real-time feedback from an AI.</p>
+        </header>
+
+        <main class="tutor-interface">
+            <section class="controls">
+                <div class="lang-selector">
+                    <label for="targetLanguage">Target Language:</label>
+                    <select id="targetLanguage">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <!-- Add more languages as needed -->
+                    </select>
+                </div>
+            </section>
+
+            <section class="practice-area">
+                <div class="input-section">
+                    <h2>Your Practice Text:</h2>
+                    <textarea id="userInput" placeholder="Type your sentence here... (e.g., 'Hello, how are you?')"></textarea>
+                    <div class="actions">
+                        <button id="submitText">Get AI Feedback</button>
+                        <button id="speechInputBtn" disabled title="Speech input not fully implemented in this demo">Speak (WIP)</button>
+                    </div>
+                </div>
+
+                <div class="ai-feedback-section">
+                    <h2>AI Feedback:</h2>
+                    <div id="aiResponse" class="response-box">
+                        <p>Your AI tutor is ready! Type something in the box above and click "Get AI Feedback" to start.</p>
+                    </div>
+                    <div id="loadingIndicator" class="loading-indicator hidden">
+                        AI is thinking...
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Language Tutor. Powered by simulated AI.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

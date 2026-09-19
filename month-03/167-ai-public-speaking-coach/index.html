@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Public Speaking Coach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Public Speaking Coach</h1>
+    </header>
+    <main>
+        <section class="controls">
+            <button id="recordBtn" disabled>Start Recording</button>
+            <button id="stopBtn" disabled>Stop Recording</button>
+            <p id="status">Initializing microphone...</p>
+        </section>
+
+        <section class="feedback-section">
+            <h2>Your Speech Analysis</h2>
+            <div id="feedbackOutput">
+                <p>Record your speech to get instant feedback!</p>
+            </div>
+            <div id="visualization">
+                <h3>Delivery Metrics Visualization</h3>
+                <canvas id="speechCanvas"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
