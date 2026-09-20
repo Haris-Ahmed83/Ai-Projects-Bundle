@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Writing Style Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Writing Style Assistant</h1>
+        <p>Enter your text below to get feedback on tone, readability, and conciseness. This tool provides simulated AI analysis for demonstration purposes.</p>
+        <textarea id="textInput" placeholder="Paste your text here..." rows="15"></textarea>
+        <button id="analyzeBtn">Analyze Text</button>
+
+        <div id="loadingIndicator" class="hidden">
+            <div class="spinner"></div>
+            <p>Analyzing text, please wait...</p>
+        </div>
+
+        <div id="results" class="results-grid">
+            <div class="result-card">
+                <h2>Overall Feedback</h2>
+                <p id="overallFeedback">Submit text to see feedback.</p>
+            </div>
+            <div class="result-card">
+                <h2>Tone Analysis</h2>
+                <p id="toneAnalysis">Neutral</p>
+            </div>
+            <div class="result-card">
+                <h2>Readability Score</h2>
+                <p id="readabilityScore">N/A</p>
+            </div>
+            <div class="result-card">
+                <h2>Conciseness Suggestions</h2>
+                <ul id="concisenessSuggestions">
+                    <li>No suggestions yet.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
