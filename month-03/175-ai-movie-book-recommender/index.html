@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Movie & Book Recommender</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Recommender</h1>
+            <p>Discover your next favorite movie or book based on your preferred genres.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <label for="genreInput">Enter a genre (e.g., Sci-Fi, Fantasy, Thriller):</label>
+                <input type="text" id="genreInput" placeholder="e.g., Action, Romance, Mystery">
+                <button id="getRecommendationsBtn">Get Recommendations</button>
+            </section>
+
+            <section class="recommendations-section">
+                <h2>Your Recommendations</h2>
+                <div id="recommendationsList" class="recommendations-grid">
+                    <p class="placeholder-text">Enter a genre and click 'Get Recommendations' to see results.</p>
+                </div>
+                <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Fetching recommendations...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Recommender. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

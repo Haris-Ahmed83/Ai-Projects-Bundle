@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Style Transfer App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Image Style Transfer</h1>
+            <p>Upload your image and apply artistic styles.</p>
+        </header>
+
+        <main>
+            <section class="image-upload-section">
+                <div class="upload-box">
+                    <h2>1. Upload Content Image</h2>
+                    <input type="file" id="contentImageInput" accept="image/*">
+                    <div class="image-preview-container">
+                        <img id="contentImagePreview" src="https://via.placeholder.com/250x250?text=Your+Image" alt="Content Image Preview">
+                    </div>
+                </div>
+
+                <div class="upload-box">
+                    <h2>2. Upload Style Image</h2>
+                    <input type="file" id="styleImageInput" accept="image/*">
+                    <div class="image-preview-container">
+                        <img id="styleImagePreview" src="https://via.placeholder.com/250x250?text=Style+Image" alt="Style Image Preview">
+                    </div>
+                </div>
+            </section>
+
+            <section class="action-section">
+                <button id="transferButton" disabled>3. Transfer Style</button>
+                <div id="loadingIndicator" class="loading-indicator">
+                    <div class="spinner"></div>
+                    <p>Processing style transfer...</p>
+                </div>
+            </section>
+
+            <section class="result-section">
+                <h2>Result Image</h2>
+                <div class="image-preview-container result">
+                    <img id="resultImage" src="https://via.placeholder.com/350x350?text=Result+Appears+Here" alt="Result Image">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Style Transfer App. All rights reserved.</p>
+            <p>Powered by simulated AI capabilities.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

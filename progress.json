@@ -1,5 +1,5 @@
 {
-  "global_number": 175,
+  "global_number": 177,
   "completed": [
     1,
     2,
@@ -174,7 +174,9 @@
     171,
     172,
     173,
-    174
+    174,
+    175,
+    176
   ],
   "history": [
     {
@@ -1568,8 +1570,24 @@
       "month": 3,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 175,
+      "name": "AI Movie & Book Recommender",
+      "concepts": "Recommendation System, API Integration, Data Filtering, Modern JavaScript",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 176,
+      "name": "AI Image Style Transfer App",
+      "concepts": "AI, Machine Learning, Image Processing, Style Transfer, API Integration, Modern Web Framework",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-21T10:24:14Z",
+  "last_run": "2026-09-21T11:23:02Z",
   "fallback_count": 38
 }
