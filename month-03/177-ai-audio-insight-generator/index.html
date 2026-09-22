@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Audio Insight Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Audio Insight Generator</h1>
+        <p class="description">Upload an audio file or provide a URL to get AI-powered transcription and key insights.</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="audioFile">Upload Audio File:</label>
+                <input type="file" id="audioFile" accept="audio/*">
+            </div>
+            <p class="or-separator">OR</p>
+            <div class="input-group">
+                <label for="audioUrl">Enter Audio URL:</label>
+                <input type="text" id="audioUrl" placeholder="e.g., https://example.com/myaudio.mp3">
+            </div>
+            <button id="processAudioBtn" disabled>Generate Insights</button>
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator hidden">
+            <div class="spinner"></div>
+            <p>Processing audio and generating insights...</p>
+        </div>
+
+        <div class="output-section">
+            <h2>Results:</h2>
+            <div class="output-card">
+                <h3>Transcription:</h3>
+                <div id="transcriptionOutput" class="output-content">
+                    <em>Transcription will appear here.</em>
+                </div>
+            </div>
+            <div class="output-card">
+                <h3>Key Insights & Summary:</h3>
+                <div id="insightsOutput" class="output-content">
+                    <em>Insights will appear here.</em>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

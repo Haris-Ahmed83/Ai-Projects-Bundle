@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sentiment Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Sentiment Tracker</h1>
+        <p>Analyze the emotional tone of any text input, from customer reviews to social media comments.</p>
+
+        <div class="input-section">
+            <textarea id="text-input" placeholder="Enter text here to analyze its sentiment..."></textarea>
+            <button id="analyze-button">Analyze Sentiment</button>
+        </div>
+
+        <div class="results-section">
+            <h2>Analysis Results</h2>
+            <div id="loading-indicator" class="hidden">Analyzing...</div>
+            <div id="sentiment-output" class="result-box hidden">
+                <p><strong>Sentiment:</strong> <span id="sentiment-label">N/A</span></p>
+                <p><strong>Score:</strong> <span id="sentiment-score">N/A</span> (range -1 to 1)</p>
+                <p><strong>Confidence:</strong> <span id="sentiment-confidence">N/A</span></p>
+                <div class="sentiment-bar-container">
+                    <div id="sentiment-bar" class="sentiment-bar"></div>
+                </div>
+            </div>
+            <div id="error-output" class="result-box hidden">
+                <p class="error-message">Please enter some text to analyze.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
