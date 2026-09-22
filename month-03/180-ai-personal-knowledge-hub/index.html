@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Personal Knowledge Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Personal Knowledge Hub</h1>
+            <p>Upload documents, links, and ask AI questions to build your personalized knowledge base.</p>
+        </header>
+
+        <main>
+            <section class="upload-section card">
+                <h2>Add New Knowledge</h2>
+                <div class="input-group">
+                    <label for="file-upload">Upload Documents (PDF, TXT):</label>
+                    <input type="file" id="file-upload" accept=".pdf,.txt" multiple>
+                </div>
+                <div class="input-group">
+                    <label for="url-input">Add Web Link:</label>
+                    <input type="url" id="url-input" placeholder="e.g., https://example.com/article">
+                    <button id="add-url-btn">Add Link</button>
+                </div>
+                <button id="process-docs-btn" class="primary-btn">Process Uploaded Files</button>
+            </section>
+
+            <section class="documents-section card">
+                <h2>Your Knowledge Base</h2>
+                <div class="search-bar">
+                    <input type="text" id="doc-search" placeholder="Search documents...">
+                </div>
+                <div id="documents-list" class="document-grid"></div>
+                <p id="no-docs-message" class="info-message">No documents yet. Start by uploading files or adding links!</p>
+            </section>
+
+            <section class="ai-section card">
+                <h2>Ask Your AI Hub</h2>
+                <textarea id="ai-question" placeholder="Ask a question about your documents, e.g., 'Summarize the key points of the climate change report' or 'What is RAG?'"></textarea>
+                <button id="ask-ai-btn" class="primary-btn">Ask AI</button>
+                <div id="ai-response" class="ai-response">
+                    <p class="info-message">AI responses will appear here.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Personal Knowledge Hub. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

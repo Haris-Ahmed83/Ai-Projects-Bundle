@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Explainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Code Explainer</h1>
+        <p>Paste your code snippet below and let our AI explain it in plain English.</p>
+
+        <div class="input-section">
+            <label for="code-input">Your Code:</label>
+            <textarea id="code-input" placeholder="Paste your code here...
+
+Example:
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+greet('World');" rows="10"></textarea>
+            <button id="explain-button">Explain Code</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Explanation:</h2>
+            <div id="explanation-output" class="explanation-box">
+                <p class="placeholder">Your AI explanation will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

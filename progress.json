@@ -1,5 +1,5 @@
 {
-  "global_number": 179,
+  "global_number": 181,
   "completed": [
     1,
     2,
@@ -178,7 +178,9 @@
     175,
     176,
     177,
-    178
+    178,
+    179,
+    180
   ],
   "history": [
     {
@@ -1604,8 +1606,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 179,
+      "name": "AI Code Explainer",
+      "concepts": "AI, code explanation, natural language processing, web development, API integration",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 180,
+      "name": "AI Personal Knowledge Hub",
+      "concepts": "AI, natural language processing, LLM, RAG, document management, full-text search",
+      "month": 3,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-22T09:38:48Z",
+  "last_run": "2026-09-22T10:33:01Z",
   "fallback_count": 38
 }
