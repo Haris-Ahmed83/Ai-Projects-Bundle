@@ -1,5 +1,5 @@
 {
-  "global_number": 181,
+  "global_number": 183,
   "completed": [
     1,
     2,
@@ -180,7 +180,9 @@
     177,
     178,
     179,
-    180
+    180,
+    181,
+    182
   ],
   "history": [
     {
@@ -1622,8 +1624,24 @@
       "month": 3,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 181,
+      "name": "AI Resume Optimizer",
+      "concepts": "AI, LLM, document analysis, career tech, web development",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 182,
+      "name": "Sentiment Analysis Dashboard",
+      "concepts": "Fetch API, JSON Parsing",
+      "month": 4,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-09-22T10:33:01Z",
-  "fallback_count": 38
+  "last_run": "2026-09-23T09:49:50Z",
+  "fallback_count": 39
 }

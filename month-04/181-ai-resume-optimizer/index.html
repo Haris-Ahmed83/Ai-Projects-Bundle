@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Resume Optimizer</h1>
+        <p class="description">Upload your resume and optionally a job description. Our AI will analyze it for keywords, formatting, and content relevance, providing tailored suggestions.</p>
+
+        <div class="input-section">
+            <label for="resumeFile">Upload Resume (PDF, DOCX):</label>
+            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" required>
+
+            <label for="jobDescription">Optional: Paste Job Description:</label>
+            <textarea id="jobDescription" placeholder="e.g., 'Seeking a Senior Software Engineer with expertise in Python, AWS, and microservices. Must have strong problem-solving skills...'" rows="6"></textarea>
+
+            <button id="analyzeBtn">Analyze Resume</button>
+        </div>
+
+        <div class="loading-spinner" id="loadingSpinner"></div>
+
+        <div class="output-section" id="outputSection">
+            <h2>AI Suggestions</h2>
+            <div id="suggestionsContent">
+                <p>Your AI-powered resume analysis will appear here after you upload your resume and click 'Analyze'.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
