@@ -1,5 +1,5 @@
 {
-  "global_number": 183,
+  "global_number": 185,
   "completed": [
     1,
     2,
@@ -182,7 +182,9 @@
     179,
     180,
     181,
-    182
+    182,
+    183,
+    184
   ],
   "history": [
     {
@@ -1640,8 +1642,24 @@
       "month": 4,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 183,
+      "name": "AI Meeting Minute Generator",
+      "concepts": "AI, Speech-to-Text, Natural Language Processing, Summarization, WebRTC, React",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 184,
+      "name": "AI Data Storyteller & Viz Generator",
+      "concepts": "AI, Data Analysis, Natural Language Generation (NLG), Data Visualization, React, Node.js, APIs",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-23T09:49:50Z",
+  "last_run": "2026-09-23T10:27:39Z",
   "fallback_count": 39
 }

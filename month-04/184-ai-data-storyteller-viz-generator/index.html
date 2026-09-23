@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Data Storyteller & Viz Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Data Storyteller & Viz Generator</h1>
+        <p>Upload your structured dataset (e.g., CSV) and let our AI generate insights, a data story, and basic visualizations.</p>
+    </header>
+
+    <main>
+        <section class="upload-section card">
+            <h2>Upload Dataset</h2>
+            <input type="file" id="csvFileInput" accept=".csv">
+            <button id="generateBtn" disabled>Generate Story & Viz</button>
+            <p id="uploadMessage" class="message">Please upload a CSV file.</p>
+        </section>
+
+        <section class="results-section">
+            <div class="card">
+                <h2>Generated Data Story</h2>
+                <div id="dataStoryOutput" class="output-area">
+                    <p>Upload a CSV and click 'Generate' to see your data story here.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Data Visualization</h2>
+                <div id="dataVizOutput" class="output-area viz-area">
+                    <p>Your basic visualization will appear here.</p>
+                    <svg id="chartSvg" width="100%" height="300" style="display:none;"></svg>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AI Data Storyteller. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

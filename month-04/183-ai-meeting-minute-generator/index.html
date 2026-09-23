@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Meeting Minute Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Meeting Minute Generator</h1>
+        <p class="description">Transcribe live audio or uploaded recordings and get AI-powered summaries of key discussions.</p>
+
+        <section class="input-section live-audio">
+            <h2>Live Audio Transcription</h2>
+            <div class="controls">
+                <button id="startRecording" class="btn primary">Start Recording</button>
+                <button id="stopRecording" class="btn" disabled>Stop Recording</button>
+                <span id="recordingStatus" class="status">Idle</span>
+            </div>
+            <div class="live-transcript-preview">
+                <h3>Live Transcript Preview:</h3>
+                <p id="liveTranscriptPreview"></p>
+            </div>
+        </section>
+
+        <section class="input-section file-upload">
+            <h2>Upload Recording</h2>
+            <input type="file" id="audioFileUpload" accept="audio/*, .txt">
+            <button id="uploadAndProcess" class="btn primary" disabled>Process Uploaded File</button>
+            <p class="note">Note: For demonstration, actual audio processing is simulated for audio files. Text files will be used directly.</p>
+        </section>
+
+        <section class="results-section">
+            <h2>Meeting Minutes</h2>
+            <div id="loadingIndicator" class="loading" style="display: none;">
+                Processing audio and generating summary...
+            </div>
+            <div class="output-box">
+                <h3>Full Transcription:</h3>
+                <p id="transcriptionOutput"></p>
+            </div>
+            <div class="output-box">
+                <h3>AI Summary:</h3>
+                <p id="summaryOutput"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
