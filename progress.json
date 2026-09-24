@@ -1,5 +1,5 @@
 {
-  "global_number": 187,
+  "global_number": 189,
   "completed": [
     1,
     2,
@@ -186,7 +186,9 @@
     183,
     184,
     185,
-    186
+    186,
+    187,
+    188
   ],
   "history": [
     {
@@ -1676,8 +1678,24 @@
       "month": 4,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 187,
+      "name": "AI User Persona Builder",
+      "concepts": "AI, User Experience Design, Product Management, Persona Generation, LLM API",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 188,
+      "name": "Weather Dashboard",
+      "concepts": "Fetch API, Async/Await",
+      "month": 4,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-09-24T09:43:57Z",
-  "fallback_count": 41
+  "last_run": "2026-09-24T10:43:47Z",
+  "fallback_count": 42
 }

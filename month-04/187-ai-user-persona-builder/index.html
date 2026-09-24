@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI User Persona Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI User Persona Builder</h1>
+        <p class="description">Generate detailed user personas based on your product's description using AI.</p>
+
+        <div class="input-section">
+            <label for="productDescription">Product Description:</label>
+            <textarea id="productDescription" placeholder="e.g., A mobile app for managing personal finances, budgeting, and tracking expenses, or A platform for online learning and skill development." rows="6"></textarea>
+            <button id="generatePersonaBtn">Generate Persona</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Generated Persona</h2>
+            <div id="personaOutput" class="persona-card">
+                <p class="placeholder-text">Enter your product description and click "Generate Persona" to see results.</p>
+            </div>
+            <div id="loadingIndicator" class="loading-indicator hidden">Generating persona...</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
