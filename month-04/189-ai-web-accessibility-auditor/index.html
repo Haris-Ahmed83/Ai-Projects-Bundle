@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Web Accessibility Auditor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Web Accessibility Auditor</h1>
+        <p>Input a URL or paste HTML content to get an accessibility analysis.</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="urlInput">Enter URL (Optional):</label>
+                <input type="url" id="urlInput" placeholder="e.g., https://example.com">
+            </div>
+            <div class="input-group">
+                <label for="htmlInput">Paste HTML (Required if no URL):</label>
+                <textarea id="htmlInput" rows="15" placeholder="Paste your HTML code here..."></textarea>
+            </div>
+            <button id="analyzeBtn">Analyze Accessibility</button>
+        </div>
+
+        <div class="results-section">
+            <h2>Analysis Results</h2>
+            <div id="resultsDiv" class="results-display">
+                <p>No analysis performed yet. Provide a URL or HTML and click 'Analyze'.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
