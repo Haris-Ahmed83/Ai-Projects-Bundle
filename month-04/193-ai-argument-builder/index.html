@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Argument Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Argument Builder</h1>
+            <p>Construct well-reasoned arguments with AI assistance.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <label for="topicInput">Enter your topic or statement:</label>
+                <textarea id="topicInput" placeholder="e.g., 'Should homework be abolished?' or 'The benefits of renewable energy.'"></textarea>
+                <button id="generateBtn">Generate Arguments</button>
+            </section>
+
+            <section class="output-section">
+                <div id="loadingIndicator" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Generating arguments...</p>
+                </div>
+                
+                <div id="errorMessage" class="error-message hidden"></div>
+
+                <div id="resultsContainer" class="results-grid hidden">
+                    <div class="argument-card">
+                        <h2>Supporting Points</h2>
+                        <ul id="supportingPoints"></ul>
+                    </div>
+                    <div class="argument-card">
+                        <h2>Counter-Arguments</h2>
+                        <ul id="counterArguments"></ul>
+                    </div>
+                    <div class="argument-card">
+                        <h2>Rebuttals</h2>
+                        <ul id="rebuttals"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Argument Builder. Powered by simulated AI.</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Prep Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Interview Prep Assistant</h1>
+            <p>Generate tailored interview questions based on your job description.</p>
+            <p class="tagline">Leveraging simulated AI & NLP concepts for your success.</p>
+        </header>
+
+        <main class="main-content">
+            <section class="input-section card">
+                <h2>Enter Job Description</h2>
+                <textarea id="jobDescription" placeholder="Paste the full job description here... (e.g., 'We are looking for a Senior Frontend Developer with expertise in React, JavaScript, and strong problem-solving skills, experienced with API integration and agile methodologies.')"></textarea>
+                <button id="generateQuestionsBtn">Generate Questions</button>
+            </section>
+
+            <section class="output-section card">
+                <h2>Generated Questions</h2>
+                <div id="questionsOutput">
+                    <p class="placeholder-text">Your tailored interview questions will appear here.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Interview Prep Assistant. <small>AI functionality is simulated for this client-side demo; a real application would use backend NLP/AI APIs (e.g., Node.js with a large language model).</small></p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
