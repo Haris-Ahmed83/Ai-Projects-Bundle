@@ -1,5 +1,5 @@
 {
-  "global_number": 197,
+  "global_number": 199,
   "completed": [
     1,
     2,
@@ -196,7 +196,9 @@
     193,
     194,
     195,
-    196
+    196,
+    197,
+    198
   ],
   "history": [
     {
@@ -1766,8 +1768,24 @@
       "month": 4,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 197,
+      "name": "AI Financial Insight Engine",
+      "concepts": "AI, machine learning, personal finance, data analysis, budgeting, recommendations, API, data visualization",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 198,
+      "name": "AI Data Explorer & Visualizer",
+      "concepts": "AI, data visualization, interactive charts, data analysis, API integration",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-26T10:29:40Z",
+  "last_run": "2026-09-27T10:22:54Z",
   "fallback_count": 47
 }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Financial Insight Engine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Financial Insight Engine</h1>
+            <p>Leveraging AI for personalized financial analysis and recommendations.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="input-section card">
+            <h2>Enter Your Transactions</h2>
+            <p>Provide your financial transactions in the format: <code>Category:Amount;Category:Amount</code></p>
+            <p><em>Example: Groceries:-50;Salary:2000;Rent:-800;Coffee:-5;Freelance:300</em></p>
+            <textarea id="transactionsInput" placeholder="e.g., 'Groceries:-50;Rent:-800;Salary:2000;Coffee:-5;Dinner:-40'"></textarea>
+            <button id="analyzeButton">Analyze Transactions</button>
+        </section>
+
+        <section class="insights-section card">
+            <h2>Financial Insights & Recommendations</h2>
+            <div id="insightsOutput">
+                <p>Your AI-powered financial insights, budgeting breakdowns, and personalized recommendations will appear here after analysis.</p>
+                <p><strong>Key Concepts:</strong> AI, machine learning, personal finance, data analysis, budgeting, recommendations, API (simulated), data visualization (text-based).</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AI Financial Insight Engine. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

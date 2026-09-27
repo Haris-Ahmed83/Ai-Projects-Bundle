@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Data Explorer & Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Data Explorer & Visualizer</h1>
+    </header>
+
+    <main>
+        <section class="upload-section card">
+            <h2>Upload Dataset (CSV)</h2>
+            <input type="file" id="csvFileInput" accept=".csv">
+        </section>
+
+        <section class="controls-section card">
+            <h2>Visualization Controls</h2>
+            <div class="control-group">
+                <label for="xAxisSelect">X-Axis (Category):</label>
+                <select id="xAxisSelect"></select>
+            </div>
+            <div class="control-group">
+                <label for="yAxisSelect">Y-Axis (Value):</label>
+                <select id="yAxisSelect"></select>
+            </div>
+            <div class="control-group">
+                <label for="chartTypeSelect">Chart Type:</label>
+                <select id="chartTypeSelect">
+                    <option value="bar">Bar Chart</option>
+                    <!-- Extend with more chart types here if desired -->
+                </select>
+            </div>
+        </section>
+
+        <section class="data-table-section card">
+            <h2>Raw Data Preview</h2>
+            <div id="dataTableContainer" class="table-container">
+                <p>Upload a CSV file to see data here.</p>
+            </div>
+        </section>
+
+        <section class="visualization-section card">
+            <h2>Data Visualization</h2>
+            <canvas id="dataChart" width="600" height="400"></canvas>
+            <p id="chartMessage" class="message">Upload data and select columns to generate chart.</p>
+        </section>
+
+        <section class="ai-insights-section card">
+            <h2>AI Insights (Basic Analysis)</h2>
+            <div id="aiInsightsContainer">
+                <p>Upload data and select columns for basic insights.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
