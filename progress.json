@@ -1,5 +1,5 @@
 {
-  "global_number": 199,
+  "global_number": 201,
   "completed": [
     1,
     2,
@@ -198,7 +198,9 @@
     195,
     196,
     197,
-    198
+    198,
+    199,
+    200
   ],
   "history": [
     {
@@ -1784,8 +1786,24 @@
       "month": 4,
       "engine": "gemini",
       "fallback": false
+    },
+    {
+      "number": 199,
+      "name": "AI Podcast Episode Summarizer",
+      "concepts": "AI, natural language processing, audio transcription, summarization, API integration, React",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 200,
+      "name": "AI Document Query Assistant",
+      "concepts": "AI, NLP, LLM, document parsing, vector database, chat interface, React, Node.js",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-27T10:22:54Z",
+  "last_run": "2026-09-27T11:02:38Z",
   "fallback_count": 47
 }

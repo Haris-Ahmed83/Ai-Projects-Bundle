@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Podcast Episode Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Podcast Episode Summarizer</h1>
+        <p>Input a podcast episode URL or upload an audio file to get a transcription and summary.</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="podcastUrl">Podcast Episode URL:</label>
+                <input type="url" id="podcastUrl" placeholder="e.g., https://example.com/podcast.mp3">
+            </div>
+            <div class="input-group">
+                <label for="audioFile">Or Upload Audio File:</label>
+                <input type="file" id="audioFile" accept="audio/*">
+            </div>
+            <button id="processButton">Transcribe & Summarize</button>
+            <p id="loadingMessage" class="loading-message"></p>
+        </div>
+
+        <div class="output-section">
+            <h2>Transcription:</h2>
+            <div id="transcriptionOutput" class="output-box">
+                <p>Transcription will appear here...</p>
+            </div>
+
+            <h2>Summary:</h2>
+            <div id="summaryOutput" class="output-box">
+                <p>Summary will appear here...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

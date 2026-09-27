@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Query Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>AI Document Query Assistant</h1>
+            <p>Upload documents and chat with AI to get insights.</p>
+        </header>
+
+        <section class="upload-section card">
+            <h2>Upload Documents</h2>
+            <div class="upload-box">
+                <input type="file" id="documentUpload" multiple accept=".pdf,.txt,.docx" style="display: none;">
+                <label for="documentUpload" class="upload-button">Choose Files</label>
+                <p id="upload-status">No files chosen.</p>
+            </div>
+            <div class="uploaded-docs" id="uploadedDocumentsList">
+                <!-- Uploaded documents will be listed here -->
+            </div>
+        </section>
+
+        <section class="chat-section card">
+            <h2>Chat with AI</h2>
+            <div class="chat-window" id="chatWindow">
+                <!-- Initial AI message -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask a question about your documents..." autocomplete="off">
+                <button id="sendMessageBtn">Send</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2023 AI Document Query Assistant. Powered by simulated LLM & Vector DB.</p>
+        </footer>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
