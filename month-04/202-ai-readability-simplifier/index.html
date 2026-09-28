@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readability & Simplifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AI Readability & Simplifier</h1>
+        <p>Paste your text below to get an instant readability score and AI-powered simplification suggestions.</p>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <textarea id="textInput" placeholder="Paste your text here..."></textarea>
+            <button id="analyzeBtn">Analyze & Simplify</button>
+        </section>
+
+        <section class="output-section">
+            <div class="score-card">
+                <h2>Readability Score</h2>
+                <p>Flesch-Kincaid Grade Level: <span id="fleschKincaidScore">N/A</span></p>
+                <p>Ease of Reading: <span id="readabilityEase">N/A</span></p>
+            </div>
+
+            <div class="ai-suggestions">
+                <h2>AI Simplification Suggestions</h2>
+                <div id="simplificationOutput">
+                    <p>Suggestions will appear here after analysis.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AI Readability & Simplifier. All rights reserved. (AI features simulated for local deployment)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
