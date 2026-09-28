@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Forge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Forge</h1>
+        <p>Craft descriptive text prompts to generate unique AI-powered images.</p>
+
+        <div class="input-section">
+            <label for="prompt-input">Your Prompt:</label>
+            <textarea id="prompt-input" placeholder="A futuristic city at sunset, neon lights reflecting on wet streets, flying cars, cyberpunk style, highly detailed, 8k" rows="5"></textarea>
+            <button id="generate-btn">Generate Image</button>
+        </div>
+
+        <div class="output-section">
+            <h2>Generated Image</h2>
+            <div id="image-display" class="image-display">
+                <p class="placeholder-text">Enter a prompt and click 'Generate' to see your image!</p>
+                <img id="generated-image" src="" alt="Generated AI Image" style="display: none;">
+                <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
