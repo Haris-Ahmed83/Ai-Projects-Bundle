@@ -1,5 +1,5 @@
 {
-  "global_number": 207,
+  "global_number": 209,
   "completed": [
     1,
     2,
@@ -206,7 +206,9 @@
     203,
     204,
     205,
-    206
+    206,
+    207,
+    208
   ],
   "history": [
     {
@@ -1856,8 +1858,24 @@
       "month": 4,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 207,
+      "name": "AI Trend Scout",
+      "concepts": "AI, natural language processing, data analysis, real-time data, trend detection, data visualization",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 208,
+      "name": "Weather Dashboard",
+      "concepts": "Fetch API, Async/Await",
+      "month": 4,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-09-29T11:03:34Z",
-  "fallback_count": 51
+  "last_run": "2026-09-29T11:47:00Z",
+  "fallback_count": 52
 }

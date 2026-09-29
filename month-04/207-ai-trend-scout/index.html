@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trend Scout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>AI Trend Scout</h1>
+        <p>Real-time AI trend detection from specified data sources.</p>
+    </header>
+
+    <main class="container">
+        <section class="card" id="data-sources-section">
+            <h2>Data Sources</h2>
+            <div class="input-group">
+                <input type="text" id="new-source-input" placeholder="e.g., TechCrunch RSS">
+                <button id="add-source-btn">Add Source</button>
+            </div>
+            <ul id="data-sources-list">
+                <!-- Initial sources will be rendered by JS -->
+            </ul>
+        </section>
+
+        <section class="card" id="trends-section">
+            <h2>Detected Trends</h2>
+            <ul id="trends-list">
+                <!-- Trends will be dynamically added here -->
+            </ul>
+        </section>
+
+        <section class="card" id="insights-section">
+            <h2>Real-time Insights</h2>
+            <p>Current AI buzzwords and prominent concepts:</p>
+            <div id="buzzwords-cloud">
+                <!-- Buzzwords will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 AI Trend Scout. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
