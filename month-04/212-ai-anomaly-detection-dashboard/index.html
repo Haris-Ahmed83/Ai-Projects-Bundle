@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Anomaly Detection Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0/dist/chartjs-adapter-moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AI Anomaly Detection Dashboard</h1>
+    </header>
+
+    <main class="dashboard-grid">
+        <section class="control-panel">
+            <h2>Data Input & Controls</h2>
+
+            <div class="card data-upload">
+                <h3>Upload Time-Series Data (CSV)</h3>
+                <input type="file" id="csvFileInput" accept=".csv">
+                <button id="uploadProcessBtn" disabled>Process Data</button>
+                <p id="uploadStatus" class="status-message"></p>
+            </div>
+
+            <div class="card algorithm-selection">
+                <h3>Anomaly Detection Algorithm</h3>
+                <label for="algorithmSelect">Select Algorithm:</label>
+                <select id="algorithmSelect">
+                    <option value="movingAvgStdDev">Moving Average & Std Dev (Simulated)</option>
+                    <option value="isolationForest">Isolation Forest (Simulated)</option>
+                    <option value="oneClassSVM">One-Class SVM (Simulated)</option>
+                </select>
+
+                <div class="algorithm-params">
+                    <label for="sensitivityInput">Sensitivity Threshold:</label>
+                    <input type="number" id="sensitivityInput" value="2" min="1" step="0.1">
+                    <small>Higher value = fewer anomalies.</small>
+                </div>
+                <button id="detectAnomaliesBtn" disabled>Detect Anomalies</button>
+                <p id="detectionStatus" class="status-message"></p>
+            </div>
+        </section>
+
+        <section class="data-visualization">
+            <h2>Time-Series Visualization</h2>
+            <div class="card chart-container">
+                <canvas id="anomalyChart"></canvas>
+            </div>
+        </section>
+
+        <section class="anomaly-results">
+            <h2>Detected Anomalies</h2>
+            <div class="card anomaly-list-container">
+                <p id="noAnomaliesMsg">No anomalies detected yet.</p>
+                <ul id="anomalyList"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AI Anomaly Detection. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
