@@ -1,5 +1,5 @@
 {
-  "global_number": 209,
+  "global_number": 211,
   "completed": [
     1,
     2,
@@ -208,7 +208,9 @@
     205,
     206,
     207,
-    208
+    208,
+    209,
+    210
   ],
   "history": [
     {
@@ -1874,8 +1876,24 @@
       "month": 4,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 209,
+      "name": "Todo List with Categories",
+      "concepts": "CRUD Operations, Filtering",
+      "month": 4,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 210,
+      "name": "AI Document Schema Extractor",
+      "concepts": "AI, NLP, Data Extraction, API Integration, Document Processing",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-09-29T11:47:00Z",
-  "fallback_count": 52
+  "last_run": "2026-09-30T10:55:03Z",
+  "fallback_count": 53
 }

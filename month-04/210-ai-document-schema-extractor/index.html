@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Schema Extractor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Document Schema Extractor</h1>
+        <p>Upload a semi-structured document (e.g., invoice, resume, contract) and AI will attempt to extract key fields.</p>
+
+        <div class="upload-section">
+            <input type="file" id="documentUpload" accept=".txt" />
+            <label for="documentUpload" class="upload-button">Choose Document</label>
+            <span id="fileNameDisplay" class="file-name">No file chosen</span>
+        </div>
+
+        <div id="loading" class="loading-spinner hidden"></div>
+
+        <div class="results-section">
+            <h2>Extracted Schema</h2>
+            <pre><code id="extractedSchemaOutput">Upload a document to see the extracted schema here.</code></pre>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
