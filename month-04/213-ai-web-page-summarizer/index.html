@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Web Page Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Web Page Summarizer</h1>
+            <p>Input any web page URL and let the AI instantly extract and summarize its core content into concise bullet points.</p>
+        </header>
+
+        <main>
+            <section class="input-section card">
+                <label for="urlInput">Enter Web Page URL:</label>
+                <input type="url" id="urlInput" placeholder="e.g., https://www.openai.com/blog/chatgpt" required>
+                <button id="summarizeBtn">Summarize Page</button>
+            </section>
+
+            <section class="output-section card">
+                <h2>Summary</h2>
+                <div id="summaryOutput" class="summary-output">
+                    <p>Enter a URL and click 'Summarize Page' to see the summary here.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Summarizer Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
