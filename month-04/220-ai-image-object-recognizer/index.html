@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Object Recognizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Object Recognizer</h1>
+        <p>Upload an image to detect and identify objects using simulated AI.</p>
+
+        <div class="input-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="recognizeButton" disabled>Recognize Objects</button>
+        </div>
+
+        <div class="image-display">
+            <img id="uploadedImage" src="#" alt="Upload an image" style="display: none;">
+        </div>
+
+        <div class="results-section">
+            <h2>Detected Objects</h2>
+            <div id="loading" style="display: none;">Analyzing image...</div>
+            <ul id="objectList">
+                <li class="placeholder">Upload an image and click "Recognize" to see results.</li>
+            </ul>
+            <p class="disclaimer"><em>Note: This is a front-end demonstration. Object recognition is simulated.</em></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
