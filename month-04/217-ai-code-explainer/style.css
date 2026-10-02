@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top initially */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 250px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace; /* Monospace for code */
+    resize: vertical;
+    box-sizing: border-box; /* Include padding in width */
+    background-color: #fcfcfc;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; /* Center the button */
+    width: fit-content;
+    min-width: 180px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+    background-color: #21618c;
+}
+
+.output-box {
+    background-color: #ecf0f1;
+    border: 1px solid #ccd;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 100px;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace; /* Monospace for explanation */
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    word-wrap: break-word; /* Break long words */
+    color: #333;
+    line-height: 1.6;
+}
+
+.output-box p {
+    margin: 0;
+    text-align: left;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    textarea {
+        min-height: 200px;
+        font-size: 0.95rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        min-width: unset;
+        width: 100%; /* Full width on small screens */
+    }
+
+    .output-box {
+        padding: 15px;
+        min-height: 80px;
+    }
+}

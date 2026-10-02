@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #50E3C2;
+    --text-color: #333;
+    --background-color: #F8F9FA;
+    --card-bg-front: #FFFFFF;
+    --card-bg-back: #EBF4FF;
+    --border-color: #DDDDDD;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--card-bg-front);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+#inputText {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 200px;
+    box-shadow: inset 0 1px 3px var(--shadow-light);
+}
+
+#inputText:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+#generateBtn {
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-end; /* Align button to the right */
+}
+
+#generateBtn:hover {
+    background-color: #3a7bdc; /* Darker shade */
+    transform: translateY(-2px);
+}
+
+#generateBtn:active {
+    transform: translateY(0);
+}
+
+.flashcard-display-section {
+    margin-top: 40px;
+}
+
+.flashcards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    perspective: 1000px; /* For 3D transform */
+}
+
+.flashcard {
+    background-color: transparent; /* Transparent to show inner */
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.flashcard.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when not flipped */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.1em;
+    overflow: hidden; /* Hide overflow content */
+}
+
+.flashcard-front {
+    background-color: var(--card-bg-front);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.flashcard-front h3 {
+    font-size: 1.4em;
+    margin: 0;
+    max-height: 100%; /* Ensure content fits */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limit to 4 lines */
+    -webkit-box-orient: vertical;
+}
+
+.flashcard-back {
+    background-color: var(--card-bg-back);
+    color: var(--text-color);
+    transform: rotateY(180deg);
+    border: 1px solid var(--primary-color);
+}
+
+.flashcard-back p {
+    font-size: 1em;
+    margin: 0;
+    max-height: 100%; /* Ensure content fits */
+    overflow: auto; /* Allow scrolling if content is too long */
+    text-align: left;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.flashcard-back p::-webkit-scrollbar {
+    display: none;
+}
+
+.disclaimer {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    #generateBtn {
+        align-self: stretch; /* Full width button on smaller screens */
+    }
+    .flashcards-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .flashcard {
+        height: 180px;
+    }
+    .flashcard-front h3 {
+        font-size: 1.2em;
+    }
+    .flashcard-back p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    #inputText {
+        min-height: 150px;
+    }
+    #generateBtn {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+    .flashcard {
+        height: 160px;
+    }
+    .flashcard-front h3 {
+        font-size: 1.1em;
+    }
+    .flashcard-back p {
+        font-size: 0.85em;
+    }
+}

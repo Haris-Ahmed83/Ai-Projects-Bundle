@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Flashcard Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Study Flashcard Generator</h1>
+        <p>Input your lecture notes or article text below, and our AI (simulated for this demo) will help generate flashcards!</p>
+
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Paste your text here (e.g., 'Artificial intelligence (AI) is intelligence demonstrated by machines. Machine learning (ML) is a subset of AI that enables systems to learn from data. Deep learning is a subfield of ML that uses neural networks with many layers.')" rows="15"></textarea>
+            <button id="generateBtn">Generate Flashcards</button>
+        </div>
+
+        <div class="flashcard-display-section">
+            <h2>Your Flashcards</h2>
+            <div id="flashcardsContainer" class="flashcards-grid">
+                <!-- Flashcards will be generated here -->
+            </div>
+            <p class="disclaimer">
+                <strong>Disclaimer:</strong> For this client-side demo, flashcard generation is simulated using basic text parsing heuristics.
+                A real AI Study Flashcard Generator would involve sending your text to a Large Language Model (LLM) API (e.g., OpenAI, Gemini)
+                via a secure backend server to perform advanced natural language processing, extract key concepts, and create comprehensive definitions.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

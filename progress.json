@@ -1,5 +1,5 @@
 {
-  "global_number": 217,
+  "global_number": 219,
   "completed": [
     1,
     2,
@@ -216,7 +216,9 @@
     213,
     214,
     215,
-    216
+    216,
+    217,
+    218
   ],
   "history": [
     {
@@ -1946,8 +1948,24 @@
       "month": 4,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 217,
+      "name": "AI Code Explainer",
+      "concepts": "AI, NLP, Code Analysis, API Integration",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
+    },
+    {
+      "number": 218,
+      "name": "AI Study Flashcard Generator",
+      "concepts": "AI, natural language processing, LLM API, React/Vue, data extraction",
+      "month": 4,
+      "engine": "gemini",
+      "fallback": false
     }
   ],
-  "last_run": "2026-10-01T12:00:09Z",
+  "last_run": "2026-10-02T10:54:40Z",
   "fallback_count": 57
 }
