@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Creative Writer Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Creative Writer Assistant</h1>
+            <p>Unleleash your creativity with AI-powered text generation.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="prompt">Your Idea/Prompt:</label>
+                    <textarea id="prompt" placeholder="e.g., A brave knight on a quest, a poem about nature, marketing copy for a new coffee machine..."></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="contentType">Content Type:</label>
+                    <select id="contentType">
+                        <option value="story">Short Story</option>
+                        <option value="poem">Poem</option>
+                        <option value="marketing">Marketing Copy</option>
+                        <option value="headline">Headline Ideas</option>
+                    </select>
+                </div>
+
+                <button id="generateBtn">Generate Content</button>
+            </section>
+
+            <section class="output-section">
+                <h2>Generated Content</h2>
+                <div id="loading" class="hidden">Generating...</div>
+                <pre id="outputContent"></pre>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 AI Creative Writer Assistant. Powered by simulated AI.</p>
+        </footer>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

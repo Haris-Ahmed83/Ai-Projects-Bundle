@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #6a0572; /* Deep Purple */
+    --secondary-color: #a020f0; /* Purple */
+    --accent-color: #f7b731; /* Golden Yellow */
+    --accent-color-rgb: 247, 183, 49; /* RGB values for accent-color */
+    --text-color: #333;
+    --bg-color: #f4f4f9;
+    --card-bg: #fff;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-style: italic;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Stacks vertically on small screens */
+    gap: 25px;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row; /* Side-by-side on larger screens */
+    }
+}
+
+.input-section, .output-section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: #fdfdff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    resize: vertical; /* Allow vertical resizing for textarea */
+    min-height: 100px;
+}
+
+select {
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%236a0572%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-13%205.4-13%2013s5.4%2013%2013%2013h255.3c6.5%200%2013-5.4%2013-13%200-2.8-.8-5.7-3.4-8.2z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px top 50%;
+    background-size: 12px auto;
+    cursor: pointer;
+}
+
+
+textarea:focus, select:focus, button:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.2);
+}
+
+/* Fallback for older browsers that don't support rgb(var(...)) directly in rgba() */
+@supports not (color: rgb(var(--accent-color-rgb))) {
+    textarea:focus, select:focus, button:focus {
+        box-shadow: 0 0 0 3px rgba(247, 183, 49, 0.2); /* Hardcoded RGBA fallback */
+    }
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start; /* Aligns button to the start of the flex container */
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.output-section h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#outputContent {
+    white-space: pre-wrap; /* Preserves whitespace and wraps text */
+    word-wrap: break-word; /* Breaks long words */
+    background-color: #fafafa;
+    padding: 15px;
+    border: 1px dashed var(--border-color);
+    border-radius: 5px;
+    min-height: 150px;
+    font-size: 0.95rem;
+    color: #555;
+    overflow-x: auto; /* For very long lines */
+}
+
+#loading {
+    text-align: center;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
