@@ -1,5 +1,5 @@
 {
-  "global_number": 243,
+  "global_number": 245,
   "completed": [
     1,
     2,
@@ -242,7 +242,9 @@
     239,
     240,
     241,
-    242
+    242,
+    243,
+    244
   ],
   "history": [
     {
@@ -2180,8 +2182,24 @@
       "month": 5,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 243,
+      "name": "Text Summarizer Tool",
+      "concepts": "Text Processing, String Methods",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 244,
+      "name": "Language Detector",
+      "concepts": "Fetch API, Text Input",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-10-08T11:45:42Z",
-  "fallback_count": 79
+  "last_run": "2026-10-08T12:25:22Z",
+  "fallback_count": 81
 }
