@@ -1,5 +1,5 @@
 {
-  "global_number": 247,
+  "global_number": 249,
   "completed": [
     1,
     2,
@@ -246,7 +246,9 @@
     243,
     244,
     245,
-    246
+    246,
+    247,
+    248
   ],
   "history": [
     {
@@ -2216,8 +2218,24 @@
       "month": 5,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 247,
+      "name": "Quiz Application",
+      "concepts": "DOM Manipulation, Event Listeners",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 248,
+      "name": "Weather Dashboard",
+      "concepts": "Fetch API, Async/Await",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-10-09T11:38:29Z",
-  "fallback_count": 83
+  "last_run": "2026-10-09T12:14:33Z",
+  "fallback_count": 85
 }
