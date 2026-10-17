@@ -1,5 +1,5 @@
 {
-  "global_number": 277,
+  "global_number": 279,
   "completed": [
     1,
     2,
@@ -276,7 +276,9 @@
     273,
     274,
     275,
-    276
+    276,
+    277,
+    278
   ],
   "history": [
     {
@@ -2486,8 +2488,24 @@
       "month": 5,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 277,
+      "name": "Drawing Canvas App",
+      "concepts": "Canvas API, Mouse Events",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 278,
+      "name": "Password Generator",
+      "concepts": "Random Generation, Clipboard API",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-10-16T10:18:18Z",
-  "fallback_count": 113
+  "last_run": "2026-10-17T08:59:39Z",
+  "fallback_count": 115
 }
