@@ -1,5 +1,5 @@
 {
-  "global_number": 279,
+  "global_number": 281,
   "completed": [
     1,
     2,
@@ -278,7 +278,9 @@
     275,
     276,
     277,
-    278
+    278,
+    279,
+    280
   ],
   "history": [
     {
@@ -2504,8 +2506,24 @@
       "month": 5,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 279,
+      "name": "Unit Converter Pro",
+      "concepts": "Math Operations, Select Inputs",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 280,
+      "name": "Stopwatch Application",
+      "concepts": "setInterval, Date Object",
+      "month": 5,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-10-17T08:59:39Z",
-  "fallback_count": 115
+  "last_run": "2026-10-17T09:51:41Z",
+  "fallback_count": 117
 }
