@@ -1,5 +1,5 @@
 {
-  "global_number": 335,
+  "global_number": 337,
   "completed": [
     1,
     2,
@@ -334,7 +334,9 @@
     331,
     332,
     333,
-    334
+    334,
+    335,
+    336
   ],
   "history": [
     {
@@ -3008,8 +3010,24 @@
       "month": 6,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 335,
+      "name": "Music Player UI",
+      "concepts": "HTML Audio API, Event Listeners",
+      "month": 6,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 336,
+      "name": "Countdown Timer Events",
+      "concepts": "Date Object, setInterval",
+      "month": 6,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-10-31T10:42:40Z",
-  "fallback_count": 171
+  "last_run": "2026-10-31T11:23:13Z",
+  "fallback_count": 173
 }
