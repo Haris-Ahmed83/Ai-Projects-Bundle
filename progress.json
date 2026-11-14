@@ -1,5 +1,5 @@
 {
-  "global_number": 391,
+  "global_number": 393,
   "completed": [
     1,
     2,
@@ -390,7 +390,9 @@
     387,
     388,
     389,
-    390
+    390,
+    391,
+    392
   ],
   "history": [
     {
@@ -3512,8 +3514,24 @@
       "month": 7,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 391,
+      "name": "Recipe Finder App",
+      "concepts": "Fetch API, Search/Filter",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 392,
+      "name": "Habit Tracker Calendar",
+      "concepts": "Calendar View, localStorage",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-11-14T11:55:26Z",
-  "fallback_count": 227
+  "last_run": "2026-11-14T12:40:22Z",
+  "fallback_count": 229
 }
