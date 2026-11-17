@@ -1,5 +1,5 @@
 {
-  "global_number": 403,
+  "global_number": 405,
   "completed": [
     1,
     2,
@@ -402,7 +402,9 @@
     399,
     400,
     401,
-    402
+    402,
+    403,
+    404
   ],
   "history": [
     {
@@ -3620,8 +3622,24 @@
       "month": 7,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 403,
+      "name": "Text Summarizer Tool",
+      "concepts": "Text Processing, String Methods",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 404,
+      "name": "Language Detector",
+      "concepts": "Fetch API, Text Input",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-11-17T14:05:13Z",
-  "fallback_count": 239
+  "last_run": "2026-11-17T15:06:00Z",
+  "fallback_count": 241
 }
