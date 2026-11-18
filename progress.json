@@ -1,5 +1,5 @@
 {
-  "global_number": 405,
+  "global_number": 407,
   "completed": [
     1,
     2,
@@ -404,7 +404,9 @@
     401,
     402,
     403,
-    404
+    404,
+    405,
+    406
   ],
   "history": [
     {
@@ -3638,8 +3640,24 @@
       "month": 7,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 405,
+      "name": "Markdown Previewer",
+      "concepts": "Text Parsing, Real-time Preview",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 406,
+      "name": "Expense Tracker Pro",
+      "concepts": "CRUD Operations, localStorage",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-11-17T15:06:00Z",
-  "fallback_count": 241
+  "last_run": "2026-11-18T13:39:04Z",
+  "fallback_count": 243
 }
