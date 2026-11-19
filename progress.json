@@ -1,5 +1,5 @@
 {
-  "global_number": 409,
+  "global_number": 411,
   "completed": [
     1,
     2,
@@ -408,7 +408,9 @@
     405,
     406,
     407,
-    408
+    408,
+    409,
+    410
   ],
   "history": [
     {
@@ -3674,8 +3676,24 @@
       "month": 7,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 409,
+      "name": "Todo List with Categories",
+      "concepts": "CRUD Operations, Filtering",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 410,
+      "name": "QR Code Generator",
+      "concepts": "Canvas API, Download API",
+      "month": 7,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-11-18T14:45:20Z",
-  "fallback_count": 245
+  "last_run": "2026-11-19T14:05:41Z",
+  "fallback_count": 247
 }
