@@ -1,5 +1,5 @@
 {
-  "global_number": 443,
+  "global_number": 445,
   "completed": [
     1,
     2,
@@ -442,7 +442,9 @@
     439,
     440,
     441,
-    442
+    442,
+    443,
+    444
   ],
   "history": [
     {
@@ -3980,8 +3982,24 @@
       "month": 8,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 443,
+      "name": "Text Summarizer Tool",
+      "concepts": "Text Processing, String Methods",
+      "month": 8,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 444,
+      "name": "Language Detector",
+      "concepts": "Fetch API, Text Input",
+      "month": 8,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-11-27T14:40:10Z",
-  "fallback_count": 279
+  "last_run": "2026-11-27T15:46:36Z",
+  "fallback_count": 281
 }
