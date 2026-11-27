@@ -1,5 +1,5 @@
 {
-  "global_number": 441,
+  "global_number": 443,
   "completed": [
     1,
     2,
@@ -440,7 +440,9 @@
     437,
     438,
     439,
-    440
+    440,
+    441,
+    442
   ],
   "history": [
     {
@@ -3962,8 +3964,24 @@
       "month": 8,
       "engine": "fallback",
       "fallback": true
+    },
+    {
+      "number": 441,
+      "name": "AI Chatbot Interface",
+      "concepts": "Fetch API, DOM Manipulation",
+      "month": 8,
+      "engine": "fallback",
+      "fallback": true
+    },
+    {
+      "number": 442,
+      "name": "Sentiment Analysis Dashboard",
+      "concepts": "Fetch API, JSON Parsing",
+      "month": 8,
+      "engine": "fallback",
+      "fallback": true
     }
   ],
-  "last_run": "2026-11-26T15:58:06Z",
-  "fallback_count": 277
+  "last_run": "2026-11-27T14:40:10Z",
+  "fallback_count": 279
 }
